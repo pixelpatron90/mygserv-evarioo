@@ -153,10 +153,8 @@
         <div class="container">
             <p>Copyright © 2025 - 2026 www.mygserv.de | Alle Rechte vorbehalten.</p>
             <ul>
-                <li><a href="#">Impressum</a></li>
-                <li><a href="#">Datenschutz</a></li>
-                <li><a href="#">AGB</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="{{ route('legalnotice.index') }}">{{ __('Legal notice') }}</a></li>
+                <li><a href="{{ route('media.index') }}">{{ __('Media') }}</a></li>
             </ul>
         </div>
     </footer>
