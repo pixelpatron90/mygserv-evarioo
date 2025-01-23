@@ -1,13 +1,7 @@
 <x-app-layout>
     <div class="min-h-[50vh] flex items-center justify-center flex-col">
-        <div>
-            <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
-            </a>
-        </div>
-        
-        <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg content-box">
-            <div class="mb-4 text-sm">
+        <div class="w-full px-6 py-4 mt-6 overflow-hidden rounded-sm content-box">
+            <div class="mb-4 text-red-500">
                 {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
             </div>
 
