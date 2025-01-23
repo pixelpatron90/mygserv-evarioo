@@ -24,8 +24,7 @@
         }
     </style>
     @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
-    <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     @if (config('settings::app_logo'))
     <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png" />
     @else
@@ -125,6 +124,16 @@
                                 {{ __('Register') }}
                             </a>
                             @endauth
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="title">
+                            <h1>» {{ __('Reviews') }}</h1>
+                        </div>
+                        <div class="content">
+                            <div class="trustpilot-widget" data-locale="de-DE" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="679298f81bb2105f11f9f0eb" data-style-height="52px" data-style-width="100%">
+                                <a href="https://de.trustpilot.com/review/mygserv.de" target="_blank" rel="noopener">Trustpilot</a>
+                            </div>
                         </div>
                     </div>
                 </div>
