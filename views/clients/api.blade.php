@@ -58,7 +58,7 @@
                     <div class="content-box mt-4">
                         <h1 class="text-xl text-secondary-200">Manage API Token</h1>
                         @if ($tokens->isEmpty())
-                            <label class='bg-green-500 text-white rounded-md text-center'>You have not tokens created yet!</label>
+                            <label class='bg-green-500 text-white rounded-md block text-center w-full p-4'>You have not tokens created yet!</label>
                         @endif
 
                         @foreach($tokens as $token)
