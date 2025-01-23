@@ -215,8 +215,8 @@
             </div>
         </div>
     @else
-        <div class="text-center">
-            <p>{{ __('There are no products in your cart') }} </p>
+        <div class="bg-red-500 rounded-md text-white p-4 w-full">
+            {{ __('There are no products in your cart') }}
         </div>
     @endempty
 </div>
