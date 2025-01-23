@@ -55,7 +55,7 @@
                                         <option value="immediate">{{ __('Immediate') }}</option>
                                     </x-input>
 
-                                    <button class="button button-primary mt-4" type="button" data-modal-toggle="confimrationModal" data-modal-hide="cancellationModal">
+                                    <button class="button bg-green-500 hover:bg-green-600 text-white mt-4" type="button" data-modal-toggle="confimrationModal" data-modal-hide="cancellationModal">
                                         {{ __('Cancel') }} {{ $product->name }}
                                     </button>
                                 </form>
