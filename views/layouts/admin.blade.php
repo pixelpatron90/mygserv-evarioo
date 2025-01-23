@@ -90,7 +90,7 @@
         @else
             @include('layouts.adminnavigation')
         @endif
-        <main class="grow">
+        <div class="grow">
             @if (!request()->routeIs('admin.index'))
                 <div class="py-6 pb-12">
                     <div class="mx-auto max-w-8xl sm:px-6 lg:px-8">
