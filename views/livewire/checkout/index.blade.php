@@ -160,7 +160,7 @@
                                 <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Price') }}
                                 </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
+                                <th scope="col" class="text-end pr-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Remove') }}
                                 </th>
                             </tr>
@@ -204,7 +204,7 @@
                                             {{ __('each') }}
                                         @endif
                                     </td>
-                                    <td class="py-3 pr-6" wire:click="removeProduct({{ $key }})">
+                                    <td class="py-3 pr-6 content-end" wire:click="removeProduct({{ $key }})">
                                         <button class="button bg-red-500 hover:bg-red-600 text-white">
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
