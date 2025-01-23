@@ -43,17 +43,17 @@
                                                 @continue
                                             @endif
                                             <tr class="@if($loop1->index < ($loop1->count - $loop->count )) border-b-2 border-secondary-200 @endif">
-                                                <td class="pl-6 py-3 items-center break-all max-w-fit">
+                                                <td class="pl-6 py-3 text-secondary-200 items-center break-all max-w-fit">
                                                     <div class="flex">
                                                         <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-8 h-8 md:w-12 md:h-12 my-auto rounded-md"
                                                              onerror="removeElement(this);">
                                                         <strong class="ml-3 my-auto">{{ ucfirst($product->name) }}</strong>
                                                     </div>
                                                 </td>
-                                                <td class="py-3 hidden md:table-cell" data-order="0.00">
+                                                <td class="py-3 text-secondary-200 hidden md:table-cell" data-order="0.00">
                                                     <x-money :amount="$product2->price" />
                                                 </td>
-                                                <td class="py-3 hidden md:table-cell">
+                                                <td class="py-3 text-secondary-200 hidden md:table-cell">
                                                     {{ $product2->expiry_date ? $product2->expiry_date->toDateString() : __('Doesn\'t Expire') }}
                                                 </td>
                                                 <td class="py-3 hidden md:table-cell">
@@ -77,7 +77,9 @@
                                                     </div>
                                                 </td>
                                                 <td class="py-3 flex">
-                                                    <a class="button button-secondary" @if($product2->status === 'cancelled' || $product2->status === 'suspended') style="opacity: 0.5; cursor: not-allowed;" @else href="{{ route('clients.active-products.show', $product2->id) }}" @endif><i class="ri-eye-line"></i></a>
+                                                    <a class="button button-secondary" @if($product2->status === 'cancelled' || $product2->status === 'suspended') style="opacity: 0.5; cursor: not-allowed;" @else href="{{ route('clients.active-products.show', $product2->id) }}" @endif>
+                                                        <i class="fa-solid fa-eye"></i>
+                                                    </a>
                                                     <span class="relative flex ml-2">
                                                             <a class="button @if($product2->status !== 'pending' || $product2->status !== 'suspended') cursor-pointer bg-secondary-200 hidden @else button-secondary @endif" @if($product2->status === 'pending' || $product2->status === 'suspended') href='{{ route('clients.invoice.index') }}'@endif><i class="ri-money-dollar-circle-line"></i></a>
                                                             @if($product2->status === 'pending' || $product2->status === 'suspended')
