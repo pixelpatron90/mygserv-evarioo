@@ -36,7 +36,7 @@
     @apply bg-primarycolor h-12 mt-2;
   }
   main nav ul {
-    @apply h-full hidden w-full md:flex-row;
+    @apply flex flex-row h-full;
   }
 
   main nav ul li {
