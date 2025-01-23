@@ -142,6 +142,8 @@
             <p>Seite wurde in {{ round(microtime(true) - LARAVEL_START, 3) }} Sekunden geladen</p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
