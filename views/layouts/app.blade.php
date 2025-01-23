@@ -68,7 +68,6 @@
                         <p>Machs einfach. Zock kostenlos!</p>
                     </div>
                 </div>
-                <div class="login">Login</div>
             </div>
         </div>
     </header>
@@ -132,7 +131,9 @@
                         <div class="title">
                             <h1>» Kundenmeinungen</h1>
                         </div>
-                        <div class="content">asdasd</div>
+                        <div class="content">
+                            <livewire:cart-count />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,8 +153,6 @@
             <p>Seite wurde in {{ round(microtime(true) - LARAVEL_START, 3) }} Sekunden geladen</p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
