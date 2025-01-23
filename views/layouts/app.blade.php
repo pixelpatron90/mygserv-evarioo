@@ -83,7 +83,6 @@
                     </svg>
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                  fgdg
                   <ul>
                     <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
                     @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
