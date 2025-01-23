@@ -7,13 +7,13 @@
             <div class="flex flex-wrap -mx-2 mb-4">
                 <div class="w-full md:w-1/2 px-2">
                     <div class="mb-4">
-                        <h2 class="text-lg font-bold">{{ __('Product Details') }}</h2>
+                        <h2 class="text-lg text-secondary-200 font-bold">{{ __('Product Details') }}</h2>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-4 text-secondary-200">
                         <p><span class="font-bold">{{ __('Product Name') }}: </span>{{ $product->name }}</p>
                         <p><span class="font-bold">{{ __('Product Description') }}: </span>@markdownify($product->description)
                         </p>
-                        <p>
+                        <p class="text-secondary-200">
                             <span class="font-bold">{{ __('Product Price') }}:
                             </span>
                             <x-money :amount="$orderProduct->price" showFree="true" />
@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 px-2">
+                <div class="w-full md:w-1/2 px-2 text-secondary-200">
                     @if ($orderProduct->expiry_date)
                         <div class="mb-4">
                             <h2 class="text-lg font-bold">{{ __('Status') }}</h2>
