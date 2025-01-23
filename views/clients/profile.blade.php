@@ -23,22 +23,10 @@
                             class="text-secondary-200 pl-3 border-red-500 border-l-2 duration-300 hover:text-secondary-200 hover:pl-3 hover:border-red-500 focus:text-secondary-200 focus:pl-3 focus:border-red-500">
                             {{ __('My Details') }}
                         </a>
-                        @if (config('settings::credits'))
-                            <a href="{{ route('clients.credits') }}"
-                                class="border-l-2 border-transparent duration-300 hover:text-secondary-200 hover:pl-3 hover:border-red-500 focus:text-secondary-200 focus:pl-3 focus:border-red-500">
-                                {{ __('Credits') }}
-                            </a>
-                        @endif
                         <a href="{{ route('clients.api.index') }}"
-                            class="border-l-2 border-transparent duration-300 hover:text-secondary-200 hover:pl-3 hover:border-red-500 focus:text-secondary-200 focus:pl-3 focus:border-red-500">
+                            class="text-secondary-200 border-l-2 border-transparent duration-300 hover:text-secondary-200 hover:pl-3 hover:border-red-500 focus:text-secondary-200 focus:pl-3 focus:border-red-500">
                             {{ __('Account API') }}
                         </a>
-                        @if (config('settings::affiliate'))
-                            <a href="{{ route('clients.affiliate') }}"
-                                class="border-l-2 border-transparent duration-300 hover:text-secondary-200 hover:pl-3 hover:border-red-500 focus:text-secondary-200 focus:pl-3 focus:border-red-500">
-                                {{ __('Affiliate') }}
-                            </a>
-                        @endif
                     </div>
                 </div>
             </div>
