@@ -10,7 +10,7 @@
     }
   
     nav {
-      @apply bg-primary py-5 w-full top-0 fixed;
+      @apply bg-primarycolor py-5 w-full top-0 fixed;
     }
   
     nav ul {
@@ -33,11 +33,8 @@
     }
   
     footer {
-      @apply w-full text-white bottom-0 fixed bg-primary py-5;
+      @apply w-full text-white bottom-0 fixed bg-primarycolor py-5;
     }
-  }
-  
-  @layer components {
   }
   
   @layer utilities {
