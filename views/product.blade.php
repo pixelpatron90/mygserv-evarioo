@@ -8,7 +8,7 @@
     </script>
     <div class="content">
         <div class="grid grid-cols-12 gap-4">
-            <div class="@if ($categories->count() > 0) lg:col-span-10 @endif col-span-12">
+            <div class="@if ($categories->count() > 0) lg:col-span-12 @endif col-span-12">
                 <div class="content-box">
                     <div class="flex flex-row">
                         @if($category->image)
