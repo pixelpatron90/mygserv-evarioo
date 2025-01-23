@@ -92,22 +92,22 @@
                                 {{ Auth::user()->username }}
                             </h1>
                             <a href="{{ route('clients.profile') }}"
-                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded-md transition-all ease-in-out">
                                 <i class="ri-account-circle-line"></i> {{__('Profile')}}
                             </a>
                             @if (Auth::user()->has('ADMINISTRATOR'))
                             <a href="{{ route('admin.index') }}"
-                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded-md transition-all ease-in-out">
                                 <i class="ri-key-2-line"></i> {{ __('Admin area') }}
                             </a>
                             <a href="{{ route('clients.api.index') }}"
-                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded-md transition-all ease-in-out">
                                 <i class="ri-code-s-slash-line"></i> {{ __('API') }}
                             </a>
                             @endif
                             <a type="button" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();"
-                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded-md transition-all ease-in-out">
                                 <i class="ri-logout-box-line"></i> {{ __('Log Out') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
