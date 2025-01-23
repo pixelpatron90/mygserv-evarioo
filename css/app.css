@@ -52,7 +52,7 @@
     @apply ms-7 -me-2 h-full p-2.5 text-white border border-primarycolor;
   }
   main nav ul li a:hover {
-    @apply bg-red-500 border border-transparent;
+    @apply border border-transparent;
     background-image: url('../images/li-hover.jpg');
   }
 
