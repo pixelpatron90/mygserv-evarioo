@@ -132,7 +132,7 @@
                             <h1>» Kundenmeinungen</h1>
                         </div>
                         <div class="content">
-                            <livewire:cart-count />
+                            np
                         </div>
                     </div>
                 </div>
