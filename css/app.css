@@ -33,23 +33,23 @@
   }
 
   main nav {
-    @apply bg-primarycolor sm:h-12 mt-2 sm:p-0 p-2;
+    @apply bg-primarycolor md:h-12 mt-2 sm:p-0 p-2;
   }
   main nav ul {
-    @apply sm:flex sm:flex-row flex-col sm:h-full;
+    @apply md:flex md:flex-row flex-col md:h-full;
   }
 
   main nav ul li {
-    @apply relative content-center h-full me-0 sm:me-2 text-base text-shadow;
+    @apply relative content-center h-full me-0 md:me-2 text-base text-shadow;
   }
   main nav ul li::before {
-    @apply p-2 border-2 border-primarycolor text-white content-center hidden sm:block h-12 absolute top-0;
+    @apply p-2 border-2 border-primarycolor text-white content-center hidden md:block h-12 absolute top-0;
     content: '»';
     background-image: url('../images/before.jpg');
   }
 
   main nav ul li a {
-    @apply sm:ms-7 block ms-0 -me-0 sm:-me-2 h-full p-2.5 text-white border border-primarycolor;
+    @apply md:ms-7 block ms-0 -me-0 md:-me-2 h-full p-2.5 text-white border border-primarycolor;
   }
   main nav ul li a:hover {
     @apply border border-transparent;
