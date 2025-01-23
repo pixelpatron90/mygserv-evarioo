@@ -1,6 +1,6 @@
-<div>
+<div class="h-full">
     @if ($cartItems > 0)
-        <a href="{{ route('checkout.index') }}" class="button button-secondary-outline !font-normal">
+        <a href="{{ route('checkout.index') }}" class="button bg-red-500 hover:bg-red-600 text-white !font-normal">
             <i class="ri-shopping-bag-line"></i>
             {{ $cartItems }}
         </a>
