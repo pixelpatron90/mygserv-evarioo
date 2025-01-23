@@ -3,13 +3,11 @@
 
     @if ($categories->count() > 0)
     <div class="content">
-        <h2 class="font-semibold text-2xl mb-2 text-secondary-900">{{ __('Categories') }}</h2>
         <div class="grid grid-cols-12 gap-4">
-
             @foreach ($categories as $category)
             @if (($category->products()->where('hidden', false)->count() > 0 && !$category->category_id) ||
             $category->children()->count() > 0)
-            <div class="lg:col-span-3 md:col-span-6 col-span-12">
+            <div class="sm:col-span-6 col-span-12">
                 <div class="content-box h-full flex flex-col">
                     <div class="flex gap-x-3 items-center mb-2">
                         @if($category->image)
