@@ -157,7 +157,7 @@
                                 <th scope="col" class="text-start py-2 text-secondary-200 font-normal">
                                     {{ __('Quantity') }}
                                 </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
+                                <th scope="col" class="text-center pr-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Price') }}
                                 </th>
                                 <th scope="col" class="text-end pr-6 py-2 text-secondary-200 font-normal">
@@ -193,7 +193,7 @@
                                             {{ $product->quantity }}
                                         @endif
                                     </td>
-                                    <td class="py-3 text-secondary-200">
+                                    <td class="py-3 text-center text-secondary-200">
                                         @if ($product->discount)
                                             <span class="text-red-500 line-through"><x-money :amount="$product->price" /></span>
                                             <x-money :amount="round($product->price - $product->discount, 2)" />
