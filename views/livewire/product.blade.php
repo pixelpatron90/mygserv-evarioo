@@ -6,9 +6,9 @@
                     onerror="removeElement(this);">
             @endif
             <div>
-                <h3 class="text-lg text-secondary-400 leading-5 font-semibold">
+                <h3 class="text-lg text-secondary-200 leading-5 font-semibold">
                     {{ $product->name }}</h3>
-                <p>
+                <p class="!text-secondary-200">
                     <x-money :amount="$product->price()" showFree="true" />
                 </p>
             </div>
