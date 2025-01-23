@@ -4,10 +4,10 @@
         <div class="content-box">
             <div class="prose dark:prose-invert min-w-full">
                 <div class="flex flex-row gap-4">
-                    <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-900">{{ __('Legal notice') }}</h2>
+                    <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-200">{{ __('Legal notice') }}</h2>
                 </div>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Information according to § 5 DDG:') }}
                 </h2>
 
@@ -15,7 +15,7 @@
                 <p>Am Heidorn 7</p>
                 <p>30890 Barsinghausen</p>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Contact:') }}
                 </h2>
 
@@ -23,7 +23,7 @@
                 <p>{{ __('Mail:') }} info[aet]mygserver.de</p>
                 <p>{{ __('Website:') }} https://www.mygserver.de</p>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Liability for content') }}
                 </h2>
                 <p>
@@ -37,7 +37,7 @@
                     remove this content.') }}
                 </p>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Liability for links') }}
                 </h2>
                 <p>
@@ -51,7 +51,7 @@
                     }}
                 </p>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Copyright') }}
                 </h2>
                 <p>
@@ -65,7 +65,7 @@
                     will immediately remove such content.') }}
                 </p>
 
-                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-900">
+                <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
                     {{ __('Dispute resolution') }}
                 </h2>
                 <p>
