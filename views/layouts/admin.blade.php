@@ -62,18 +62,23 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="{{ route('admin') }}">
-                            <i class="fa-solid fa-bars me-2"></i> Dashboard
+                        <a href="{{ route('admin.index') }}">
+                            <i class="fa-solid fa-bars me-2"></i> {{ __('Dashboard') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin') }}">
-                            <i class="fa-solid fa-bars me-2"></i> Kunden
+                        <a href="{{ route('admin.orders') }}">
+                            <i class="fa-solid fa-bars me-2"></i> {{__('Orders')}}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin') }}">
-                            <i class="fa-solid fa-bars me-2"></i> Bestellungen
+                        <a href="{{ route('admin.invoices') }}">
+                            <i class="fa-solid fa-bars me-2"></i> {{__('Invoices')}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.invoices') }}">
+                            <i class="fa-solid fa-bars me-2"></i> {{__('Invoices')}}
                         </a>
                     </li>
                 </ul>
