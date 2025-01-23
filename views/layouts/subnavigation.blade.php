@@ -1,5 +1,5 @@
 @if (config('settings::sidebar') == 0)
-    <div class="bg-primarycolor text-white text-shadow md:block hidden mb-4" id="clientsNavBar">
+    <div class="bg-primarycolor text-white text-shadow md:block hidden rounded-md mb-4" id="clientsNavBar">
         <div class="max-w-[1650px] mx-auto block md:flex items-center gap-x-5 px-5">
             <a href="{{ route('clients.home') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-red-500 duration-300">
                 <i class="ri-layout-2-line @if (request()->routeIs('clients.home')) text-primary-400 @endif"></i> {{ __('Dashboard') }}
