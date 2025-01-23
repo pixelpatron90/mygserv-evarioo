@@ -111,7 +111,10 @@
 
                             @auth
 
-                            <h1 class="w-full">{{ Auth::user()->name }}</h1>
+                            <h1 class="w-full">
+                                {{ __('Welcome back,') }}
+                                {{ Auth::user()->username }}
+                            </h1>
 
                             <a href="{{ route('clients.profile') }}"
                                 class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
