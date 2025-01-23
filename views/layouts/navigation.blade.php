@@ -1,4 +1,4 @@
-<nav class="flex flex-row justify-between">
+<nav class="lg:flex lg:flex-row lg:justify-between">
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-sm lg:hidden bg-red-500 hover:bg-red-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <i class="fa-solid fa-bars"></i>
@@ -16,5 +16,7 @@
         <li><a href="{{ route('legalnotice.index') }}">{{ __('Legal notice') }}</a></li>
     </ul>
     </div>
-    <livewire:cart-count />
+    <div class="lg:block hidden">
+        <livewire:cart-count />
+    </div>
 </nav>
