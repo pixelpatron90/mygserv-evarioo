@@ -1,14 +1,9 @@
 @if (config('settings::sidebar') == 0)
-    <div class="bg-primarycolor md:block hidden mb-4" id="clientsNavBar">
+    <div class="bg-primarycolor md:block hidden mb-6" id="clientsNavBar">
         <div class="max-w-[1650px] mx-auto block md:flex items-center gap-x-5 px-5">
             <a href="{{ route('clients.home') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-secondary-800 duration-300">
                 <i class="ri-layout-2-line @if (request()->routeIs('clients.home')) text-primary-400 @endif"></i> {{ __('Dashboard') }}
             </a>
-            <!-- Will be added in the next update
-            <a href="#" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-secondary-800 duration-300">
-                <i class="ri-instance-line"></i> {{ __('Services') }}
-            </a>
-            -->
             <a href="{{ route('clients.invoice.index') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-secondary-800 duration-300">
                 <i class="ri-file-paper-line @if (request()->routeIs('clients.invoice*')) text-primary-400 @endif"></i> {{ __('Invoices') }}
             </a>
