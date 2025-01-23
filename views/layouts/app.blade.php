@@ -95,7 +95,7 @@
                         <p>Machs einfach. Zock kostenlos!</p>
                     </div>
                 </div>
-                <div class="login hidden">Login</div>
+                <div class="login">Login</div>
             </div>
         </div>
     </header>

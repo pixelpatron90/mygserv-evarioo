@@ -26,7 +26,7 @@
     @apply text-xl text-gray-400 font-intertight text-shadow-lg;
   }
   header .container > div .login {
-    @apply bg-red-500 w-2/6 sm:block hidden;
+    @apply bg-red-500 w-2/6 hidden;
   }
   main {
     @apply py-6 bg-gradient-to-t from-slate-50 to-slate-50;
