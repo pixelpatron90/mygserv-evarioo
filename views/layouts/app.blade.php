@@ -107,19 +107,74 @@
                         <div class="title">
                             <h1>» Kundenmeinungen</h1>
                         </div>
-                        <div class="content">asdasd</div>
+                        <div class="content">
+
+                            @auth
+                @if(Auth::user()->credits > 0 && config('settings::credits'))
+                <div class="ml-auto items-center justify-end hidden md:flex">
+                    <a href="{{ route('clients.credits') }}" class="text-md mr-2">
+                        <i class="ri-wallet-3-line"></i> {{__('Your Balance:')}} <span class="font-semibold">
+                            <x-money :amount="Auth::user()->credits" />
+                        </span>
+                    </a>
+                </div>
+                <div class="ml-auto flex items-center justify-end md:hidden">
+                    <a href="{{ route('clients.credits') }}" class="text-md mr-2">
+                        <i class="ri-wallet-3-line"></i> <span class="font-semibold">
+                            <x-money :amount="Auth::user()->credits" />
+                        </span>
+                    </a>
+                </div>
+                @endif
+                <button type="button" aria-expanded="true" aria-haspopup="true" data-dropdown-placement="bottom-end"
+                    data-dropdown-toggle="account" class="relative md:flex-none flex-1">
+                    <div class="inline-flex items-center justify-center">
+                        <img class="w-8 h-8 rounded-md"
+                            src="https://www.gravatar.com/avatar/{{md5(Auth::user()->email)}}?s=200&d=mp"
+                            alt="Avatar" />
+                        <p class="p-2 font-bold">
+                            {{ Auth::user()->first_name }}
+                        </p>
                     </div>
-                    <div class="widget">
-                        <div class="title">
-                            <h1>» Kundenmeinungen</h1>
+                    <div class="absolute left-0 hidden w-60 mt-2 origin-top-right bg-secondary-200 border border-secondary-300 rounded-md text-secondary-700 font-normal text-start z-10"
+                        role="menu" aria-orientation="vertical" aria-labelledby="product" tabindex="-1" id="account">
+                        <div class="px-2 py-2">
+
+                            <a href="{{ route('clients.profile') }}"
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                <i class="ri-account-circle-line"></i> {{__('Profile')}}
+                            </a>
+                            @if (Auth::user()->has('ADMINISTRATOR'))
+                            <a href="{{ route('admin.index') }}"
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                <i class="ri-key-2-line"></i> {{ __('Admin area') }}
+                            </a>
+                            <a href="{{ route('clients.api.index') }}"
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                <i class="ri-code-s-slash-line"></i> {{ __('API') }}
+                            </a>
+                            @endif
+
+                            <hr class="mx-2 my-1 border-secondary-400" />
+
+                            <a type="button" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                                class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
+                                <i class="ri-logout-box-line"></i> {{ __('Log Out') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                @csrf
+                            </form>
                         </div>
-                        <div class="content">asdasd</div>
                     </div>
-                    <div class="widget">
-                        <div class="title">
-                            <h1>» Kundenmeinungen</h1>
+                </button>
+                @else
+                <a href="{{ route('login') }}" class="button button-primary md:flex-none flex-1">
+                    {{ __('Log In') }}
+                </a>
+                @endauth
+
                         </div>
-                        <div class="content">asdasd</div>
                     </div>
                     <div class="widget">
                         <div class="title">
