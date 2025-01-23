@@ -76,7 +76,7 @@
                 </div>
                 <div class="content-box mt-4">
                     <h1 class="text-xl text-secondary-200 font-semibold">{{ __('2FA') }}</h1>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    <p class="mt-2 mb-2 text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         {{ __('Two factor authentication adds an extra layer of security to your account. Once enabled, you will be prompted to enter a code from your authenticator app when logging in.') }}
                     </p>
                     @isset($secret)
