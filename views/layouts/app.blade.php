@@ -111,14 +111,7 @@
 
                             @auth
 
-                            <div class="inline-flex items-center justify-center">
-                                <img class="w-8 h-8 rounded-md"
-                                    src="https://www.gravatar.com/avatar/{{md5(Auth::user()->email)}}?s=200&d=mp"
-                                    alt="Avatar" />
-                                <p class="p-2 font-bold">
-                                    {{ Auth::user()->first_name }}
-                                </p>
-                            </div>
+                            <h1 class="w-full">{{ Auth::user()->name }}</h1>
 
                             <a href="{{ route('clients.profile') }}"
                                 class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
