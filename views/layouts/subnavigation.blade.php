@@ -4,12 +4,6 @@
             <a href="{{ route('clients.home') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-red-500 duration-300">
                 <i class="ri-layout-2-line @if (request()->routeIs('clients.home')) text-primary-400 @endif"></i> {{ __('Dashboard') }}
             </a>
-            <a href="{{ route('clients.invoice.index') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-red-500 duration-300">
-                <i class="ri-file-paper-line @if (request()->routeIs('clients.invoice*')) text-primary-400 @endif"></i> {{ __('Invoices') }}
-            </a>
-            <a href="{{ route('clients.tickets.index') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-red-500 duration-300">
-                <i class="ri-customer-service-2-line @if (request()->routeIs('clients.tickets*')) text-primary-400 @endif"></i> {{ __('Tickets') }}
-            </a>
             <a href="{{ route('clients.profile') }}" class="md:px-2 py-3 flex items-center gap-x-2 hover:text-red-500 duration-300">
                 <i class="ri-user-6-line @if (request()->routeIs('clients.profile')) text-primary-400 @endif"></i> {{ __('Profile Settings') }}
             </a>
