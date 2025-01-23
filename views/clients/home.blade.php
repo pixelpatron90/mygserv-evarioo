@@ -77,8 +77,8 @@
                                                     </div>
                                                 </td>
                                                 <td class="py-3 flex">
-                                                    <a class="button button-secondary" @if($product2->status === 'cancelled' || $product2->status === 'suspended') style="opacity: 0.5; cursor: not-allowed;" @else href="{{ route('clients.active-products.show', $product2->id) }}" @endif>
-                                                        <i class="fa-solid fa-eye"></i>
+                                                    <a class="button bg-green-500 hover:bg-green-600 text-white" @if($product2->status === 'cancelled' || $product2->status === 'suspended') style="opacity: 0.5; cursor: not-allowed;" @else href="{{ route('clients.active-products.show', $product2->id) }}" @endif>
+                                                        <i class="fa-solid fa-eye fa-lg"></i>
                                                     </a>
                                                     <span class="relative flex ml-2">
                                                             <a class="button @if($product2->status !== 'pending' || $product2->status !== 'suspended') cursor-pointer bg-secondary-200 hidden @else button-secondary @endif" @if($product2->status === 'pending' || $product2->status === 'suspended') href='{{ route('clients.invoice.index') }}'@endif><i class="ri-money-dollar-circle-line"></i></a>
