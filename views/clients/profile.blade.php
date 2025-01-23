@@ -66,7 +66,7 @@
                                 <x-input type="text" class="mt-4" placeholder="{{ __('Phone') }}" name="phone"
                                     id="phone" label="{{ __('Phone') }}" value="{{ Auth::user()->phone }}" :required="config('settings::requiredClientDetails_phone') == 1"/>
                                 <div class="flex justify-end mt-6">
-                                    <button type="submit" class="button button-primary">
+                                    <button type="submit" class="button bg-green-500 hover:bg-green-600 text-white">
                                         {{ __('Update') }}
                                     </button>
                                 </div>
