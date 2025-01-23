@@ -10,68 +10,21 @@
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 relative">
                 <div class="bottom-0 top-0 right-0 left-0 flex absolute z-0 rounded-xl" id="particlesjs"></div>
-                    <div class="bg-primary-400 p-4 rounded-xl text-white">
+                    <div class="bg-red-500 p-4 rounded-lg text-white">
                         <div class="flex items-center">
-                            <div class="flex-shrink-0 w-12 h-12" style="display: none;">
-                                <img class="w-8 h-8 rounded-md" style="align-self: center; width: 3rem; height: 3rem;"
-                                    src="https://www.gravatar.com/avatar/{{ md5(Auth::user()->email) }}?s=200&d=mp" />
-                            </div>
                             <div class="ml-4 text-lg font-semibold leading-7">
                                 {{ __('Welcome back') }}, {{ Auth::user()->name }}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-3 col-span-12 flex-col">
-                    <div class="bg-secondary-50 border-2 border-secondary-200 dark:border-0 dark:bg-secondary-100 rounded-xl">
-                        <div class="flex items-center border-b-2 p-3.5 border-secondary-200">
-                            <h1 class="text-lg font-semibold mx-auto text-center">
-                                {{ __('Pending Invoices') }}
-                            </h1>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            @if (count($invoices) === 0)
-                                <div class="text-center">
-                                    <p class="text-primary-300 dark:text-primary-400 font-bold text-lg mt-2">
-                                        {{__('Hurray! No invoices to pay')}}
-                                    </p>
-                                </div>
-                            @endif
-                                @foreach ($invoices as $invoice)
-                                    <div class="hover:bg-secondary-300 transition-all border-b-[1px] border-secondary-200 ease-out hover:ease-in cursor-pointer w-full p-3" onclick="window.location.href='{{ route('clients.invoice.show', $invoice->id) }}'">
-                                        <div class="flex flex-row">
-                                            <div class="flex my-auto text-2xl ms-2 w-1/12 justify-center text-primary-400">
-                                                <i class="ri-bill-fill"></i>
-                                            </div>
-                                            <div class="w-8/12 ml-4 truncate">
-                                                <span class="font-semibold">{{ __('Invoice ID') }}:</span>
-                                                <span class="font-semibold">{{ $invoice->id }}</span>
-                                                <div class="w-full text-sm text-gray-400 truncate">
-                                                    <span class="font-semibold">{{__('Amount to pay')}} -
-                                                        <x-money :amount="$invoice->total()" />
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="justify-end flex text-center my-auto button button-primary text-md w-fit py-[5px] px-[8px]">
-                                                <b>{{__('View')}}</b>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-
-                                <div class="p-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-9 col-span-12">
+                <div class="col-span-12">
                     <div class="content-box">
                         <table class="w-full">
-                            <thead class="border-b-2 border-secondary-200 dark:border-secondary-200 text-secondary-600">
+                            <thead class="border-b-2 border-secondary-200 text-secondary-200">
                                 <tr>
                                     <th scope="col" class="text-start pl-6 py-2 text-sm font-normal">
                                         {{ __('Product/Service') }}</th>
-                                    <th scope="col" class="text-start pr-6 py-2 text-sm font-normal hidden md:table-cell">
-                                        {{ __('Cost') }}</th>
                                     <th scope="col" class="text-start pr-6 py-2 text-sm font-normal hidden md:table-cell">
                                         {{ __('Active until') }}</th>
                                     <th scope="col" class="text-start pr-6 py-2 text-sm font-normal hidden md:table-cell">
@@ -138,11 +91,8 @@
                                         @endforeach
                                     @endforeach
                                 @elseif (count($services) <= 0)
-                                    <tr>
-
-                                    </tr>
                                     <tr class="w-full">
-                                        <td colspan="4" class=" pt-5 w-full dark:text-primary-400 font-bold text-lg text-center dark:bg-secondary-100">
+                                        <td colspan="5" class="p-4 w-full text-red-500 font-bold text-lg text-center">
                                             {{ __('No services found.') }}
                                         </td>
                                     </tr>
