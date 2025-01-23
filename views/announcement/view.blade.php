@@ -4,13 +4,13 @@
     <div class="content">
         <div class="content-box max-w-6xl mx-auto">
             <div class="flex justify-between">
-                <h1 class="text-2xl font-bold">{{ $announcement->title }}</h1>
+                <h1 class="text-2xl text-secondary-200 font-bold">{{ $announcement->title }}</h1>
                 <div class="flex items-center gap-x-5">
-                    <p class="text-secondary-600 flex items-center gap-x-2">
+                    <p class="text-secondary-400 flex items-center gap-x-2">
                         <i class="ri-calendar-line"></i>
                         {{ $announcement->created_at->format('d/m/Y') }}
                     </p>
-                    <p class="text-secondary-600 flex items-center gap-x-2">
+                    <p class="text-secondary-400 flex items-center gap-x-2">
                         <i class="ri-time-line ml-1"></i>
                         {{ $announcement->created_at->format('H:i') }}
                     </p>

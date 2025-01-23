@@ -8,7 +8,9 @@
                     <div class="col-span-12">
                         <div class="content-box">
                             <h3 class="font-semibold text-secondary-200 text-lg">{{ $announcement->title }}</h3>
-                            <p class="text-secondary-200">@markdownify(substr($announcement->announcement, 0, 100) . '...')</p>
+                            <div class="prose dark:prose-invert max-w-full">
+                                @markdownify(substr($announcement->announcement, 0, 100) . '...')
+                            </div>
                             <div class="flex justify-between items-center mt-3">
                                 <span class="text-sm text-secondary-400">{{ __('Published') }}
                                     {{ $announcement->created_at->diffForHumans() }}</span>
