@@ -6,36 +6,36 @@
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12">
                 <div class="content-box">
-                    <h2 class="text-xl font-semibold">{{ __('Profile Settings') }}</h2>
+                    <h2 class="text-xl text-secondary-200 font-semibold">{{ __('Profile Settings') }}</h2>
                 </div>
             </div>
             <div class="lg:col-span-3 col-span-12">
                 <div class="content-box">
                     <div class="flex gap-x-2 items-center">
                         <div
-                            class="bg-primary-400 w-8 h-8 flex items-center justify-center rounded-md text-gray-50 text-xl">
+                            class="bg-red-500 w-8 h-8 flex items-center justify-center rounded-md text-gray-50 text-xl">
                             <i class="ri-account-circle-line"></i>
                         </div>
-                        <h3 class="font-semibold text-lg">{{ __('My Account') }}</h3>
+                        <h3 class="font-semibold text-secondary-200 text-lg">{{ __('My Account') }}</h3>
                     </div>
                     <div class="flex flex-col gap-2 mt-2">
                         <a href="{{ route('clients.profile') }}"
-                            class="text-secondary-900 pl-3 border-primary-400 border-l-2 duration-300 hover:text-secondary-900 hover:pl-3 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
+                            class="text-secondary-900 pl-3 border-red-500 border-l-2 duration-300 hover:text-secondary-900 hover:pl-3 hover:border-red-500 focus:text-secondary-900 focus:pl-3 focus:border-red-500">
                             {{ __('My Details') }}
                         </a>
                         @if (config('settings::credits'))
                             <a href="{{ route('clients.credits') }}"
-                                class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
+                                class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-red-500 focus:text-secondary-900 focus:pl-3 focus:border-red-500">
                                 {{ __('Credits') }}
                             </a>
                         @endif
                         <a href="{{ route('clients.api.index') }}"
-                            class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
+                            class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-red-500 focus:text-secondary-900 focus:pl-3 focus:border-red-500">
                             {{ __('Account API') }}
                         </a>
                         @if (config('settings::affiliate'))
                             <a href="{{ route('clients.affiliate') }}"
-                                class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
+                                class="border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-red-500 focus:text-secondary-900 focus:pl-3 focus:border-red-500">
                                 {{ __('Affiliate') }}
                             </a>
                         @endif
