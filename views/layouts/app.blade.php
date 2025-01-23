@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<!-- Software build by https://paymenter.org -->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <script>
         if ("{{ config('settings::theme:snow') }}" == 1) {
-            document.addEventListener("DOMContentLoaded", function() {
-                window.snow();
-            });
-        }
-        window.addEventListener('keydown', function(e) {
-            var ctrlDown = true;
-            var ctrlKey = 17,
-                enterKey = 13;
-            $(document).keydown(function(e) {
-                if (e.keyCode == ctrlKey) ctrlDown = true;
-                if (e.keyCode == enterKey && ctrlDown) {
-                    if ($('#submit').length) {
-                        $('#submit').click();
-                    }
-                }
-            }).keyup(function(e) {
-                if (e.keyCode == ctrlKey) ctrlDown = false;
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+          window.snow();
         });
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+      }
+      window.addEventListener('keydown', function (e) {
+        var ctrlDown = true;
+        var ctrlKey = 17,
+          enterKey = 13;
+        $(document)
+          .keydown(function (e) {
+            if (e.keyCode == ctrlKey) ctrlDown = true;
+            if (e.keyCode == enterKey && ctrlDown) {
+              if ($('#submit').length) {
+                $('#submit').click();
+              }
+            }
+          })
+          .keyup(function (e) {
+            if (e.keyCode == ctrlKey) ctrlDown = false;
+          });
+      });
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     </script>
     <style>
         .snow {
@@ -44,101 +44,125 @@
             z-index: 2;
             pointer-events: none;
         }
-
-        :root {
-            --secondary-50: {{ config('settings::theme:secondary-50', '#ffffff') }};
-            --secondary-100: {{ config('settings::theme:secondary-100', '#fafcff') }};
-            --secondary-200: {{ config('settings::theme:secondary-200', '#ebeef3') }};
-            --secondary-300: {{ config('settings::theme:secondary-300', '#bbbfd2') }};
-            --secondary-400: {{ config('settings::theme:secondary-400', '#808498') }};
-            --secondary-500: {{ config('settings::theme:secondary-500', '#606372') }};
-            --secondary-600: {{ config('settings::theme:secondary-600', '#4d4f60') }};
-            --secondary-700: {{ config('settings::theme:secondary-700', '#353741') }};
-            --secondary-800: {{ config('settings::theme:secondary-800', '#1c1c20') }};
-            --secondary-900: {{ config('settings::theme:secondary-900', '#000000') }};
-
-            --primary-50: {{ config('settings::theme:primary-50', '#EDF0FF') }};
-            --primary-100: {{ config('settings::theme:primary-100', '#C6DBFF') }};
-            --primary-200: {{ config('settings::theme:primary-200', '#9BBEFB') }};
-            --primary-300: {{ config('settings::theme:primary-300', '#799CD8') }};
-            --primary-400: {{ config('settings::theme:primary-400', '#5270FD') }};
-        }
-
-        .dark {
-            --secondary-50: {{ config('settings::theme:secondary-50-dark', '#1E202D') }};
-            --secondary-100: {{ config('settings::theme:secondary-100-dark', '#313441') }};
-            --secondary-200: {{ config('settings::theme:secondary-200-dark', '#404351') }};
-            --secondary-300: {{ config('settings::theme:secondary-300-dark', '#4F525E') }};
-            --secondary-400: {{ config('settings::theme:secondary-400-dark', '#656874') }};
-            --secondary-500: {{ config('settings::theme:secondary-500-dark', '#7D8091') }};
-            --secondary-600: {{ config('settings::theme:secondary-600-dark', '#AEB2C2') }};
-            --secondary-700: {{ config('settings::theme:secondary-700-dark', '#CACBD2') }};
-            --secondary-800: {{ config('settings::theme:secondary-800-dark', '#F1F1F1') }};
-            --secondary-900: {{ config('settings::theme:secondary-900-dark', '#ffffff') }};
-        }
     </style>
-    @empty($title)
-        <title>{{ config('app.name', 'Paymenter') }}</title>
-    @else
-        <title>{{ config('app.name', 'Paymenter') . ' - ' . ucfirst($title) }}</title>
-    @endempty
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap">
-
-    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
+    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') .
+    '/css/app.css'], config('settings::theme-active'))
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
     @if (config('settings::app_logo'))
-        <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png">
+    <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png" />
     @else
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
     @endif
-    <meta content="{{ ucfirst($title) ?? config('settings::seo_title') }}" property="og:title">
-    <meta content="{{ $description ?? config('settings::seo_description') }}" property="og:description">
-    <meta content="{{ $description ?? config('settings::seo_description') }}" name="description">
-    <meta content='{{ $image ?? config('settings::seo_image') }}' property='og:image'>
+    <meta content="{{ ucfirst($title) ?? config('settings::seo_title') }}" property="og:title" />
+    <meta content="{{ $description ?? config('settings::seo_description') }}" property="og:description" />
+    <meta content="{{ $description ?? config('settings::seo_description') }}" name="description" />
+    <meta content='{{ $image ?? config(' settings::seo_image') }}' property='og:image'>
     <link type="application/json+oembed"
         href="{{ url('/') }}/manifest.json?title={{ config('app.name', 'Paymenter') }}&author_url={{ url('/') }}&author_name={{ config('app.name', 'Paymenter') }}" />
-    <meta name="twitter:card" content="@if (config('settings::seo_twitter_card')) summary_large_image @endif">
-    <meta name="theme-color" content="#5270FD">
+    <meta name="twitter:card" content="@if (config('settings::seo_twitter_card')) summary_large_image @endif" />
+    <meta name="theme-color" content="#5270FD" />
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" />
+
+    @empty($title)
+    <title>{{ config('app.name', 'Paymenter') }}</title>
+    @else
+    <title>{{ config('app.name', 'Paymenter') . ' - ' . ucfirst($title) }}</title>
+    @endempty
 </head>
 
-<body class="font-sans bg-secondary-100 dark:bg-secondary-50 text-secondary-700">
-
-    <script>
-        var default = @json(config('app.name', 'Paymenter'));
-        document.addEventListener("visibilitychange", () => {
-            if (document.hidden) {
-                document.title = "Hey! Komm zurück! <3";
-            } else {
-                document.title = default;
-            }
-        });
-    </script>
-
-    @if (config('settings::theme:snow') == 1)
-        <canvas class="snow" id="snow" width="1920" height="1080"></canvas>
-    @endif
-    <div id="app" class="min-h-screen">
-        <x-paymenter-update />
-        @if (!$clients || config('settings::sidebar') == 0)
-            @include('layouts.navigation')
-        @endif
-        <div class="@if (config('settings::sidebar') == 1) flex md:flex-nowrap flex-wrap @endif">
-            @if ($clients)
-                @include('layouts.subnavigation')
-            @endif
-            <div class="w-full flex flex-col @if ($clients) min-h-[calc(100vh-105px)] @else min-h-[calc(100vh-64px)] @endif">
-                
-                <main class="grow">
-                    {{ $slot }}
-                </main>
-
-                <x-footer />
+<body>
+    <x-paymenter-update />
+    <header>
+        <div class="container">
+            <div>
+                <div class="logo">
+                    <svg version="1.1" viewBox="0 0 800 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="5.2147">
+                            <path
+                                d="m803 485.7v-41.196c0-68.678-27.482-103.04-82.445-103.04h-82.445c-54.963 0-82.445 34.365-82.445 103.04v20.598c0 41.196 10.325 72.119 30.923 92.718 20.598 20.598 44.638 34.365 72.119 41.196 27.482 6.8834 41.196 24.04 41.196 51.521v20.598h-602.3v-532.94l38.015 154.46h38.015l38.015-155.29v155.29h95.064v-265.17h-114.1l-29.046 94.073-12.724-0.83435-34.261-93.239h-114.1v746.75h717.96c54.963 0 82.445-34.365 82.445-103.04v-20.598c0-41.196-10.325-72.119-30.923-92.718-20.598-20.598-44.638-34.365-72.119-41.196-27.482-6.8834-41.196-24.04-41.196-51.521v-20.598h41.196v41.196h103.15z"
+                                fill="#fff" />
+                            <path
+                                d="m635.76 492.07c0 50.374-25.396 75.509-76.239 75.509h-272.36c-50.843 0-76.239-25.187-76.239-75.509v-245.46c0-50.374 25.396-75.509 76.239-75.509h272.36c50.843 0 76.239 25.187 76.239 75.509v56.632h-95.325v-37.754h-234.24v207.7h234.24v-37.754h-133.39v-94.386h228.72z"
+                                fill="#058cd0" />
+                        </g>
+                    </svg>
+                    <div class="title">
+                        <h1>mygserv.de</h1>
+                        <p>Machs einfach. Zock kostenlos!</p>
+                    </div>
+                </div>
+                <div class="login">Login</div>
             </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            @if ($clients) @include('layouts.subnavigation') @endif
+            <nav>
+                <ul>
+                    <li><a href="#">Startseite</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Ankündigungen</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="site">
+                <div class="content">
+                    <div class="headline">
+                        <h1>Startseite</h1>
+                        <p>Willkommen auf mygserv.de</p>
+                    </div>
+
+                    <section>{{ $slot }}</section>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <div class="title">
+                            <h1>» Kundenmeinungen</h1>
+                        </div>
+                        <div class="content">asdasd</div>
+                    </div>
+                    <div class="widget">
+                        <div class="title">
+                            <h1>» Kundenmeinungen</h1>
+                        </div>
+                        <div class="content">asdasd</div>
+                    </div>
+                    <div class="widget">
+                        <div class="title">
+                            <h1>» Kundenmeinungen</h1>
+                        </div>
+                        <div class="content">asdasd</div>
+                    </div>
+                    <div class="widget">
+                        <div class="title">
+                            <h1>» Kundenmeinungen</h1>
+                        </div>
+                        <div class="content">asdasd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Copyright © 2025 - 2026 www.mygserv.de | Alle Rechte vorbehalten.</p>
+            <ul>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="info">
+        <div class="container">
+            <p>Seite wurde in 1.2 Sekunden geladen</p>
         </div>
     </div>
 </body>
