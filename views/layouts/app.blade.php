@@ -6,28 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <script>
-        if ("{{ config('settings::theme:snow') }}" == 1) {
-        document.addEventListener('DOMContentLoaded', function () {
-          window.snow();
-        });
-      }
-      window.addEventListener('keydown', function (e) {
-        var ctrlDown = true;
-        var ctrlKey = 17,
-          enterKey = 13;
-        $(document)
-          .keydown(function (e) {
-            if (e.keyCode == ctrlKey) ctrlDown = true;
-            if (e.keyCode == enterKey && ctrlDown) {
-              if ($('#submit').length) {
-                $('#submit').click();
-              }
-            }
-          })
-          .keyup(function (e) {
-            if (e.keyCode == ctrlKey) ctrlDown = false;
-          });
-      });
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
@@ -45,11 +23,9 @@
             pointer-events: none;
         }
     </style>
-    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') .
-    '/css/app.css'], config('settings::theme-active'))
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
     @if (config('settings::app_logo'))
     <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png" />
     @else
@@ -64,9 +40,6 @@
         href="{{ url('/') }}/manifest.json?title={{ config('app.name', 'Paymenter') }}&author_url={{ url('/') }}&author_name={{ config('app.name', 'Paymenter') }}" />
     <meta name="twitter:card" content="@if (config('settings::seo_twitter_card')) summary_large_image @endif" />
     <meta name="theme-color" content="#5270FD" />
-
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" />
-
     @empty($title)
     <title>{{ config('app.name', 'Paymenter') }}</title>
     @else
