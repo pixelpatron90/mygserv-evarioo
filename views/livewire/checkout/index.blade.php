@@ -1,9 +1,5 @@
 <div>
-    @php
-    use App\Livewire\Checkout\Index;
-    $foo = new Index;
-    @endphp
-    @empty(!$foo->products)
+    @empty(!$this->products)
         <div class="grid grid-cols-12 gap-4">
             <div class="lg:col-span-8 col-span-12">
                 <div class="content-box !p-0 overflow-hidden">
@@ -26,7 +22,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($foo->products as $key => $product)
+                            @foreach ($this->products as $key => $product)
                                 <tr
                                     class="{{ $loop->last ? '' : 'border-b-2 border-secondary-200 dark:border-secondary-50' }}">
                                     <td class="pl-6 py-3">
@@ -34,7 +30,7 @@
                                             @if ($product->image !== 'null')
                                                 <img src="{{ $product->image }}" alt="{{ $product->name }}"
                                                     class="w-8 h-8 md:w-12 md:h-12 my-auto rounded-md"
-                                                    onerror="removeElement(foo);">
+                                                    onerror="removeElement(this);">
                                             @endif
                                             <strong class="ml-3 my-auto">{{ ucfirst($product->name) }}</strong>
                                         </div>
@@ -99,7 +95,7 @@
                         </div>
                     @endif
                     <hr class="my-4 border-secondary-300">
-                    @foreach ($foo->products as $product)
+                    @foreach ($this->products as $product)
                         @if ($product->price > 0)
                             <span class=" -mb-3">
                                 {{ ucfirst($product->name) }}

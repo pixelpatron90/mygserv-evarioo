@@ -127,7 +127,11 @@
                             @endauth
                         </div>
                     </div>
-                    @empty(!$this->products)
+                    @php
+                    use App\Livewire\Checkout\Index;
+                    $foo = new Index;
+                    @endphp
+                    @empty(!$foo->products)
                     <div class="widget">
                         <div class="title">
                             <h1>» Kundenmeinungen</h1>
