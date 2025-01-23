@@ -1,5 +1,5 @@
 @import 'fonts.css';
-@import '../../node_modules/animate.css/animate.min.css';
+@import '../node_modules/animate.css/animate.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
