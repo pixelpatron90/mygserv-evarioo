@@ -117,7 +117,11 @@
                             <a href="{{ route('login') }}" class="button bg-red-500 w-full hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Login') }}
                             </a>
-                            <hr class="w-48 h-1 mx-auto mt-2 mb-2 bg-gray-300">
+                            <div class="flex items-center my-2">
+                                <div class="w-full h-0.5 bg-secondary-200"></div>
+                                <div class="px-5 text-center text-secondary-500">{{ __('or') }}</div>
+                                <div class="w-full h-0.5 bg-secondary-200"></div>
+                            </div>
                             <a href="{{ route('register') }}" class="button bg-red-500 w-full hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Register') }}
                             </a>
