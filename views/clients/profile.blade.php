@@ -32,9 +32,9 @@
             </div>
             <div class="lg:col-span-9 col-span-12">
                 <div class="content-box">
-                    <h1 class="text-xl font-semibold">{{ __('My Details') }}</h1>
+                    <h1 class="text-xl text-secondary-200 font-semibold">{{ __('My Details') }}</h1>
                     <div class="grid grid-cols-1 gap-4">
-                        <div class="mt-6">
+                        <div class="mt-2">
                             <form method="POST" action="{{ route('clients.profile.update') }}">
                                 @csrf
                                 <x-input type="text" class="mt-4" placeholder="{{ __('First name') }}"
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="content-box mt-4">
-                    <h1 class="text-xl font-semibold">{{ __('2FA') }}</h1>
+                    <h1 class="text-xl text-secondary-200 font-semibold">{{ __('2FA') }}</h1>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         {{ __('Two factor authentication adds an extra layer of security to your account. Once enabled, you will be prompted to enter a code from your authenticator app when logging in.') }}
                     </p>
@@ -198,7 +198,7 @@
                     @endisset
                 </div>
                 <div class="content-box mt-4">
-                    <h1 class="text-xl font-semibold">{{ __('Browser Sessions') }}</h1>
+                    <h1 class="text-xl text-secondary-200 font-semibold">{{ __('Browser Sessions') }}</h1>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         {{ __('Manage and logout your active sessions on other browsers and devices.') }}
                     </p>
