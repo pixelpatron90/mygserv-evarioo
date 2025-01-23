@@ -55,7 +55,7 @@
                                         <option value="immediate">{{ __('Immediate') }}</option>
                                     </x-input>
 
-                                    <button class="button bg-green-500 hover:bg-green-600 text-white mt-4" type="button" data-modal-toggle="confimrationModal" data-modal-hide="cancellationModal">
+                                    <button class="button bg-red-500 hover:bg-red-600 text-white mt-4" type="button" data-modal-toggle="confimrationModal" data-modal-hide="cancellationModal">
                                         {{ __('Cancel') }} {{ $product->name }}
                                     </button>
                                 </form>
@@ -76,17 +76,17 @@
                                     {{ __('This will cancel (delete) the product and any associated services. This is irreversible.') }}
                                 </p>
                                 <x-slot name="footer">
-                                    <button class="button button-secondary" data-modal-toggle="confimrationModal">
+                                    <button class="button bg-green-500 hover:bg-green-600 text-white" data-modal-toggle="confimrationModal">
                                         {{ __('No') }}
                                     </button>
-                                    <button class="button button-danger"
+                                    <button class="button bg-red-500 hover:bg-red-600 text-white"
                                         onclick="document.getElementById('cancellationForm').submit();">
                                         {{ __('Yes') }}
                                     </button>
                                 </x-slot>
                             </x-modal>
 
-                            <button class="button button-danger"  data-modal-target="cancellationModal"
+                            <button class="button bg-red-500 hover:bg-red-600 text-white"  data-modal-target="cancellationModal"
                                 data-modal-toggle="cancellationModal">
                                 {{ __('Cancel Product') }}
                             </button>
@@ -120,7 +120,7 @@
             <div class="sm:flex">
                 @if ($link)
                     <div class="sm:flex-1">
-                        <a href="{{ $link }}" class="button button-primary" target="_blank">
+                        <a href="{{ $link }}" class="button bg-green-500 hover:bg-green-600 text-white" target="_blank">
                             {{ __('Login to Product') }}
                         </a>
                     </div>
@@ -128,7 +128,7 @@
                 @if ($orderProduct->getOpenInvoices()->count() > 0)
                     <div>
                         <a href="{{ route('clients.invoice.show', $orderProduct->getOpenInvoices()->first()->id) }}"
-                            class="button button-primary">
+                            class="button bg-green-500 hover:bg-green-600 text-white">
                             {{ __('View open Invoice') }}
                         </a>
                     </div>
