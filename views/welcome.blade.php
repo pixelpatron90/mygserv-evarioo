@@ -33,7 +33,7 @@
 
     @if ($announcements->count() > 0)
     <div class="content">
-        <h2 class="font-semibold text-2xl mb-2 text-secondary-900">{{ __('Announcements') }}</h2>
+        <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-900">{{ __('Announcements') }}</h2>
         <div class="grid grid-cols-12 gap-4">
             @foreach ($announcements->sortByDesc('created_at') as $announcement)
             <div class="col-span-12">
