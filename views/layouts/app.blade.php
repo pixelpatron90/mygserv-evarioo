@@ -82,18 +82,8 @@
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                       </svg>
                   </button>
-                  <div class="hidden w-full md:block" id="navbar-default">
-                    <ul>
-                        <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
-                        @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
-                        @if ($category->products()->where('hidden', false)->count() > 0 || $category->children->count() > 0)
-                        <li><a href="{{ route('products', $category->slug) }}">{{ $category->name }}</a></li>
-                        @endif
-                        @endforeach
-                        <li><a href="{{ route('announcements.index') }}">{{ __('Announcements') }}</a></li>
-                        <li><a href="{{ route('media.index') }}">{{ __('Media') }}</a></li>
-                        <li><a href="{{ route('legalnotice.index') }}">{{ __('Legal notice') }}</a></li>
-                    </ul>
+                  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    fgdg
                   </div>
               </nav>
 
