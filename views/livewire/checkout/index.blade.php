@@ -204,7 +204,7 @@
                                             {{ __('each') }}
                                         @endif
                                     </td>
-                                    <td class="py-3 pr-6 content-end" wire:click="removeProduct({{ $key }})">
+                                    <td class="py-3 pr-6 text-right" wire:click="removeProduct({{ $key }})">
                                         <button class="button bg-red-500 hover:bg-red-600 text-white">
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
