@@ -1,77 +1,8 @@
 <div>
     @empty(!$this->products)
         <div class="grid grid-cols-12 gap-4">
-            <div class="lg:col-span-8 col-span-12">
-                <div class="content-box !p-0 overflow-hidden">
-                    <h2 class="text-xl font-bold px-6 pt-5 pb-2">{{ __('Order overview') }}</h2>
-                    <table class="w-full">
-                        <thead class="border-b-2 border-secondary-200 dark:border-secondary-50 text-secondary-600">
-                            <tr>
-                                <th scope="col" class="text-start pl-6 py-2 text-sm font-normal">
-                                    {{ __('Product') }}
-                                </th>
-                                <th scope="col" class="text-start py-2 text-sm font-normal">
-                                    {{ __('Quantity') }}
-                                </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
-                                    {{ __('Price') }}
-                                </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
-                                    {{ __('Remove') }}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($this->products as $key => $product)
-                                <tr
-                                    class="{{ $loop->last ? '' : 'border-b-2 border-secondary-200 dark:border-secondary-50' }}">
-                                    <td class="pl-6 py-3">
-                                        <div class="flex">
-                                            @if ($product->image !== 'null')
-                                                <img src="{{ $product->image }}" alt="{{ $product->name }}"
-                                                    class="w-8 h-8 md:w-12 md:h-12 my-auto rounded-md"
-                                                    onerror="removeElement(this);">
-                                            @endif
-                                            <strong class="ml-3 my-auto">{{ ucfirst($product->name) }}</strong>
-                                        </div>
-                                        @error('product.' . $product->id)
-                                            <span class="text-red-500 text-sm">{{ $message }}</span>
-                                        @enderror
-                                    </td>
-                                    <td class="py-3">
-                                        @if ($product->allow_quantity == 1 || $product->allow_quantity == 2)
-                                            <input type="number" name="quantity"
-                                                wire:change="updateQuantity({{ $product->id }}, $event.target.value)"
-                                                wire:model="quantity" value="{{ $product->quantity }}"
-                                                class="w-16 border border-secondary-200 dark:border-secondary-50 dark:bg-secondary-200 rounded-md px-2 py-1 text-sm text-center"
-                                                min="1" max="100" />
-                                        @else
-                                            {{ $product->quantity }}
-                                        @endif
-                                    </td>
-                                    <td class="py-3">
-                                        @if ($product->discount)
-                                            <span class="text-red-500 line-through"><x-money :amount="$product->price" /></span>
-                                            <x-money :amount="round($product->price - $product->discount, 2)" />
-                                        @else
-                                            <x-money :amount="$product->price" :showFree="true" />
-                                        @endif
-                                        @if ($product->quantity > 1 && $product->price > 0)
-                                            {{ __('each') }}
-                                        @endif
-                                    </td>
-                                    <td class="py-3 pr-6" wire:click="removeProduct({{ $key }})">
-                                        <button class="button button-danger-outline">
-                                            <i class="ri-delete-bin-2-line"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="lg:col-span-4 col-span-12">
+
+            <div class="col-span-12">
                 <div class="content-box">
                     @if (empty($coupon))
                         <div class="flex flex-row items-start gap-x-2 place-content-stretch">
@@ -213,6 +144,78 @@
                     </form>
                 </div>
             </div>
+
+            <div class="col-span-12">
+                <div class="content-box !p-0 overflow-hidden">
+                    <h2 class="text-xl font-bold px-6 pt-5 pb-2">{{ __('Order overview') }}</h2>
+                    <table class="w-full">
+                        <thead class="border-b-2 border-secondary-200 dark:border-secondary-50 text-secondary-600">
+                            <tr>
+                                <th scope="col" class="text-start pl-6 py-2 text-sm font-normal">
+                                    {{ __('Product') }}
+                                </th>
+                                <th scope="col" class="text-start py-2 text-sm font-normal">
+                                    {{ __('Quantity') }}
+                                </th>
+                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
+                                    {{ __('Price') }}
+                                </th>
+                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
+                                    {{ __('Remove') }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($this->products as $key => $product)
+                                <tr
+                                    class="{{ $loop->last ? '' : 'border-b-2 border-secondary-200 dark:border-secondary-50' }}">
+                                    <td class="pl-6 py-3">
+                                        <div class="flex">
+                                            @if ($product->image !== 'null')
+                                                <img src="{{ $product->image }}" alt="{{ $product->name }}"
+                                                    class="w-8 h-8 md:w-12 md:h-12 my-auto rounded-md"
+                                                    onerror="removeElement(this);">
+                                            @endif
+                                            <strong class="ml-3 my-auto">{{ ucfirst($product->name) }}</strong>
+                                        </div>
+                                        @error('product.' . $product->id)
+                                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                                        @enderror
+                                    </td>
+                                    <td class="py-3">
+                                        @if ($product->allow_quantity == 1 || $product->allow_quantity == 2)
+                                            <input type="number" name="quantity"
+                                                wire:change="updateQuantity({{ $product->id }}, $event.target.value)"
+                                                wire:model="quantity" value="{{ $product->quantity }}"
+                                                class="w-16 border border-secondary-200 dark:border-secondary-50 dark:bg-secondary-200 rounded-md px-2 py-1 text-sm text-center"
+                                                min="1" max="100" />
+                                        @else
+                                            {{ $product->quantity }}
+                                        @endif
+                                    </td>
+                                    <td class="py-3">
+                                        @if ($product->discount)
+                                            <span class="text-red-500 line-through"><x-money :amount="$product->price" /></span>
+                                            <x-money :amount="round($product->price - $product->discount, 2)" />
+                                        @else
+                                            <x-money :amount="$product->price" :showFree="true" />
+                                        @endif
+                                        @if ($product->quantity > 1 && $product->price > 0)
+                                            {{ __('each') }}
+                                        @endif
+                                    </td>
+                                    <td class="py-3 pr-6" wire:click="removeProduct({{ $key }})">
+                                        <button class="button button-danger-outline">
+                                            <i class="ri-delete-bin-2-line"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     @else
         <div class="bg-red-500 rounded-md text-white p-4 w-full">
