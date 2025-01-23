@@ -136,11 +136,11 @@
                                 @csrf
                             </form>
                             @else
-                            <a href="{{ route('login') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
+                            <a href="{{ route('login') }}" class="button bg-red-500 w-full hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Login') }}
                             </a>
-                            <hr class="w-48 h-1 mx-auto mt-2 mb-2 bg-gray-100">
-                            <a href="{{ route('register') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
+                            <hr class="w-48 h-1 mx-auto mt-2 mb-2 bg-gray-300">
+                            <a href="{{ route('register') }}" class="button bg-red-500 w-full hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Register') }}
                             </a>
                             @endauth
