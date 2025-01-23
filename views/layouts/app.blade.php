@@ -139,7 +139,7 @@
                             <a href="{{ route('login') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Login') }}
                             </a>
-                            <hr class="h-px my-8 bg-red-500 border-0">
+                            <hr class="h-px mt-2 mb-2 bg-red-500 border-0">
                             <a href="{{ route('register') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
                                 {{ __('Register') }}
                             </a>
