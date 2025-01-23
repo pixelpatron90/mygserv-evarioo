@@ -43,7 +43,7 @@
     @apply relative content-center h-full me-2 text-base text-shadow;
   }
   main nav ul li::before {
-    @apply p-2 border-2 border-primarycolor text-white content-center block h-12 absolute top-0;
+    @apply p-2 border-2 border-primarycolor text-white content-center hidden sm:block h-12 absolute top-0;
     content: '»';
     background-image: url('../images/before.jpg');
   }
