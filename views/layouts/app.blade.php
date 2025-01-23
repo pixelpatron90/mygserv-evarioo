@@ -136,8 +136,12 @@
                                 @csrf
                             </form>
                             @else
-                            <a href="{{ route('login') }}" class="button button-primary md:flex-none flex-1">
-                                {{ __('Log In') }}
+                            <a href="{{ route('login') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
+                                {{ __('Login') }}
+                            </a>
+                            <hr>
+                            <a href="{{ route('register') }}" class="button bg-red-500 hover:bg-red-600 text-white md:flex-none flex-1">
+                                {{ __('Register') }}
                             </a>
                             @endauth
                         </div>
