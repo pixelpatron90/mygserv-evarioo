@@ -118,11 +118,6 @@
 
             <div class="site">
                 <div class="content">
-                    <div class="headline">
-                        <h1>Startseite</h1>
-                        <p>Willkommen auf mygserv.de</p>
-                    </div>
-
                     <section>{{ $slot }}</section>
                 </div>
                 <div class="sidebar">
