@@ -33,7 +33,7 @@
   }
 
   main nav {
-    @apply bg-primarycolor sm:h-12 mt-2;
+    @apply bg-primarycolor sm:h-12 mt-2 sm:p-0 p-2;
   }
   main nav ul {
     @apply sm:flex sm:flex-row flex-col sm:h-full;
