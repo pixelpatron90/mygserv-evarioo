@@ -57,10 +57,10 @@
   }
 
   main .site {
-    @apply flex flex-col sm:flex-row gap-5 mt-8;
+    @apply flex flex-col md:flex-row gap-5 mt-8;
   }
   main .site > .content {
-    @apply sm:w-9/12 w-full bg-gray-200 p-8;
+    @apply md:w-9/12 w-full bg-gray-200 p-8;
   }
   main .site .content .headline {
     @apply w-full;
@@ -79,7 +79,7 @@
   }
 
   main .site .sidebar {
-    @apply w-full text-gray-500 text-base sm:w-3/12;
+    @apply w-full text-gray-500 text-base md:w-3/12;
   }
 
   main .site .sidebar > .widget {
