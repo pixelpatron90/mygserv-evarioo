@@ -105,17 +105,14 @@
                 <div class="sidebar">
                     <div class="widget">
                         <div class="title">
-                            <h1>» Kundenmeinungen</h1>
+                            <h1>» {{ __('Authentication') }}</h1>
                         </div>
                         <div class="content">
-
                             @auth
-
                             <h1 class="w-full p-2 mb-1.5 bg-red-500 text-white rounded-md">
                                 {{ __('Welcome back,') }}
                                 {{ Auth::user()->username }}
                             </h1>
-
                             <a href="{{ route('clients.profile') }}"
                                 class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
                                 <i class="ri-account-circle-line"></i> {{__('Profile')}}
@@ -130,7 +127,6 @@
                                 <i class="ri-code-s-slash-line"></i> {{ __('API') }}
                             </a>
                             @endif
-
                             <a type="button" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                                 class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded transition-all ease-in-out">
@@ -139,13 +135,11 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                                 @csrf
                             </form>
-
-                @else
-                <a href="{{ route('login') }}" class="button button-primary md:flex-none flex-1">
-                    {{ __('Log In') }}
-                </a>
-                @endauth
-
+                            @else
+                            <a href="{{ route('login') }}" class="button button-primary md:flex-none flex-1">
+                                {{ __('Log In') }}
+                            </a>
+                            @endauth
                         </div>
                     </div>
                     <div class="widget">
