@@ -15,7 +15,7 @@
                             onerror="removeElement(this);" />
                         @endif
                         <div>
-                            <h3 class="font-semibold text-lg">{{ $category->name }}</h3>
+                            <h3 class="font-semibold text-secondary-200 text-lg">{{ $category->name }}</h3>
                         </div>
                     </div>
                     <div class="prose dark:prose-invert">@markdownify($category->description)</div>
@@ -38,12 +38,12 @@
             @foreach ($announcements->sortByDesc('created_at') as $announcement)
             <div class="col-span-12">
                 <div class="content-box">
-                    <h3 class="font-semibold text-lg">{{ $announcement->title }}</h3>
+                    <h3 class="font-semibold text-secondary-200 text-lg">{{ $announcement->title }}</h3>
                     <div class="prose dark:prose-invert">
                         @markdownify($announcement->announcement)
                     </div>
                     <div class="flex justify-between items-center mt-3">
-                        <span class="text-sm text-secondary-600">{{ __('Published') }}
+                        <span class="text-sm text-secondary-400">{{ __('Published') }}
                             {{ $announcement->created_at->diffForHumans() }}</span>
                     </div>
                 </div>
