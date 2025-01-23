@@ -23,13 +23,13 @@
                         <table class="w-full">
                             <thead class="border-b-2 border-secondary-200 text-secondary-200">
                                 <tr>
-                                    <th scope="col" class="text-start pl-6 py-2 text-sm font-normal">
+                                    <th scope="col" class="text-start pl-6 py-2 text-secondary-200 font-normal">
                                         {{ __('Product/Service') }}</th>
-                                    <th scope="col" class="text-start pr-6 py-2 text-sm font-normal hidden md:table-cell">
+                                    <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal hidden md:table-cell">
                                         {{ __('Active until') }}</th>
-                                    <th scope="col" class="text-start pr-6 py-2 text-sm font-normal hidden md:table-cell">
+                                    <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal hidden md:table-cell">
                                         {{ __('Status') }}</th>
-                                    <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
+                                    <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
                                         {{ __('Actions') }}</th>
                                 </tr>
                             </thead>
