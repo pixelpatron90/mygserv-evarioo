@@ -122,7 +122,7 @@
                     <form wire:submit.prevent="pay">
                         <span class="text-secondary-200">{{ __('You can continue without paying') }}</span>
                         @if (config('settings::tos'))
-                            <div class="items-center">
+                            <div class="items-center mt-3">
                                 @php
                                 $tos = "I agree to the <a href='" . route('tos') . "' class='text-red-500 hover:text-red-600'>terms of service</a>"; @endphp <x-input id="tos" type="checkbox" name="tos" required
                                     :label="$tos" wire:model="tos" />
