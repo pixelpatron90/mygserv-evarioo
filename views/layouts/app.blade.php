@@ -101,7 +101,6 @@
     </header>
     <main>
         <div class="container">
-            @if ($clients) @include('layouts.subnavigation') @endif
             <nav>
                 <ul>
                     <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
@@ -118,6 +117,7 @@
 
             <div class="site">
                 <div class="content">
+                    @if ($clients) @include('layouts.subnavigation') @endif
                     <section>{{ $slot }}</section>
                 </div>
                 <div class="sidebar">
