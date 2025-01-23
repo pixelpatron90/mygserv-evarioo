@@ -15,7 +15,7 @@
                             <img src="/storage/categories/{{ $category->image }}" class="w-20 h-full rounded-md mr-4" />
                         @endif
                         <div class="w-full">
-                            <h1 class="text-3xl font-semibold text-secondary-900">{{ $category->name }}</h1>
+                            <h1 class="text-3xl font-semibold text-secondary-400">{{ $category->name }}</h1>
                             <div class="prose dark:prose-invert">
                                 @markdownify($category->description)
                             </div>

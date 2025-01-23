@@ -6,7 +6,7 @@
                     onerror="removeElement(this);">
             @endif
             <div>
-                <h3 class="text-lg text-secondary-800 leading-5 font-semibold">
+                <h3 class="text-lg text-secondary-400 leading-5 font-semibold">
                     {{ $product->name }}</h3>
                 <p>
                     <x-money :amount="$product->price()" showFree="true" />
@@ -18,7 +18,7 @@
         </div>
         <div class="pt-3 mt-auto">
             @if ($product->stock_enabled && $product->stock <= 0)
-                <a class="button bg-secondary-200 text-white w-full hover:cursor-not-allowed">
+                <a class="button bg-red-500 text-white w-full hover:cursor-not-allowed">
                     Out of stock
                 </a>
             @else
