@@ -1,5 +1,6 @@
 <div>
     @php
+    use App\Livewire\Checkout\Index;
     $foo = new Index;
     @endphp
     @empty(!$foo->products)
