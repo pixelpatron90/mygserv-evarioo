@@ -85,7 +85,7 @@
                     @if (config('settings::discord_enabled'))
                     <a href="{{ route('social.login', 'discord') }}"
                         class="button button-secondary !flex gap-x-2 items-center justify-center">
-                        <svg class="w-5 h-5 mr-2 text-secondary-900 dark:text-secondary" viewBox="0 0 127.14 96.36"
+                        <svg class="w-5 h-5 mr-2 text-secondary-900" viewBox="0 0 127.14 96.36"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <style>
