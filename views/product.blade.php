@@ -8,50 +8,6 @@
     </script>
     <div class="content">
         <div class="grid grid-cols-12 gap-4">
-            @if ($categories->count() > 0)
-                <div class="lg:col-span-3 col-span-12">
-                    <div class="content-box">
-                        <div class="flex gap-x-2 items-center">
-                            <div
-                                class="bg-primary-400 w-8 h-8 flex items-center justify-center rounded-md text-gray-50 text-xl">
-                                <i class="ri-list-indefinite"></i>
-                            </div>
-                            <h3 class="font-semibold text-lg">{{ __('Categories') }}</h3>
-                        </div>
-                        <div class="flex flex-col gap-2 mt-2">
-                            @foreach ($categories as $categoryItem)
-                                @php $hasActiveChild = false; @endphp
-                                @if ($categoryItem->children->count() > 0)
-                                    @foreach ($categoryItem->children as $childCategory)
-                                        @if ($category->name == $childCategory->name)
-                                            @php $hasActiveChild = true; @endphp
-                                        @endif
-                                    @endforeach
-                                @endif
-                                <div class="flex flex-col gap-1 group duration-150">
-                                    @if ($categoryItem->products()->where('hidden', false)->count() > 0 || $categoryItem->children->count() > 0)
-                                        <a href="{{ route('products', $categoryItem->slug) }}"
-                                            class="@if ($category->name == $categoryItem->name || $hasActiveChild) text-secondary-900 pl-3 !border-primary-400 @endif border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-3 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
-                                            {{ $categoryItem->name }}
-                                        </a>
-                                    @endif
-                                    @if($categoryItem->children->count() > 0)
-                                        <div class="flex flex-col gap-1 @if(!$hasActiveChild) hidden @endif group-hover:flex transition ease-in-out duration-300">
-                                            @foreach ($categoryItem->children as $childCategory)
-                                                <a href="{{ route('products', $childCategory->slug) }}"
-                                                    class="pl-6 text-sm @if ($category->name == $childCategory->name) text-secondary-900 pl-3 !border-primary-400 @endif border-l-2 border-transparent duration-300 hover:text-secondary-900 hover:pl-8 hover:border-primary-400 focus:text-secondary-900 focus:pl-3 focus:border-primary-400">
-                                                    {{ $childCategory->name }}
-                                                </a>
-                                            @endforeach
-                                        </div>
-                                    @endif
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            @endif
-
             <div class="@if ($categories->count() > 0) lg:col-span-6 @endif col-span-12">
                 <div class="content-box">
                     <div class="flex flex-row">
