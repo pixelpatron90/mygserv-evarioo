@@ -197,35 +197,19 @@
   }
 
   .button-primary {
-    @apply bg-red-500 text-white hover:bg-red-600 hover:text-white focus:bg-primary-300 focus:text-white focus:ring-2 ring-primary-300 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
+    @apply bg-red-500 text-white hover:bg-red-600;
   }
 
   .button-secondary {
-    @apply bg-secondary-200 text-secondary-800 hover:bg-secondary-300 hover:text-secondary-900 focus:bg-secondary-300 focus:text-secondary-900 focus:ring-2 ring-secondary-300 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
+    @apply bg-secondary-500 text-white hover:bg-secondary-600;
   }
 
   .button-danger {
-    @apply bg-danger-400 text-danger-50 hover:bg-danger-300 hover:text-white focus:bg-danger-300 focus:text-white focus:ring-2 ring-danger-300 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
+    @apply bg-red-500 text-white hover:bg-red-600;
   }
 
   .button-success {
-    @apply bg-success-400 text-success-50 hover:bg-success-300 hover:text-white focus:bg-success-300 focus:text-white focus:ring-2 ring-success-300 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
-  }
-
-  .button-primary-outline {
-    @apply text-primary-400 hover:bg-primary-400 hover:text-white focus:bg-primary-400 focus:text-white focus:ring-2 ring-primary-400 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
-  }
-
-  .button-secondary-outline {
-    @apply text-secondary-800 hover:bg-secondary-200 hover:text-secondary-900 focus:bg-secondary-200 focus:text-secondary-900 focus:ring-2 ring-secondary-200 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
-  }
-
-  .button-danger-outline {
-    @apply text-danger-400 hover:bg-danger-400 hover:text-white focus:bg-danger-400 focus:text-white focus:ring-2 ring-danger-400 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
-  }
-
-  .button-success-outline {
-    @apply text-success-400 hover:bg-success-400 hover:text-white focus:bg-success-400 focus:text-white focus:ring-2 ring-success-400 ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100;
+    @apply bg-green-500 text-white hover:bg-green-600;
   }
 
   .content {
