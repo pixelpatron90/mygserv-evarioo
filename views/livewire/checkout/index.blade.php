@@ -10,7 +10,7 @@
                                 <x-input type="text" placeholder="{{ __('Coupon') }}" name="couponCode"
                                     wire:model="couponCode" icon="ri-coupon-2-line" class="w-full" />
                             </div>
-                            <button class="button button-primary" wire:click="validateCoupon">
+                            <button class="button bg-green-500 hover:bg-green-600 text-white" wire:click="validateCoupon">
                                 {{ __('Validate') }}
                             </button>
                         </div>
@@ -20,8 +20,8 @@
                                 {{ __('Coupon:') }}
                                 <span class="text-secondary-900 font-semibold">{{ $coupon->code }}</span>
                             </div>
-                            <button class="button button-danger" wire:click="removeCoupon">
-                                <i class="ri-delete-bin-2-line"></i>
+                            <button class="button bg-red-500 hover:bg-red-600 text-white" wire:click="removeCoupon">
+                                <i class="fa-solid fa-trash"></i>
                             </button>
                         </div>
                     @endif
@@ -58,7 +58,7 @@
                             </div>
                         @endif
                         @if ($product->setup_fee > 0)
-                            <div class="flex flex-row items-center justify-between text-gray-500 text-sm">
+                            <div class="flex flex-row items-center justify-between text-gray-200 text-sm">
                                 <div class="flex flex-row items-center">
                                     {{ __('Setup fee') }}
                                 </div>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     @endif
-                    <hr class="my-4 border-secondary-300">
+                    <hr class="my-4 border-secondary-200">
                     @if($tax->amount > 0)
                         <div class="flex flex-row items-center justify-between mt-2">
                             <div class="flex flex-row items-center">
@@ -108,7 +108,7 @@
                             <span class="text-lg font-bold">{{ __('Total Today') }}</span>
                         </div>
                         <div class="flex flex-col items-end">
-                            <span class="text-lg font-bold">
+                            <span class="text-lg text-secondary-200 font-bold">
                                 @if (!empty($discount))
                                     <x-money :amount="$total - $discount" />
                                 @else
@@ -120,16 +120,16 @@
 
                     <hr class="my-4 border-secondary-300">
                     <form wire:submit.prevent="pay">
-                        {{ __('You can continue without paying') }}
+                        <span class="text-secondary-200">{{ __('You can continue without paying') }}</span>
                         @if (config('settings::tos'))
                             <div class="items-center p-1">
                                 @php
-                                $tos = "I agree to the <a href='" . route('tos') . "' class='text-blue-500 hover:text-blue-600'>terms of service</a>"; @endphp <x-input id="tos" type="checkbox" name="tos" required
+                                $tos = "I agree to the <a href='" . route('tos') . "' class='text-red-500 hover:text-red-600'>terms of service</a>"; @endphp <x-input id="tos" type="checkbox" name="tos" required
                                     :label="$tos" wire:model="tos" />
                             </div>
                         @endif
                         <div class="flex justify-end mt-4">
-                            <button class="button button-primary" type="submit">
+                            <button class="button bg-green-500 hover:bg-green-600 text-white" type="submit">
                                 <span wire:loading wire:target="pay">
                                     <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#9095A0" stroke-width="4"></circle>
@@ -147,20 +147,20 @@
 
             <div class="col-span-12">
                 <div class="content-box !p-0 overflow-hidden">
-                    <h2 class="text-xl font-bold px-6 pt-5 pb-2">{{ __('Order overview') }}</h2>
+                    <h2 class="text-xl font-bold text-secondary-200 px-6 pt-5 pb-2">{{ __('Order overview') }}</h2>
                     <table class="w-full">
-                        <thead class="border-b-2 border-secondary-200 dark:border-secondary-50 text-secondary-600">
+                        <thead class="border-b-2 border-secondary-200 text-secondary-200">
                             <tr>
-                                <th scope="col" class="text-start pl-6 py-2 text-sm font-normal">
+                                <th scope="col" class="text-start pl-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Product') }}
                                 </th>
-                                <th scope="col" class="text-start py-2 text-sm font-normal">
+                                <th scope="col" class="text-start py-2 text-secondary-200 font-normal">
                                     {{ __('Quantity') }}
                                 </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
+                                <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Price') }}
                                 </th>
-                                <th scope="col" class="text-start pr-6 py-2 text-sm font-normal">
+                                <th scope="col" class="text-start pr-6 py-2 text-secondary-200 font-normal">
                                     {{ __('Remove') }}
                                 </th>
                             </tr>
@@ -168,7 +168,7 @@
                         <tbody>
                             @foreach ($this->products as $key => $product)
                                 <tr
-                                    class="{{ $loop->last ? '' : 'border-b-2 border-secondary-200 dark:border-secondary-50' }}">
+                                    class="{{ $loop->last ? '' : 'border-b-2 border-secondary-200' }}">
                                     <td class="pl-6 py-3">
                                         <div class="flex">
                                             @if ($product->image !== 'null')
@@ -176,7 +176,7 @@
                                                     class="w-8 h-8 md:w-12 md:h-12 my-auto rounded-md"
                                                     onerror="removeElement(this);">
                                             @endif
-                                            <strong class="ml-3 my-auto">{{ ucfirst($product->name) }}</strong>
+                                            <strong class="ml-3 text-secondary-200 my-auto">{{ ucfirst($product->name) }}</strong>
                                         </div>
                                         @error('product.' . $product->id)
                                             <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -187,7 +187,7 @@
                                             <input type="number" name="quantity"
                                                 wire:change="updateQuantity({{ $product->id }}, $event.target.value)"
                                                 wire:model="quantity" value="{{ $product->quantity }}"
-                                                class="w-16 border border-secondary-200 dark:border-secondary-50 dark:bg-secondary-200 rounded-md px-2 py-1 text-sm text-center"
+                                                class="w-16 border border-secondary-200 rounded-md px-2 py-1 text-sm text-center"
                                                 min="1" max="100" />
                                         @else
                                             {{ $product->quantity }}
@@ -205,7 +205,7 @@
                                         @endif
                                     </td>
                                     <td class="py-3 pr-6" wire:click="removeProduct({{ $key }})">
-                                        <button class="button button-danger-outline">
+                                        <button class="button bg-red-500 hover:bg-red-600 text-white">
                                             <i class="ri-delete-bin-2-line"></i>
                                         </button>
                                     </td>
