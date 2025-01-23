@@ -16,13 +16,12 @@
 
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
 
-                <button class="button button-primary w-full mt-4">{{ __('Login') }}</button>
+                <button class="button bg-red-500 hover:bg-red-600 text-white w-full mt-4">{{ __('Login') }}</button>
 
-                <a href="{{ route('register') }}" class="text-sm text-secondary-600 underline mt-2 block text-center">{{
+                <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-3 block text-center">{{
                     __('New here? Create an account.') }}</a>
 
                 <div class="flex items-center justify-center mt-4">
-                    <!-- Recaptcha, also send the form id -->
                     <x-recaptcha form="login" />
                 </div>
 
@@ -31,9 +30,9 @@
                 config('settings::google_enabled') == 1 ||
                 config('settings::github_enabled') == 1)
                 <div class="flex items-center my-2">
-                    <div class="w-full h-0.5 bg-secondary-200 dark:bg-secondary-300"></div>
-                    <div class="px-5 text-center text-secondary-500 dark:text-secondary-400">{{ __('or') }}</div>
-                    <div class="w-full h-0.5 bg-secondary-200 dark:bg-secondary-300"></div>
+                    <div class="w-full h-0.5 bg-secondary-200"></div>
+                    <div class="px-5 text-center text-secondary-500">{{ __('or') }}</div>
+                    <div class="w-full h-0.5 bg-secondary-200"></div>
                 </div>
                 <div class="space-y-2">
                     @if (config('settings::google_enabled') == 1)

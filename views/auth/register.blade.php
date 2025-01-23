@@ -74,7 +74,7 @@
                     <a href="{{ route('login') }}" class="text-sm text-secondary-200 font-bold">
                         {{ __('Already registered?') }}
                     </a>
-                    <button type="submit" class="button bg-red-500 text-white">
+                    <button type="submit" class="button bg-red-500 hover:bg-red-600 text-white">
                         {{ __('Register') }}
                     </button>
                 </div>
