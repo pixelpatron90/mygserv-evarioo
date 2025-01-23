@@ -1,7 +1,6 @@
 <x-app-layout>
-
-    <div class="content min-h-[50vh] flex items-center justify-center flex-col">
-        <div class="content-box max-w-lg w-full">
+    <div class="content flex items-center justify-center flex-col">
+        <div class="content-box w-full">
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
                 <h2 class="text-lg font-semibold">{{ __('Login to continue') }}</h2>
