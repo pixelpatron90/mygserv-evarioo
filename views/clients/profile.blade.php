@@ -80,7 +80,7 @@
                         {{ __('Two factor authentication adds an extra layer of security to your account. Once enabled, you will be prompted to enter a code from your authenticator app when logging in.') }}
                     </p>
                     @isset($secret)
-                        <button data-modal-target="tfa" data-modal-toggle="tfa" class="button button-primary"
+                        <button data-modal-target="tfa" data-modal-toggle="tfa" class="button bg-green-500 hover:bg-green-600 text-white"
                             type="button">
                             {{ __('Setup Two Factor Authentication') }}
                         </button>
@@ -133,7 +133,7 @@
                                                     required type="password" />
                                             </div>
                                             <div class="flex items-center justify-end mt-4">
-                                                <button class="button button-primary" type="submit">
+                                                <button class="button bg-green-500 hover:bg-green-600 text-white" type="submit">
                                                     {{ __('Submit') }}
                                                 </button>
                                             </div>
@@ -185,7 +185,7 @@
                                             </div>
                                             <div class="flex items-center justify-end mt-4">
                                                 <button
-                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                    class="text-white bg-red-500 hover:bg-red-600 text-whitefocus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                                     type="submit">
                                                     {{ __('Submit') }}
                                                 </button>
