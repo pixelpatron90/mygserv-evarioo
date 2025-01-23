@@ -2,7 +2,7 @@
     <div class="content">
         <div class="content-box">
             <div class="mb-4">
-                <h1 class="text-2xl font-bold">{{ __('Product: ') }}{{ $product->name }}</h1>
+                <h1 class="text-2xl text-secondary-200 font-bold">{{ __('Product: ') }}{{ $product->name }}</h1>
             </div>
             <div class="flex flex-wrap -mx-2 mb-4">
                 <div class="w-full md:w-1/2 px-2">
