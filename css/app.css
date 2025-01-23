@@ -49,7 +49,7 @@
   }
 
   main nav ul li a {
-    @apply sm:ms-7 w-full ms-0 -me-2 h-full p-2.5 text-white border border-primarycolor;
+    @apply sm:ms-7 block ms-0 -me-0 sm:-me-2 h-full p-2.5 text-white border border-primarycolor;
   }
   main nav ul li a:hover {
     @apply border border-transparent;
