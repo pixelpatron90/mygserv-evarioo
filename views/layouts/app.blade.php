@@ -82,7 +82,7 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                     </svg>
                 </button>
-                <div class="hidden w-full md:block h-full" id="navbar-default">
+                <div class="mt-1 md:mt-0 hidden w-full md:block h-full" id="navbar-default">
                   <ul>
                     <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
                     @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
