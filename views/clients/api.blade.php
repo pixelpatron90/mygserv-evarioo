@@ -29,7 +29,7 @@
                     <x-success/>
 
                     <div class="content-box">
-                        <h1 class="text-xl">Create API Token</h1>
+                        <h1 class="text-xl text-secondary-200">Create API Token</h1>
                         <form method="POST" action="{{ route('clients.api.create') }}">
                             @csrf
                             <x-input
@@ -50,15 +50,15 @@
                                     />
                                 @endforeach
                             </div>
-                            <button type="submit" class="button button-primary mt-6">
+                            <button type="submit" class="button bg-green-500 hover:bg-green-600 text-white mt-6">
                                 {{ __('Create') }}
                             </button>
                         </form>
                     </div>
                     <div class="content-box mt-4">
-                        <h1 class="text-xl">Manage API Token</h1>
+                        <h1 class="text-xl text-secondary-200">Manage API Token</h1>
                         @if ($tokens->isEmpty())
-                            <label class='text-center'>You have not tokens created yet!</label>
+                            <label class='bg-green-500 text-white rounded-md text-center'>You have not tokens created yet!</label>
                         @endif
 
                         @foreach($tokens as $token)
