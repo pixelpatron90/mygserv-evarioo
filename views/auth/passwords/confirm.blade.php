@@ -16,7 +16,7 @@
                 <x-recaptcha form="pw-confirm" />
                 <div class="flex justify-end mt-4">
                     <button type="submit"
-                        class="button bg-red-500 hover:text-red-600 text-white">
+                        class="button bg-red-500 hover:bg-red-600 text-white">
                         {{ __('Confirm') }}
                     </button>
                 </div>
