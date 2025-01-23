@@ -25,7 +25,7 @@
     </style>
     @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
     <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     @if (config('settings::app_logo'))
     <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png" />
     @else
