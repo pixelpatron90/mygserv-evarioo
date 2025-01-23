@@ -228,7 +228,7 @@
   }
 
   .content {
-    @apply container mx-auto items-center px-4;
+    @apply container mx-auto items-center;
   }
 
   .content-box {
