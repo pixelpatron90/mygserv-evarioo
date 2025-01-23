@@ -72,7 +72,7 @@
     @apply text-gray-500 pt-1 text-base;
   }
   main .site .content > section {
-    @apply mt-4;
+    @apply mt-0;
   }
   main .site .content > section > p {
     @apply text-gray-500 pt-1 text-xl;
