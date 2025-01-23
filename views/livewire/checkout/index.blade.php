@@ -182,7 +182,7 @@
                                             <span class="text-red-500 text-sm">{{ $message }}</span>
                                         @enderror
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 text-secondary-200">
                                         @if ($product->allow_quantity == 1 || $product->allow_quantity == 2)
                                             <input type="number" name="quantity"
                                                 wire:change="updateQuantity({{ $product->id }}, $event.target.value)"
@@ -193,7 +193,7 @@
                                             {{ $product->quantity }}
                                         @endif
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 text-secondary-200">
                                         @if ($product->discount)
                                             <span class="text-red-500 line-through"><x-money :amount="$product->price" /></span>
                                             <x-money :amount="round($product->price - $product->discount, 2)" />
