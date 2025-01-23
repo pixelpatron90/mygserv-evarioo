@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="min-h-[50vh] flex items-center justify-center flex-col">
         <div class="w-full content-box">
-            <div class="mb-4 text-red-500">
+            <div class="mb-4 bg-red-500 p-4 text-white rounded-md">
                 {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
             </div>
 
