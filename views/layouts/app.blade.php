@@ -160,7 +160,7 @@
     </footer>
     <div class="info">
         <div class="container">
-            <p>Seite wurde in 1.2 Sekunden geladen</p>
+            <p>Seite wurde in {{ round(microtime(true) - LARAVEL_START, 3) }} Sekunden geladen</p>
         </div>
     </div>
 </body>
