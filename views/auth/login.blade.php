@@ -18,7 +18,7 @@
 
                 <button class="button bg-red-500 hover:bg-red-600 text-white w-full mt-4">{{ __('Login') }}</button>
 
-                <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-3 block text-center">{{
+                <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-3.5 block text-center">{{
                     __('New here? Create an account.') }}</a>
 
                 <div class="flex items-center justify-center mt-4">
