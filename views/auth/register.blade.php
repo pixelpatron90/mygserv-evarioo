@@ -1,23 +1,18 @@
 <x-app-layout>
 
-    <div class="content min-h-[50vh] flex items-center justify-center flex-col">
+    <div class="content flex items-center justify-center flex-col">
 
         @if (config('settings::registrationAbillity_disable') == 1)
-        <div class="max-w-lg w-full text-center  pb-7 pt-7 mb-5 bg-red-400 rounded-lg">
-            <h1 class="font-bold text-red-800">REGISTRATION IS CURRENTLY DISABLED</h1>
+        <div class="w-full text-center pb-7 pt-7 mb-5 bg-red-500 rounded-lg">
+            <h1 class="font-bold text-white">REGISTRATION IS CURRENTLY DISABLED</h1>
         </div>
         @else
 
-        <div class="flex items-center text-secondary-900 font-semibold text-lg py-4 gap-x-2">
-            <x-application-logo class="w-10" />
-            {{ config('app.name', 'Paymenter') }}
-        </div>
-
-        <div class="content-box max-w-2xl w-full">
+        <div class="content-box w-full">
             <form method="POST" action="{{ route('register') }}" id="register">
                 @csrf
 
-                <h2 class="text-lg font-semibold">{{ __('Make an Account') }}</h2>
+                <h2 class="text-lg text-secondary-200 font-semibold">{{ __('Make an Account') }}</h2>
                 <div class="flex flex-row gap-4">
                     <x-input class="mt-3 w-full" label="{{ __('First name') }}" type="name"
                         placeholder="{{ __('First name..') }}" required name="first_name" id="first_name"
@@ -76,10 +71,10 @@
                     <x-recaptcha form="register" />
                 </div>
                 <div class="mt-3 flex justify-between items-center">
-                    <a href="{{ route('login') }}" class="text-sm text-secondary-600 underline">
+                    <a href="{{ route('login') }}" class="text-sm text-secondary-200 font-bold">
                         {{ __('Already registered?') }}
                     </a>
-                    <button type="submit" class="button button-primary">
+                    <button type="submit" class="button bg-red-500 text-white">
                         {{ __('Register') }}
                     </button>
                 </div>
