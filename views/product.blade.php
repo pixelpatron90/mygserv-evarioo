@@ -54,7 +54,7 @@
             </div>
             @endif
 
-            <div class="@if ($categories->count() > 0) lg:col-span-11 @endif col-span-12">
+            <div class="@if ($categories->count() > 0) lg:col-span-6 @endif col-span-12">
                 <div class="content-box">
                     <div class="flex flex-row">
                         @if($category->image)
