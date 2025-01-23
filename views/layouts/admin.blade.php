@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<!-- Software build by https://paymenter.org -->
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -8,9 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ 'Admin - ' . $title }}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
+    @vite(['themes/' . config('settings::theme-active') . '/js/admin.js', 'themes/' . config('settings::theme-active') . '/css/admin.css'], config('settings::theme-active'))
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
@@ -45,52 +43,49 @@
             });
         });
     </script>
-    <style>
-        :root {
-            --secondary-50: {{ config('settings::theme:secondary-50', '#ffffff') }};
-            --secondary-100: {{ config('settings::theme:secondary-100', '#fafcff') }};
-            --secondary-200: {{ config('settings::theme:secondary-200', '#ebeef3') }};
-            --secondary-300: {{ config('settings::theme:secondary-300', '#bbbfd2') }};
-            --secondary-400: {{ config('settings::theme:secondary-400', '#808498') }};
-            --secondary-500: {{ config('settings::theme:secondary-500', '#606372') }};
-            --secondary-600: {{ config('settings::theme:secondary-600', '#4d4f60') }};
-            --secondary-700: {{ config('settings::theme:secondary-700', '#353741') }};
-            --secondary-800: {{ config('settings::theme:secondary-800', '#1c1c20') }};
-            --secondary-900: {{ config('settings::theme:secondary-900', '#000000') }};
-
-            --primary-50: {{ config('settings::theme:primary-50', '#EDF0FF') }};
-            --primary-100: {{ config('settings::theme:primary-100', '#C6DBFF') }};
-            --primary-200: {{ config('settings::theme:primary-200', '#9BBEFB') }};
-            --primary-300: {{ config('settings::theme:primary-300', '#799CD8') }};
-            --primary-400: {{ config('settings::theme:primary-400', '#5270FD') }};
-        }
-
-        .dark {
-            --secondary-50: {{ config('settings::theme:secondary-50-dark', '#1E202D') }};
-            --secondary-100: {{ config('settings::theme:secondary-100-dark', '#313441') }};
-            --secondary-200: {{ config('settings::theme:secondary-200-dark', '#404351') }};
-            --secondary-300: {{ config('settings::theme:secondary-300-dark', '#4F525E') }};
-            --secondary-400: {{ config('settings::theme:secondary-400-dark', '#656874') }};
-            --secondary-500: {{ config('settings::theme:secondary-500-dark', '#7D8091') }};
-            --secondary-600: {{ config('settings::theme:secondary-600-dark', '#AEB2C2') }};
-            --secondary-700: {{ config('settings::theme:secondary-700-dark', '#CACBD2') }};
-            --secondary-800: {{ config('settings::theme:secondary-800-dark', '#F1F1F1') }};
-            --secondary-900: {{ config('settings::theme:secondary-900-dark', '#ffffff') }};
-        }
-    </style>
     @rappasoftTableStyles
     @rappasoftTableThirdPartyStyles
 </head>
 
-<body class="font-sans bg-secondary-100 dark:bg-secondary-50 text-secondary-700">
-    <div id="app" class="min-h-screen">
-        <x-paymenter-update />
-        @if (config('settings::sidebar') == 1)
-            @include('layouts.adminsidenavigation')
-        @else
-            @include('layouts.adminnavigation')
-        @endif
-        <div class="grow">
+<body>
+
+    <nav>
+        <div class="container flex flex-row justify-between">
+            <div class="flex flex-row w-full">
+                <div class="w-12 me-6">
+                    <svg version="1.1" viewBox="0 0 800 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="5.2147">
+                            <path d="m803 485.7v-41.196c0-68.678-27.482-103.04-82.445-103.04h-82.445c-54.963 0-82.445 34.365-82.445 103.04v20.598c0 41.196 10.325 72.119 30.923 92.718 20.598 20.598 44.638 34.365 72.119 41.196 27.482 6.8834 41.196 24.04 41.196 51.521v20.598h-602.3v-532.94l38.015 154.46h38.015l38.015-155.29v155.29h95.064v-265.17h-114.1l-29.046 94.073-12.724-0.83435-34.261-93.239h-114.1v746.75h717.96c54.963 0 82.445-34.365 82.445-103.04v-20.598c0-41.196-10.325-72.119-30.923-92.718-20.598-20.598-44.638-34.365-72.119-41.196-27.482-6.8834-41.196-24.04-41.196-51.521v-20.598h41.196v41.196h103.15z" fill="#fff"></path>
+                            <path d="m635.76 492.07c0 50.374-25.396 75.509-76.239 75.509h-272.36c-50.843 0-76.239-25.187-76.239-75.509v-245.46c0-50.374 25.396-75.509 76.239-75.509h272.36c50.843 0 76.239 25.187 76.239 75.509v56.632h-95.325v-37.754h-234.24v207.7h234.24v-37.754h-133.39v-94.386h228.72z" fill="#058cd0"></path>
+                        </g>
+                    </svg>
+                </div>
+                <ul>
+                    <li>
+                        <a href="{{ route('admin') }}">
+                            <i class="fa-solid fa-bars me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin') }}">
+                            <i class="fa-solid fa-bars me-2"></i> Kunden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin') }}">
+                            <i class="fa-solid fa-bars me-2"></i> Bestellungen
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-center">
+                LOGIN
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-24">
+        <div class="container">
             @if (!request()->routeIs('admin.index'))
                 <div class="py-6 pb-12">
                     <div class="mx-auto max-w-8xl sm:px-6 lg:px-8">
@@ -105,13 +100,31 @@
             @else
                 {{ $slot }}
             @endif
-        </main>
+        </div>
+    </main>
 
-        <x-footer />
-    </div>
+    <footer>
+
+        <div class="container">
+            <div class="flex flex-row justify-between">
+                <div>
+                    <p>Copyright © 2025 - 2026 www.mygserv.de & <a class="text-red-500 hover:text-red-600" href="https://www.evarioo.eu">www.evarioo.eu</a> | Alle Rechte vorbehalten.</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a class="text-red-500 hover:text-red-600" href="https://www.evarioo.eu">Startseite</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
     <x-success />
     @rappasoftTableScripts
     @rappasoftTableThirdPartyScripts
-</body>
 
+  </body>
 </html>

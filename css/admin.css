@@ -1,0 +1,184 @@
+@import '../node_modules/animate.css/animate.min.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply bg-[#1a202c];
+    }
+  
+    nav {
+      @apply bg-primary py-5 w-full top-0 fixed;
+    }
+  
+    nav ul {
+      @apply flex flex-row h-full;
+    }
+  
+    nav ul li {
+      @apply relative content-center h-full me-2 text-base text-shadow;
+    }
+  
+    nav ul li a {
+      @apply py-2 px-3 text-white me-1.5 rounded-md;
+    }
+    nav ul li a:hover {
+      @apply bg-red-600 text-shadow;
+    }
+    
+    main {
+      @apply py-6;
+    }
+  
+    footer {
+      @apply w-full text-white bottom-0 fixed bg-primary py-5;
+    }
+  }
+  
+  @layer components {
+  }
+  
+  @layer utilities {
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+  
+    ::-webkit-scrollbar-track {
+      @apply bg-primary;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      @apply bg-red-500;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-red-600;
+    }
+
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/inter-tight-v7-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-tight-v7-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-tight-v7-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/inter-tight-v7-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/inter-tight-v7-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+}
+
+@layer components {
+  .form-label {
+    @apply absolute left-[9px] top-px text-sm text-gray-500 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base group-focus-within:!top-px group-focus-within:!text-sm group-focus-within:!text-logo rounded-md dark:text-darkmodetext dark:bg-darkmode bg-white;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-3 rounded-md shadow-sm outline-none focus:ring-1 focus:ring-primary-400 border-0 dark:text-darkmodetext dark:bg-darkmode transition-all ease-in-out;
+  }
+
+  .form-input.is-invalid {
+    @apply border-red-500;
+  }
+
+  .form-submit {
+    @apply px-4 py-2 font-bold text-white rounded-md bg-logo hover:bg-blue-700;
+  }
+
+  .prose {
+    @apply prose-code:before:content-none prose-code:after:content-none min-w-full;
+  }
+
+  .prose > * {
+    @apply my-0;
+  }
+
+  .button {
+    @apply inline-block py-2 px-4 rounded-md text-center font-sans font-medium duration-300;
+  }
+
+  .button-primary {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+
+  .button-secondary {
+    @apply bg-secondary-500 text-white hover:bg-secondary-600;
+  }
+
+  .button-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+
+  .button-success {
+    @apply bg-green-500 text-white hover:bg-green-600;
+  }
+
+  .content {
+    @apply w-full;
+  }
+
+  .content-box {
+    @apply bg-primarycolor px-6 py-5 rounded-md border-2 duration-300;
+  }
+
+  .textarea-banner {
+    width: 100px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primarycolor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-red-500;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-red-600;
+  }
+}
+
+:root {
+  --danger-50: #ffebeb;
+  --danger-100: #fdcfcf;
+  --danger-200: #ef9595;
+  --danger-300: #db5858;
+  --danger-400: #dc3a3a;
+
+  --success-50: #ebfff1;
+  --success-100: #b5efce;
+  --success-200: #86dea0;
+  --success-300: #82ce91;
+  --success-400: #4eb165;
+}

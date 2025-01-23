@@ -7,7 +7,9 @@ export default defineConfig({
         laravel({
             input: [
                 "themes/mygserv-evarioo/css/app.css",
-                "themes/mygserv-evarioo/js/app.js"
+                "themes/mygserv-evarioo/js/app.js",
+                "themes/mygserv-evarioo/css/admin.css",
+                "themes/mygserv-evarioo/js/admin.js"
             ],
             buildDirectory: "mygserv-evarioo/",
         }),
