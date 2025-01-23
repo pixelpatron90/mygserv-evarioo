@@ -8,7 +8,7 @@
     @apply bg-white;
   }
   header {
-    @apply bg-primary h-44 py-7;
+    @apply bg-primarycolor h-44 py-7;
   }
   header div {
     @apply flex justify-between w-full h-full;
@@ -33,7 +33,7 @@
   }
 
   main nav {
-    @apply bg-primary h-12 mt-2;
+    @apply bg-primarycolor h-12 mt-2;
   }
   main nav ul {
     @apply flex flex-row h-full;
@@ -43,13 +43,13 @@
     @apply relative content-center h-full me-2 text-base text-shadow;
   }
   main nav ul li::before {
-    @apply p-2 border-2 border-primary text-white content-center block h-12 absolute top-0;
+    @apply p-2 border-2 border-primarycolor text-white content-center block h-12 absolute top-0;
     content: '»';
     background-image: url('../images/before.jpg');
   }
 
   main nav ul li a {
-    @apply ms-7 -me-2 h-full p-2.5 text-white border border-primary;
+    @apply ms-7 -me-2 h-full p-2.5 text-white border border-primarycolor;
   }
   main nav ul li a:hover {
     @apply bg-red-500 border border-transparent;
@@ -91,7 +91,7 @@
   }
 
   main .site .sidebar > .widget .title h1 {
-    @apply bg-primary px-3 py-2.5 text-white text-shadow;
+    @apply bg-primarycolor px-3 py-2.5 text-white text-shadow;
   }
 
   main .site .sidebar > .widget > .content {
@@ -99,13 +99,13 @@
   }
 
   footer {
-    @apply bg-primary sm:pt-0 sm:pb-0 pt-2 pb-2 sm:h-12 text-shadow;
+    @apply bg-primarycolor sm:pt-0 sm:pb-0 pt-2 pb-2 sm:h-12 text-shadow;
   }
   footer > div {
-    @apply bg-primary flex flex-col sm:flex-row justify-between w-full h-full sm:gap-y-0 gap-y-2;
+    @apply bg-primarycolor flex flex-col sm:flex-row justify-between w-full h-full sm:gap-y-0 gap-y-2;
   }
   footer > div p {
-    @apply bg-primary text-gray-300 content-center;
+    @apply bg-primarycolor text-gray-300 content-center;
   }
   footer > div ul {
     @apply flex flex-row justify-start sm:justify-end;

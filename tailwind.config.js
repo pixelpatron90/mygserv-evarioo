@@ -9,8 +9,8 @@ module.exports = {
     // Colors
     extend: {
       colors: {
-        primary: '#23262f',
-        secondary: '#cb3f44',
+        primarycolor: '#23262f',
+        secondarycolor: '#cb3f44',
         //white: "#636B77",
         accent: '#CFE2FD',
         normal: '#E7F0FE',
@@ -21,6 +21,26 @@ module.exports = {
         darkmodehover: '#2D3748',
         darkmode2: '#252D3B',
         logo: '#5270fd',
+
+        secondary: {
+          50: 'var(--secondary-50, #ffffff)',
+          100: 'var(--secondary-100, #fafcff)',
+          200: 'var(--secondary-200, #ebeef3)',
+          300: 'var(--secondary-300, #bbbfd2)',
+          400: 'var(--secondary-400, #808498)',
+          500: 'var(--secondary-500, #606372)',
+          600: 'var(--secondary-600, #4d4f60)',
+          700: 'var(--secondary-700, #353741)',
+          800: 'var(--secondary-800, #1c1c20)',
+          900: 'var(--secondary-900, #000000)',
+        },
+        primary: {
+          50: 'var(--primary-50, #EDF0FF)',
+          100: 'var(--primary-100, #C6DBFF)',
+          200: 'var(--primary-200, #9BBEFB)',
+          300: 'var(--primary-300, #799CD8)',
+          400: 'var(--primary-400, #5270FD)',
+        },
         danger: {
           50: 'var(--danger-50)',
           100: 'var(--danger-100)',
