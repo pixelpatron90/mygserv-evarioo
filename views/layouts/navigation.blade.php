@@ -18,4 +18,5 @@
         <li><a href="{{ route('legalnotice.index') }}">{{ __('Legal notice') }}</a></li>
     </ul>
     </div>
+    <livewire:cart-count />
 </nav>
