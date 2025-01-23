@@ -111,7 +111,7 @@
 
                             @auth
 
-                            <h1 class="w-full px-1 py-1 bg-red-500 text-white rounded-md">
+                            <h1 class="w-full p-2 bg-red-500 text-white rounded-md">
                                 {{ __('Welcome back,') }}
                                 {{ Auth::user()->username }}
                             </h1>
