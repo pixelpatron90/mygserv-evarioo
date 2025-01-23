@@ -13,7 +13,7 @@
                     @isset($required) {{ $required ? 'required' : '' }} @endisset>
             </div>
             <label for="{{ $id ?? $name }}"
-                class="ml-2 text-sm font-medium text-secondary-700">{!! $label !!}</label>
+                class="ml-2 text-sm font-medium text-secondary-200">{!! $label !!}</label>
         </div>
         @error($name)
             <label for="{{ $id ?? $name }}" class="text-sm text-danger-300">{{ $message }}</label>
@@ -23,7 +23,7 @@
     <div @isset($class) class={{ $class }} @endisset>
         {{ $slot }}
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -49,7 +49,7 @@
 @elseif($type == 'select')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -72,7 +72,7 @@
 @elseif($type == 'searchselect')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
         @endisset
         <div class="relative h-fit">
             @isset($icon)
@@ -173,7 +173,7 @@
 @elseif($type == 'textarea')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -194,7 +194,7 @@
     <div @isset($class) class="{{ $class }}" @endisset>
         {{ $slot }}
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{{ $label }}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{{ $label }}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -218,7 +218,7 @@
     <div @isset($class) class="{{ $class }}" @endisset>
         {{ $slot }}
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-600">{{ $label }}</label>
+            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{{ $label }}</label>
         @endisset
         <div class="relative">
             @isset($icon)

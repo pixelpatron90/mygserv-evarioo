@@ -3,7 +3,7 @@
         <div class="content-box w-full">
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
-                <h2 class="text-lg font-semibold">{{ __('Login to continue') }}</h2>
+                <h2 class="text-lg text-secondary-200 font-semibold">{{ __('Login to continue') }}</h2>
                 <x-input class="mt-3" label="{{ __('Email') }}" type="email" placeholder="{{ __('Email..') }}" required
                     name="email" id="email" icon="ri-at-line" />
 
