@@ -75,6 +75,17 @@
     <main>
         <div class="container">
             <nav>
+                <div class="flex md:hidden">
+                    <button type="button" class="button button-secondary-outline" onclick="openMobileMenu()">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+                <script>
+                    function openMobileMenu() {
+                        document.getElementById("mobile-menu").classList.toggle("hidden");
+                        document.getElementById("clientsNavBar").classList.toggle("hidden");
+                    }
+                </script>
                 <ul>
                     <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
                     @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
