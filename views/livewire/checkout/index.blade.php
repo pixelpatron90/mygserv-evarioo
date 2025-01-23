@@ -105,7 +105,7 @@
                     @endif
                     <div class="flex flex-row items-center justify-between mt-2">
                         <div class="flex flex-row items-center">
-                            <span class="text-lg font-bold">{{ __('Total Today') }}</span>
+                            <span class="text-lg text-secondary-200 font-bold">{{ __('Total Today') }}</span>
                         </div>
                         <div class="flex flex-col items-end">
                             <span class="text-lg text-secondary-200 font-bold">
@@ -122,7 +122,7 @@
                     <form wire:submit.prevent="pay">
                         <span class="text-secondary-200">{{ __('You can continue without paying') }}</span>
                         @if (config('settings::tos'))
-                            <div class="items-center p-1">
+                            <div class="items-center">
                                 @php
                                 $tos = "I agree to the <a href='" . route('tos') . "' class='text-red-500 hover:text-red-600'>terms of service</a>"; @endphp <x-input id="tos" type="checkbox" name="tos" required
                                     :label="$tos" wire:model="tos" />
@@ -206,7 +206,7 @@
                                     </td>
                                     <td class="py-3 pr-6" wire:click="removeProduct({{ $key }})">
                                         <button class="button bg-red-500 hover:bg-red-600 text-white">
-                                            <i class="ri-delete-bin-2-line"></i>
+                                            <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
