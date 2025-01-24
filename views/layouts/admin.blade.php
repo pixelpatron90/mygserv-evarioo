@@ -90,7 +90,7 @@
                         <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
                             Dropdown
                         </a>
-                        <div id="dropdownNavbar">
+                        <div class="relative" id="dropdownNavbar">
                             <ul class="" aria-labelledby="dropdownLargeButton">
                               <li>
                                 <a href="#" class="block w-full">Dashboard</a>
