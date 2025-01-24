@@ -10,8 +10,8 @@
         </div>
         <div class="flex my-auto float-end justify-end mr-4">
             <a href="{{ route('admin.products.create') }}"
-               class="px-4 py-2 font-bold text-white transition rounded delay-400 bg-blue-500 button button-primary">
-               <i class="fa-solid text-white fa-plus me-2"></i> {{ __('Create') }}
+               class="px-4 py-2 font-bold !text-white transition rounded delay-400 button button-primary">
+               <i class="fa-solid !text-white fa-plus me-2"></i> {{ __('Create') }}
             </a>
         </div>
     </div>
