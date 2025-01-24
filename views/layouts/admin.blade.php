@@ -51,7 +51,7 @@
 
     <nav>
         <div class="container lg:flex lg:flex-row lg:justify-between">
-            <div class="flex flex-row w-full">
+            <div class="lg:flex lg:flex-row w-full">
                 <div class="w-12 me-6">
                     <svg version="1.1" viewBox="0 0 800 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                         <g stroke-width="5.2147">
