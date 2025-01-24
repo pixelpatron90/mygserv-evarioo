@@ -82,10 +82,10 @@
                         </a>
                     </li>
                     <li>
-                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
+                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarEmail" class="cursor-pointer">
                             <i class="fa-solid fa-bars me-2"></i> {{ __('Emails') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                         </a>
-                        <div class="relative" id="dropdownNavbar">
+                        <div class="relative" id="dropdownNavbarEmail">
                             <ul class="" aria-labelledby="dropdownLargeButton">
                               <li>
                                 <a href="{{ route('admin.email') }}" class="block w-full">
@@ -124,10 +124,10 @@
                         </div>
                     </li>
                     <li>
-                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
+                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarSettings" class="cursor-pointer">
                             <i class="fa-solid fa-bars me-2"></i> {{ __('Settings') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                         </a>
-                        <div class="relative" id="dropdownNavbar">
+                        <div class="relative" id="dropdownNavbarSettings">
                             <ul class="" aria-labelledby="dropdownLargeButton">
                               <li>
                                 <a href="{{ route('admin.settings') }}" class="block w-full">
