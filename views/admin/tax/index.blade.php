@@ -16,7 +16,7 @@
                 <option value="inclusive" @if (config('settings::tax_type') == 'inclusive') selected @endif>Inclusive (product price includes tax)</option>
                 <option value="exclusive" @if (config('settings::tax_type') == 'exclusive') selected @endif>Exclusive (product price excludes tax)</option>
             </x-input>
-            <h4 class="text-xl font-bold">{{ __('Tax Rates') }}</h4>
+            <h4 class="text-xl secondary-200 font-bold">{{ __('Tax Rates') }}</h4>
             @foreach ($taxrates as $key => $taxrate)
                 <input type="hidden" name="taxrates[{{ $key }}][id]" value="{{ $taxrate->id }}" />
                 <div class="flex flex-row gap-4">
@@ -30,7 +30,7 @@
                     <x-input name="taxrates[{{ $key }}][delete]" label="Delete" type="checkbox" value="1" class="w-fit mt-6" />
                 </div>
             @endforeach
-            <button class="button button-primary w-fit">{{ __('Save') }}</button>
+            <button class="button button-primary mt-4 mb-4">{{ __('Save') }}</button>
         </div>
     </form>
 
