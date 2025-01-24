@@ -125,7 +125,7 @@
                     </li>
                     <li>
                         <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
-                            <i class="fa-solid fa-bars me-2"></i> {{ __('Products') }} <i class="ms-2 fa-solid fa-caret-down"></i>
+                            <i class="fa-solid fa-bars me-2"></i> {{ __('Settings') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                         </a>
                         <div class="relative" id="dropdownNavbar">
                             <ul class="" aria-labelledby="dropdownLargeButton">
