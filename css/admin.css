@@ -14,7 +14,7 @@
     }
   
     nav ul {
-      @apply md:flex lg:flex-row flex-col lg:h-full;
+      @apply lg:flex lg:flex-row flex-col lg:h-full;
     }
   
     nav ul li {
