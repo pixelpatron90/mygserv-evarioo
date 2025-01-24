@@ -36,7 +36,7 @@
 
     <div class="p-3 site-header mt-4">
         <div>
-            <div class="text-secondary-200 text-2xl font-bold">
+            <div class="!text-secondary-200 text-2xl font-bold">
                 <i class="fa-solid fa-caret-right"></i> {{ __('Create taxes') }}
             </div>
         </div>
