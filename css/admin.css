@@ -29,7 +29,7 @@
     }
 
     nav ul li > ul {
-      @apply test-red-500;
+      @apply text-red-500;
     }
     
     main {
