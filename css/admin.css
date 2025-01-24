@@ -29,7 +29,7 @@
     }
 
     nav ul li > div {
-        @apply z-10 hidden bg-[#1a202c] rounded-md shadow lg:w-48 w-full;
+        @apply z-10 hidden bg-[#1a202c] rounded-md shadow lg:w-52 w-full;
     }
 
     nav ul li > div > ul {
