@@ -5,7 +5,7 @@
     <div class="p-3 site-header">
         <div>
             <div class="text-2xl font-bold text-secondary-200">
-                {{ __('Invoices') }}
+                <i class="fa-solid fa-caret-right"></i> {{ __('Invoices') }}
             </div>
             <p class="text-secondary-200">
                 {{ __('Here you can see all invoices.') }}
