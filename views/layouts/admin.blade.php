@@ -82,9 +82,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.invoices') }}">
-                            <i class="fa-solid fa-bars me-2"></i> {{__('Invoices')}}
+                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
+                            <i class="fa-solid fa-bars me-2"></i> {{ __('Emails') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                         </a>
+                        <div class="relative" id="dropdownNavbar">
+                            <ul class="" aria-labelledby="dropdownLargeButton">
+                              <li>
+                                <a href="{{ route('admin.email') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Logs') }}
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
@@ -108,6 +118,68 @@
                                 <a href="{{ route('admin.categories') }}" class="block w-full">
                                     <i class="fa-solid fa-bars me-2"></i>
                                     {{ __('Categories') }}
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
+                            <i class="fa-solid fa-bars me-2"></i> {{ __('Products') }} <i class="ms-2 fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="relative" id="dropdownNavbar">
+                            <ul class="" aria-labelledby="dropdownLargeButton">
+                              <li>
+                                <a href="{{ route('admin.settings') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Settings') }}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('admin.extensions') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Extensions') }}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('admin.coupons') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Coupons') }}
+                                </a>
+                              </li>
+
+                              <li>
+                                <a href="{{ route('admin.announcements')}}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Announcements') }}
+                                </a>
+                              </li>
+
+                              <li>
+                                <a href="{{ route('admin.roles') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Roles') }}
+                                </a>
+                              </li>
+
+                              <li>
+                                <a href="{{ route('admin.taxes') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Taxes') }}
+                                </a>
+                              </li>
+
+                              <li>
+                                <a href="{{ route('admin.logs') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Logs') }}
+                                </a>
+                              </li>
+
+                              <li>
+                                <a href="{{ route('admin.configurable-options')}}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Configurable Options') }}
                                 </a>
                               </li>
                             </ul>
