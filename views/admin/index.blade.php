@@ -58,7 +58,7 @@
                         <div class="grid grid-cols-1 2xl:grid-cols-3 gap-4 p-4 mt-1 rounded-md dark:bg-secondary-200 bg-normal">
 
                             <div class="flex">
-                                <i class="ri-coupon-line p-4 bg-blue-400 text-blue-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
+                                <i class="fa-solid fa-ticket p-4 bg-blue-400 text-blue-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
                                     <h3 class="text-gray-700">{{__('All')}}</h3>
                                     <span class="font-bold text-xl">
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="flex">
-                                <i class="ri-coupon-line p-4 bg-green-400 text-green-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
+                                <i class="fa-solid fa-ticket p-4 bg-green-400 text-green-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
                                     <h3 class="text-gray-700">{{__("Open")}}</h3>
                                     <span class="font-bold text-xl">
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="flex">
-                                <i class="ri-coupon-line p-4 bg-red-400 text-red-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
+                                <i class="fa-solid fa-ticket p-4 bg-red-400 text-red-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
                                     <h3 class="text-gray-700">{{__('Closed')}}</h3>
                                     <span class="font-bold text-xl">
@@ -93,16 +93,16 @@
                         <div class="grid grid-cols-1 gap-4">
                             @foreach (App\Models\Ticket::orderBy('updated_at', 'DESC')->with('user')->get()->take(4) as $ticket)
                                 <a href="/admin/tickets/{{ $ticket->id }}">
-                                    <div class="px-4 py-2 rounded-md flex flex-col dark:hover:bg-secondary-300 dark:bg-secondary-200 bg-normal hover:bg-blue-100 transition-all ease-in-out">
+                                    <div class="px-4 py-2 rounded-md flex flex-col bg-secondary-200 hover:bg-blue-100 transition-all ease-in-out">
                                         <div class="flex flex-row justify-between max-w-full">
-                                            <h1 class="text-xl text-gray-500 flex flex-col max-w-xs">
+                                            <h1 class="text-xl text-red-500 flex flex-col max-w-xs">
                                                 <b>{{__('Ticket')}} #{{ $ticket->id }}</b>
-                                                <span class="dark:text-darkmodetext">
+                                                <span class="text-secondary-400">
                                                     <b>{{__('Client')}}:</b> {{ $ticket->user->name }} (#{{ $ticket->user->id }})
                                                 </span>
                                                 @isset($ticket->assigned_to)
                                                     <div>
-                                                        <b>{{__('Admin')}}:</b> <span class="dark:text-darkmodetext">
+                                                        <b>{{__('Admin')}}:</b> <span class="">
                                                         @php
                                                             if ($ticket->assigned_to !== null) {
                                                                 $admin = App\Models\User::where('id', '=', $ticket->assigned_to)->get();
@@ -158,27 +158,21 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="p-7 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
-                        <h2 class="text-xl font-bold">{{__('New Users')}}</h2>
+                    <div class="p-7 bg-primarycolor border-2 rounded-xl">
+                        <h2 class="text-xl text-secondary-200 font-bold">{{__('New Users')}}</h2>
                         <canvas id="chartBar"></canvas>
-                        <!-- Chart bar -->
                     </div>
 
-                    <div class="p-7 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
-                        <h2 class="text-xl font-bold">{{__('New Orders')}}</h2>
+                    <div class="p-7 bg-primarycolor border-2 rounded-xl">
+                        <h2 class="text-xl text-secondary-200 font-bold">{{__('New Orders')}}</h2>
                         <canvas id="chartBarOrders"></canvas>
-                        <!-- Chart bar -->
                     </div>
-
-                    <!-- Required chart.js -->
                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 </div>
             </div>
         </div>
 
 
-
-        <!-- Script for User statistic -->
         <div>
             <script>
                 const labelsBarChart = [
