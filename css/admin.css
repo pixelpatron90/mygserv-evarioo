@@ -28,8 +28,8 @@
       @apply bg-red-600 text-shadow;
     }
 
-    nav ul li .dropdown {
-      @apply hidden absolute bg-primarycolor rounded-md shadow-lg;
+    nav ul li > ul {
+      @apply hidden md:flex lg:flex-row flex-col;
     }
     
     main {
