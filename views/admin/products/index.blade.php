@@ -1,5 +1,5 @@
 <x-admin-layout title="Products">
-    <div class="p-3 siteHeader ">
+    <div class="p-3 site-header">
         <div>
             <div class="mt-3 text-2xl font-bold">
                 {{ __('Products') }}
