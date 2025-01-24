@@ -1,10 +1,10 @@
 <x-admin-layout title="Products">
     <div class="p-3 site-header">
         <div>
-            <div class="mt-3 text-2xl font-bold">
+            <div class="text-secondary-200 text-2xl font-bold">
                 {{ __('Products') }}
             </div>
-            <p>
+            <p class="text-secondary-200">
                 {{ __('Here you can see all products.') }}
             </p>
         </div>
