@@ -29,7 +29,7 @@
     }
 
     nav ul li > ul {
-      @apply flex lg:flex-col flex-row;
+      @apply flex flex-col;
     }
     
     main {
