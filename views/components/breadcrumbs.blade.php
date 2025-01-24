@@ -1,5 +1,5 @@
 @unless ($breadcrumbs->isEmpty())
-    <div class="bg-primarycolor p-5 w-full">
+    <div class="bg-primarycolor text-secondary-200 p-5 w-full rounded-md mb-4">
         <ol class="rounded flex flex-wrap text-white-800 gap-1 items-center">
             @foreach ($breadcrumbs as $breadcrumb)
                 @if ($loop->first)
