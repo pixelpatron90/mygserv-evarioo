@@ -2,9 +2,7 @@
     <div class="p-3 site-header">
         <div>
             <div class="text-secondary-200 text-2xl font-bold">
-                @foreach ($categories as $category)
-                {{ __('Products') }} <i class="fa-solid fa-caret-right"></i> {{ $category->name }}
-                @endforeach
+                <i class="fa-solid fa-caret-right"></i> {{ __('Products') }}
             </div>
             <p class="text-secondary-200">
                 {{ __('Here you can see all products.') }}
@@ -34,6 +32,7 @@
     @else
         <div id="categories">
             @foreach ($categories as $category)
+                <h1 class="text-center text-2xl font-bold mt-4">{{ $category->name }}</h1>
                 <livewire:admin.products :category="$category" :key="$category->id" :tableName="$category->name" />
             @endforeach
         </div>

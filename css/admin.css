@@ -53,7 +53,7 @@
     }
 
     main .content-box .site-header i {
-      @apply text-red-500;
+      @apply text-red-500 me-2;
     }
   
     footer {
