@@ -95,7 +95,7 @@
         </div>
     </nav>
 
-    <main class="mt-24">
+    <main class="mt-24 mb-10">
         <div class="container">
             @if (!request()->routeIs('admin.index'))
                 {{ Breadcrumbs::render() }}
