@@ -2,8 +2,8 @@
     <div class="container">
         <div>
             <div class="logo">
-                <a class="w-24" href="{{ route('index') }}">
-                    <x-branding />
+                <a href="{{ route('index') }}">
+                    <x-branding class="w-36" />
                 </a>
                 <div class="title">
                     <h1>{{ config('app.name') }}</h1>
