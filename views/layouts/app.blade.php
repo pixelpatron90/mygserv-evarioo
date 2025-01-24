@@ -61,7 +61,7 @@
                                 <i class="fa-solid fa-caret-right me-2"></i> {{__('Profile')}}
                             </a>
                             @if (Auth::user()->has('ADMINISTRATOR'))
-                            <a target="blank" href="{{ route('admin.index') }}"
+                            <a target="_blank" href="{{ route('admin.index') }}"
                                 class="px-2 py-2 hover:bg-secondary-300 flex items-center gap-x-2 rounded-md transition-all ease-in-out">
                                 <i class="fa-solid fa-caret-right me-2"></i> {{ __('Admin area') }}
                             </a>
