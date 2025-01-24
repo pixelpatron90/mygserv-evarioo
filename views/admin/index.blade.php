@@ -60,7 +60,7 @@
                             <div class="flex">
                                 <i class="fa-solid fa-ticket p-4 bg-blue-400 text-blue-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700">{{__('All')}}</h3>
+                                    <h3 class="text-gray-700"><i class="fa-solid fa-folder-tree"></i></h3>
                                     <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::count() }}
                                     </span>
@@ -70,7 +70,7 @@
                             <div class="flex">
                                 <i class="fa-solid fa-ticket p-4 bg-green-400 text-green-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700">{{__("Open")}}</h3>
+                                    <h3 class="text-gray-700"><i class="fa-solid fa-folder-open"></i></h3>
                                     <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::where('status', '!=', 'closed')->count() }}
                                     </span>
@@ -80,7 +80,7 @@
                             <div class="flex">
                                 <i class="fa-solid fa-ticket p-4 bg-red-400 text-red-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700">{{__('Closed')}}</h3>
+                                    <h3 class="text-gray-700"><i class="fa-solid fa-folder-closed"></i></h3>
                                     <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::where('status', 'closed')->count() }}
                                     </span>
@@ -89,13 +89,13 @@
 
                         </div>
 
-                        <h2 class="text-xl font-bold mt-4 mb-2">{{__('Last Tickets')}}</h2>
+                        <h2 class="text-xl text-secondary-200 font-bold mt-4 mb-2">{{__('Last Tickets')}}</h2>
                         <div class="grid grid-cols-1 gap-4">
                             @foreach (App\Models\Ticket::orderBy('updated_at', 'DESC')->with('user')->get()->take(4) as $ticket)
                                 <a href="/admin/tickets/{{ $ticket->id }}">
                                     <div class="px-4 py-2 rounded-md flex flex-col bg-secondary-200 hover:bg-blue-100 transition-all ease-in-out">
                                         <div class="flex flex-row justify-between max-w-full">
-                                            <h1 class="text-xl text-red-500 flex flex-col max-w-xs">
+                                            <h1 class="text-lg text-red-500 flex flex-col max-w-xs">
                                                 <b>{{__('Ticket')}} #{{ $ticket->id }}</b>
                                                 <span class="text-secondary-400">
                                                     <b>{{__('Client')}}:</b> {{ $ticket->user->name }} (#{{ $ticket->user->id }})
