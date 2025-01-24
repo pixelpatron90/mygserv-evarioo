@@ -49,7 +49,7 @@
 
 <body>
 
-    <nav>
+    <nav class="z-50">
         <div class="container lg:flex lg:flex-row lg:justify-between">
             <div class="lg:flex lg:flex-row w-full">
                 <div class="w-12 me-6 hidden lg:block">
@@ -64,7 +64,7 @@
                     <span class="sr-only">Open main menu</span>
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <div class="mt-2 z-50 lg:mt-0 hidden lg:block h-full" id="navbar-default">
+                <div class="mt-2 lg:mt-0 hidden lg:block h-full" id="navbar-default">
                 <ul>
                     <li>
                         <a href="{{ route('admin.index') }}">
