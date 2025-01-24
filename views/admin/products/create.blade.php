@@ -3,10 +3,15 @@
         {{ __('Products') }}
     </x-slot>
 
-    <div class="mt-8 text-2xl dark:text-darkmodetext">
-        {{ __('Create Product') }}
+    <div class="p-3 site-header">
+        <div>
+            <div class="text-2xl font-bold text-secondary-200">
+                {{ __('Create Product') }}
+            </div>
+        </div>
     </div>
-    <div class="mt-6 text-gray-500 dark:text-darkmodetext">
+
+    <div class="mt-6 text-gray-500">
         <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
             @csrf
             <x-input type="text" name="name" label="{{ __('Name') }}" placeholder="{{ __('Name') }}"
@@ -17,8 +22,7 @@
 
             <x-input type="text" name="price" label="{{ __('Price') }}" placeholder="{{ __('Price') }}"
                 value="{{ old('price') }}" required />
-                
-
+            
             <div class="mt-4">
                 <label for="image">{{ __('Image') }}</label>
 
@@ -43,8 +47,11 @@
                     @endforeach
                 </x-input>
 
-                <div class="flex items-center justify-end mt-4 text-blue-700">
-                    <a href="{{ route('admin.categories.create') }}">Create Category</a>
+                <div class="flex items-center justify-end mt-4 text-red-500 hover:text-red-600">
+                    <a href="{{ route('admin.invoices.create') }}"
+                        class="px-4 py-2 font-bold !text-white transition rounded delay-400 button button-primary">
+                        <i class="fa-solid !text-white fa-plus me-2"></i> {{ __('Create categorie') }}
+                    </a>
                 </div>
             </div>
             <div class="flex items-center justify-end mt-4">
