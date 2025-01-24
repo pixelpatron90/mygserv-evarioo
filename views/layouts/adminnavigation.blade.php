@@ -1,9 +1,9 @@
 <nav class="z-50">
     <div class="container lg:flex lg:flex-row lg:justify-between">
         <div class="lg:flex lg:flex-row w-full">
-            <div class="w-12 me-6 hidden lg:block">
+            <div class="me-6 hidden lg:block">
                 <a href="{{ route('index') }}">
-                <x-branding />
+                <x-branding class="w-12 />
                 </a>
             </div>
             <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-3.5 w-8 h-8 justify-center text-white rounded-sm lg:hidden bg-red-500 hover:bg-red-600" aria-controls="navbar-default" aria-expanded="false">
