@@ -6,7 +6,7 @@
     <div class="p-3 site-header">
         <div>
             <div class="text-2xl font-bold text-secondary-200">
-                {{ __('Create Product') }}
+                <i class="fa-solid fa-caret-right"></i> {{ __('Create Product') }}
             </div>
         </div>
     </div>
