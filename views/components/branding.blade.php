@@ -1,4 +1,4 @@
-<div>
+<div {{ $attributes->merge() }}>
     <svg version="1.1" viewBox="0 0 800 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
         <g stroke-width="5.2147">
             <path
