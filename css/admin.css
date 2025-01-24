@@ -27,10 +27,6 @@
     nav ul li a:hover {
       @apply bg-red-600 text-shadow;
     }
-
-    nav ul li > div > ul {
-      @apply flex flex-row;
-    }
     
     main {
       @apply py-6;
