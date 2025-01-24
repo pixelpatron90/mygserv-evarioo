@@ -3,21 +3,21 @@
         {{ __('General') }}
     </x-slot>
     <div class="grow">
-        <div class="py-10 dark:bg-darkmode">
+        <div class="py-10">
             <div class="mx-auto px-8 md:px-20">
-                <div class="mb-4">
-                    <h1 class="text-2xl font-bold dark:text-darkmodetext">{{ __('Dashboard') }}</h1>
-                    <span class="text-lg dark:text-darkmodetext">{{ __('An overview of everything') }}</span>
+                <div class="mb-4 text-secondary-200">
+                    <h1 class="text-2xl font-bold">{{ __('Dashboard') }}</h1>
+                    <span class="text-red-500">{{ __('An overview of everything') }}</span>
                 </div>
                 <div class="grid gap-6 overflow-hidden grid-cols-1 lg:grid-cols-3">
-                    <div class="lg:col-span-2 p-7 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
+                    <div class="lg:col-span-2 p-7 bg-primarycolor border-2 rounded-xl">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-10">
 
-                            <div class="p-4 rounded-md dark:bg-secondary-200 bg-normal flex">
+                            <div class="p-4 rounded-md bg-normal flex">
                                 <i class="ri-shopping-cart-2-line p-4 bg-blue-400 text-blue-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col">
-                                    <h1 class="text-lg text-gray-500 dark:text-darkmodetext">{{ __('Orders today') }}</h1>
-                                    <p class="text-xl font-bold text-black dark:text-darkmodetext">
+                                    <h1 class="text-lg text-gray-500">{{ __('Orders today') }}</h1>
+                                    <p class="text-xl font-bold text-black">
                                         {{ App\Models\Order::whereDate('created_at', '=', date('Y-m-d'))->count() }}
                                     </p>
                                 </div>
@@ -26,8 +26,8 @@
                             <div class="p-4 rounded-md dark:bg-secondary-200 bg-normal flex">
                                 <i class="ri-coins-line p-4 bg-green-400 text-green-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col">
-                                    <h1 class="text-lg text-gray-500 dark:text-darkmodetext">{{ __('Revenue Total') }}</h1>
-                                    <p class="text-xl font-bold text-black dark:text-darkmodetext">
+                                    <h1 class="text-lg text-gray-500">{{ __('Revenue Total') }}</h1>
+                                    <p class="text-xl font-bold text-black">
                                         <x-money :amount="$revenueTotal" />
                                     </p>
                                 </div>
@@ -36,8 +36,8 @@
                             <div class="p-4 rounded-md dark:bg-secondary-200 bg-normal flex">
                                 <i class="ri-coupon-line p-4 bg-red-400 text-red-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col">
-                                    <h1 class="text-lg text-gray-500 dark:text-darkmodetext">{{ __('Tickets today') }}</h1>
-                                    <p class="text-xl font-bold text-black dark:text-darkmodetext">
+                                    <h1 class="text-lg text-gray-500">{{ __('Tickets today') }}</h1>
+                                    <p class="text-xl font-bold text-black">
                                         {{ App\Models\Ticket::whereDate('created_at', '=', date('Y-m-d'))->count() }}
                                     </p>
                                 </div>
@@ -60,8 +60,8 @@
                             <div class="flex">
                                 <i class="ri-coupon-line p-4 bg-blue-400 text-blue-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700 dark:text-darkmodetext">{{__('All')}}</h3>
-                                    <span class="font-bold text-xl dark:text-darkmodetext">
+                                    <h3 class="text-gray-700">{{__('All')}}</h3>
+                                    <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::count() }}
                                     </span>
                                 </div>
@@ -70,8 +70,8 @@
                             <div class="flex">
                                 <i class="ri-coupon-line p-4 bg-green-400 text-green-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700 dark:text-darkmodetext">{{__("Open")}}</h3>
-                                    <span class="font-bold text-xl dark:text-darkmodetext">
+                                    <h3 class="text-gray-700">{{__("Open")}}</h3>
+                                    <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::where('status', '!=', 'closed')->count() }}
                                     </span>
                                 </div>
@@ -80,8 +80,8 @@
                             <div class="flex">
                                 <i class="ri-coupon-line p-4 bg-red-400 text-red-900 text-2xl items-center text-center h-16 w-16 rounded-lg mr-4"></i>
                                 <div class="flex flex-col my-auto">
-                                    <h3 class="text-gray-700 dark:text-darkmodetext">{{__('Closed')}}</h3>
-                                    <span class="font-bold text-xl dark:text-darkmodetext">
+                                    <h3 class="text-gray-700">{{__('Closed')}}</h3>
+                                    <span class="font-bold text-xl">
                                         {{ App\Models\Ticket::where('status', 'closed')->count() }}
                                     </span>
                                 </div>
@@ -89,13 +89,13 @@
 
                         </div>
 
-                        <h2 class="text-xl font-bold mt-4 mb-2 dark:text-darkmodetext">{{__('Last Tickets')}}</h2>
+                        <h2 class="text-xl font-bold mt-4 mb-2">{{__('Last Tickets')}}</h2>
                         <div class="grid grid-cols-1 gap-4">
                             @foreach (App\Models\Ticket::orderBy('updated_at', 'DESC')->with('user')->get()->take(4) as $ticket)
                                 <a href="/admin/tickets/{{ $ticket->id }}">
                                     <div class="px-4 py-2 rounded-md flex flex-col dark:hover:bg-secondary-300 dark:bg-secondary-200 bg-normal hover:bg-blue-100 transition-all ease-in-out">
                                         <div class="flex flex-row justify-between max-w-full">
-                                            <h1 class="text-xl text-gray-500 dark:text-darkmodetext flex flex-col max-w-xs">
+                                            <h1 class="text-xl text-gray-500 flex flex-col max-w-xs">
                                                 <b>{{__('Ticket')}} #{{ $ticket->id }}</b>
                                                 <span class="dark:text-darkmodetext">
                                                     <b>{{__('Client')}}:</b> {{ $ticket->user->name }} (#{{ $ticket->user->id }})
@@ -148,7 +148,7 @@
                                                         </span>
                                                     @endif
                                                 </p>
-                                                <div class="my-0 flex flex-col text-end dark:text-darkmodetext">
+                                                <div class="my-0 flex flex-col text-end">
                                                     {{ $ticket->updated_at->diffForHumans() }}
                                                 </div>
                                             </div>
@@ -159,13 +159,13 @@
                         </div>
                     </div>
                     <div class="p-7 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
-                        <h2 class="text-xl font-bold dark:text-darkmodetext">{{__('New Users')}}</h2>
+                        <h2 class="text-xl font-bold">{{__('New Users')}}</h2>
                         <canvas id="chartBar"></canvas>
                         <!-- Chart bar -->
                     </div>
 
                     <div class="p-7 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
-                        <h2 class="text-xl font-bold dark:text-darkmodetext">{{__('New Orders')}}</h2>
+                        <h2 class="text-xl font-bold">{{__('New Orders')}}</h2>
                         <canvas id="chartBarOrders"></canvas>
                         <!-- Chart bar -->
                     </div>
