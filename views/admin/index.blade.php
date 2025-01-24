@@ -10,7 +10,7 @@
                     <span class="text-red-500">{{ __('An overview of everything') }}</span>
                 </div>
                 <div class="grid gap-6 overflow-hidden grid-cols-1 lg:grid-cols-3">
-                    <div class="lg:col-span-2 p-7 bg-primarycolor border-2 rounded-xl">
+                    <div class="lg:col-span-2 p-7 bg-primarycolor border-2 rounded-md">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-10">
 
                             <div class="p-4 rounded-md bg-normal flex">
@@ -54,7 +54,7 @@
                             </span>
                         </span>
                     </div>
-                    <div class="p-6 bg-white border-2 dark:bg-secondary-100 dark:border-darkmodehover rounded-xl">
+                    <div class="p-7 bg-primarycolor border-2 rounded-md">
                         <div class="grid grid-cols-1 2xl:grid-cols-3 gap-4 p-4 mt-1 rounded-md dark:bg-secondary-200 bg-normal">
 
                             <div class="flex">
@@ -158,12 +158,12 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="p-7 bg-primarycolor border-2 rounded-xl">
+                    <div class="p-7 bg-primarycolor border-2 rounded-md">
                         <h2 class="text-xl text-secondary-200 font-bold">{{__('New Users')}}</h2>
                         <canvas id="chartBar"></canvas>
                     </div>
 
-                    <div class="p-7 bg-primarycolor border-2 rounded-xl">
+                    <div class="p-7 bg-primarycolor border-2 rounded-md">
                         <h2 class="text-xl text-secondary-200 font-bold">{{__('New Orders')}}</h2>
                         <canvas id="chartBarOrders"></canvas>
                     </div>
