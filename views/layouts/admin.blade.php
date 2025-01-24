@@ -50,7 +50,7 @@
 <body>
 
     <nav>
-        <div class="container flex flex-row justify-between">
+        <div class="container lg:flex lg:flex-row lg:justify-between">
             <div class="flex flex-row w-full">
                 <div class="w-12 me-6">
                     <svg version="1.1" viewBox="0 0 800 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -60,6 +60,11 @@
                         </g>
                     </svg>
                 </div>
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-3.5 w-8 h-8 justify-center text-white rounded-sm lg:hidden bg-red-500 hover:bg-red-600" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="mt-2 lg:mt-0 hidden lg:block h-full" id="navbar-default">
                 <ul>
                     <li>
                         <a href="{{ route('admin.index') }}">
@@ -82,6 +87,7 @@
                         </a>
                     </li>
                 </ul>
+                </div>
             </div>
             <div class="content-center">
                 LOGIN
