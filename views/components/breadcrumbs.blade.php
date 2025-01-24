@@ -1,5 +1,5 @@
 @unless ($breadcrumbs->isEmpty())
-    <nav class="container mx-auto p-3 ">
+    <div>
         <ol class="rounded flex flex-wrap text-white-800 gap-1 items-center">
             @foreach ($breadcrumbs as $breadcrumb)
                 @if ($loop->first)
@@ -18,5 +18,5 @@
                 @endif
             @endforeach
         </ol>
-    </nav>
+    </div>
 @endunless
