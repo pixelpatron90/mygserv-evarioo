@@ -49,7 +49,7 @@
     }
 
     main .content-box .site-header {
-      @apply bg-[#1a202c] flex flex-row justify-between rounded-md;
+      @apply bg-[#1a202c] flex flex-row justify-between rounded-md mb-4;
     }
 
     main .content-box .site-header i {

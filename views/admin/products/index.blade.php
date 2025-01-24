@@ -11,7 +11,7 @@
         <div class="flex my-auto float-end justify-end mr-4">
             <a href="{{ route('admin.products.create') }}"
                class="px-4 py-2 font-bold text-white transition rounded delay-400 bg-blue-500 button button-primary">
-               <i class="fa-solid fa-plus me-2"></i> {{ __('Create') }}
+               <i class="fa-solid text-white fa-plus me-2"></i> {{ __('Create') }}
             </a>
         </div>
     </div>
@@ -32,7 +32,7 @@
     @else
         <div id="categories">
             @foreach ($categories as $category)
-                <h1 class="text-center text-secondary-200 text-2xl font-bold mb-4 mt-4">{{ $category->name }}</h1>
+                <h1 class="text-center text-secondary-200 text-2xl font-bold mb-2 mt-2">{{ $category->name }}</h1>
                 <livewire:admin.products :category="$category" :key="$category->id" :tableName="$category->name" />
             @endforeach
         </div>
