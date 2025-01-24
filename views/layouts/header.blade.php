@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <div class="logo">
-                <a href="{{ route('index') }}">
+                <a class="w-12" href="{{ route('index') }}">
                     <x-branding />
                 </a>
                 <div class="title">
