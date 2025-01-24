@@ -179,7 +179,7 @@
                               <li>
                                 <a href="{{ route('admin.configurable-options')}}" class="block w-full">
                                     <i class="fa-solid fa-bars me-2"></i>
-                                    {{ __('Configurable Options') }}
+                                    {{ __('Options') }}
                                 </a>
                               </li>
                             </ul>
