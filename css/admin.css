@@ -51,6 +51,10 @@
     main .content-box .site-header {
       @apply bg-[#1a202c] flex flex-row justify-between rounded-md;
     }
+
+    main .content-box .site-header i {
+      @apply text-red-500;
+    }
   
     footer {
         @apply w-full text-white bg-primarycolor py-5;

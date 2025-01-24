@@ -2,7 +2,7 @@
     <div class="p-3 site-header">
         <div>
             <div class="text-secondary-200 text-2xl font-bold">
-                {{ __('Products') }}
+                {{ __('Products') }} <i class="fa-solid fa-caret-right"></i> {{ $category->name }}
             </div>
             <p class="text-secondary-200">
                 {{ __('Here you can see all products.') }}
