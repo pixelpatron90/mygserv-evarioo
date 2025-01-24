@@ -18,7 +18,7 @@
     @apply w-4/6 flex justify-start;
   }
   header div .logo > div.title {
-    @apply ms-8 flex flex-col justify-start w-80 pt-6;
+    @apply ms-8 flex flex-col justify-start w-96 pt-2;
   }
   header div .logo > div.title h1 {
     @apply text-7xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
