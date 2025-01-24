@@ -28,6 +28,10 @@
       @apply bg-red-600 text-shadow;
     }
 
+    nav ul li > div {
+        @apply z-10 hidden bg-[#1a202c] rounded-md shadow lg:w-44 w-full;
+    }
+
     nav ul li > div > ul {
       @apply flex lg:flex-col flex-row;
     }

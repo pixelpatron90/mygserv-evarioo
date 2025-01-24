@@ -90,7 +90,7 @@
                         <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
                             Dropdown
                         </a>
-                        <div id="dropdownNavbar" class="z-10 hidden bg-white rounded-md shadow lg:w-44 w-full">
+                        <div id="dropdownNavbar">
                             <ul class="" aria-labelledby="dropdownLargeButton">
                               <li>
                                 <a href="#" class="block w-full">Dashboard</a>
