@@ -88,15 +88,27 @@
                     </li>
                     <li>
                         <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="cursor-pointer">
-                            Dropdown
+                            <i class="fa-solid fa-bars me-2"></i> {{ __('Products') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                         </a>
                         <div class="relative" id="dropdownNavbar">
                             <ul class="" aria-labelledby="dropdownLargeButton">
                               <li>
-                                <a href="#" class="block w-full">Dashboard</a>
+                                <a href="{{ route('admin.products') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('All Products') }}
+                                </a>
                               </li>
                               <li>
-                                <a href="#" class="block w-full">Settings</a>
+                                <a href="{{ route('admin.products.create') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Create Product') }}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="{{ route('admin.categories') }}" class="block w-full">
+                                    <i class="fa-solid fa-bars me-2"></i>
+                                    {{ __('Categories') }}
+                                </a>
                               </li>
                             </ul>
                         </div>
