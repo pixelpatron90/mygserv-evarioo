@@ -21,7 +21,7 @@
     @apply ms-8 flex flex-col justify-start w-80 pt-8;
   }
   header div .logo > div.title h1 {
-    @apply text-3xl content-center text-white font-intertight uppercase text-shadow-lg;
+    @apply text-5xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
   }
   header div .logo > div.title p {
     @apply text-xl text-gray-400 font-intertight text-shadow-lg;
