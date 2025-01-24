@@ -30,7 +30,7 @@
                     <x-input name="taxrates[{{ $key }}][delete]" label="Delete" type="checkbox" value="1" class="w-fit mt-6" />
                 </div>
             @endforeach
-            <button class="button button-primary mt-4 mb-4">{{ __('Save') }}</button>
+            <button class="button button-primary w-fit mt-4 mb-4">{{ __('Save') }}</button>
         </div>
     </form>
 
