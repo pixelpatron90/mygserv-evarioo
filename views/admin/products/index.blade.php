@@ -16,7 +16,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    
     @if ($categories->isEmpty())
         <div class="ml-10 flex items-baseline ">
             <p class="text-gray-600 px-3 rounded-md text-xl m-4">
