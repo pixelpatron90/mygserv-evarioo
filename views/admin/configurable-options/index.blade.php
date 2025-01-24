@@ -1,9 +1,12 @@
 <x-admin-layout title="Configurable Options">
     <div class="p-3 site-header">
         <div>
-            <div class="text-secondary-200 text-2xl font-bold content-center">
+            <div class="text-secondary-200 text-2xl font-bold">
                 <i class="fa-solid fa-caret-right"></i> {{ __('Configurable Options') }}
             </div>
+            <p class="text-secondary-200">
+                {{ __('Here you can add configurable options.') }}
+            </p>
         </div>
         <div class="flex my-auto float-end justify-end mr-4">
             <a href="{{ route('admin.configurable-options.create') }}"
