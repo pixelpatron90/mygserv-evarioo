@@ -64,7 +64,7 @@
                     <span class="sr-only">Open main menu</span>
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <div class="mt-2 lg:mt-0 hidden lg:block h-full" id="navbar-default">
+                <div class="mt-4 lg:mt-0 hidden lg:block h-full" id="navbar-default">
                 <ul>
                     <li>
                         <a href="{{ route('admin.index') }}">
@@ -95,7 +95,7 @@
         </div>
     </nav>
 
-    <main class="mt-12 mb-12">
+    <main class="mt-6 mb-6">
         <div class="container">
             @if (!request()->routeIs('admin.index'))
                 {{ Breadcrumbs::render() }}
@@ -111,7 +111,7 @@
     <footer>
 
         <div class="container">
-            <div class="flex flex-row justify-between">
+            <div class="flex flex-col sm:flex-row justify-between">
                 <div>
                     <p>Copyright © 2025 - 2026 www.mygserv.de & <a class="text-red-500 hover:text-red-600" href="https://www.evarioo.eu">www.evarioo.eu</a> | Alle Rechte vorbehalten.</p>
                 </div>
