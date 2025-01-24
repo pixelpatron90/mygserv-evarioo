@@ -1,7 +1,7 @@
 <x-admin-layout title="Configurable Options">
     <div class="p-3 site-header">
         <div>
-            <div class="text-secondary-200 text-2xl font-bold">
+            <div class="text-secondary-200 text-2xl font-bold content-center">
                 <i class="fa-solid fa-caret-right"></i> {{ __('Configurable Options') }}
             </div>
         </div>
