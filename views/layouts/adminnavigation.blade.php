@@ -74,18 +74,18 @@
                 </li>
                 <li>
                     <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarPage" class="cursor-pointer">
-                        <i class="fa-solid fa-bars me-2"></i> {{ __('Products') }} <i class="ms-2 fa-solid fa-caret-down"></i>
+                        <i class="fa-solid fa-bars me-2"></i> {{ __('Pages') }} <i class="ms-2 fa-solid fa-caret-down"></i>
                     </a>
                     <div class="relative" id="dropdownNavbarPage">
                         <ul class="" aria-labelledby="dropdownLargeButton">
                           <li>
-                            <a href="{{ route('admin.products') }}" class="block w-full">
+                            <a href="{{ route('admin.pages') }}" class="block w-full">
                                 <i class="fa-solid fa-bars me-2"></i>
                                 {{ __('All Pages') }}
                             </a>
                           </li>
                           <li>
-                            <a href="{{ route('admin.products.create') }}" class="block w-full">
+                            <a href="{{ route('admin.pages.create') }}" class="block w-full">
                                 <i class="fa-solid fa-bars me-2"></i>
                                 {{ __('Create Page') }}
                             </a>

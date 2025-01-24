@@ -1,5 +1,12 @@
 <x-admin-layout title="Taxes">
-    <h1 class="text-2xl font-bold">{{ __('Taxes') }}</h1>
+    <div class="p-3 site-header">
+        <div>
+            <div class="text-secondary-200 text-2xl font-bold">
+                <i class="fa-solid fa-caret-right"></i> {{ __('Taxes') }}
+            </div>
+        </div>
+    </div>
+
     <form action="{{ route('admin.taxes.update') }}" method="POST">
         @csrf
         <div class="flex flex-col space-y-4">
@@ -26,9 +33,17 @@
             <button class="button button-primary w-fit">{{ __('Save') }}</button>
         </div>
     </form>
+
+    <div class="p-3 site-header">
+        <div>
+            <div class="text-secondary-200 text-2xl font-bold">
+                <i class="fa-solid fa-caret-right"></i> {{ __('Create taxes') }}
+            </div>
+        </div>
+    </div>
+
     <form action="{{ route('admin.taxes.create') }}" method="POST" class="mt-4">
         @csrf
-        <h4 class="text-xl font-bold">{{ __('Create Tax Rate') }}</h4>
         <div class="flex flex-row gap-4">
             <x-input name="name" label="Name" type="text" class="w-full" />
             <x-input name="rate" label="Rate" type="text" class="w-full" />

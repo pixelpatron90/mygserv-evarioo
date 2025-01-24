@@ -1,5 +1,17 @@
 <x-admin-layout title="{{ ucfirst($level) }} Logs">
     <h1 class="text-3xl font-emibold text-secondary-900 dark:text-darkmodetext mb-1">{{ ucfirst($level) }} Logs</h1>
+
+    <div class="p-3 site-header">
+        <div>
+            <div class="text-secondary-200 text-2xl font-bold">
+                <i class="fa-solid fa-caret-right"></i> {{ __('Logs') }}
+            </div>
+            <p class="text-secondary-200">
+                {{ __('Here you can see your system logs.') }}
+            </p>
+        </div>
+    </div>
+
     <div class="w-full h-full rounded mb-4">
         <div class="mx-auto">
             <div class="flex flex-row overflow-x-auto lg:flex-wrap lg:space-x-1">
