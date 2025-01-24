@@ -47,6 +47,10 @@
     main {
         @apply py-6;
     }
+
+    main .content-box .site-header {
+      @apply bg-[#1a202c] flex flex-row justify-between;
+    }
   
     footer {
         @apply w-full text-white bg-primarycolor py-5;

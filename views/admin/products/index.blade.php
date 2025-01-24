@@ -1,12 +1,12 @@
 <x-admin-layout title="Products">
-    <div class="p-3 bg-white dark:bg-secondary-100 flex flex-row justify-between">
+    <div class="p-3 siteHeader ">
         <div>
-            <div class="mt-3 text-2xl font-bold dark:text-darkmodetext">
+            <div class="mt-3 text-2xl font-bold">
                 {{ __('Products') }}
             </div>
-            <div class="mt-3 text-gray-500 dark:text-darkmodetext">
+            <p>
                 {{ __('Here you can see all products.') }}
-            </div>
+            </p>
         </div>
         <div class="flex my-auto float-end justify-end mr-4">
             <a href="{{ route('admin.products.create') }}"
