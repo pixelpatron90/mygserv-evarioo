@@ -30,7 +30,7 @@
     @empty($title)
     <title>{{ config('app.name') }}</title>
     @else
-    <title>{{ config('app.name') . ' |' . ucfirst($title) }}</title>
+    <title>{{ config('app.name') . ' | ' . ucfirst($title) }}</title>
     @endempty
 </head>
 
