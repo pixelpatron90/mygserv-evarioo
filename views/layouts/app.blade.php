@@ -43,8 +43,10 @@
 
             @if(Route::is('index') )
 
-            <div class="carousel">
-                
+            <div class="features">
+                <div>
+                    
+                </div>
             </div>
             
             @endif
