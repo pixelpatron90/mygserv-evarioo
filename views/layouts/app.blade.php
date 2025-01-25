@@ -130,7 +130,7 @@
                     @endif
                     <div class="widget">
                         <div class="title">
-                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Partner') }}</h1>
+                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Support') }}</h1>
                         </div>
                         <div class="content">
                             <p>
