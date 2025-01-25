@@ -77,6 +77,10 @@
     background-image: url('../images/gm.jpg');
   }
 
+  main .features > .custom {
+    @apply block flex flex-row;
+  }
+
   main .site {
     @apply flex flex-col lg:flex-row gap-5 mt-8;
   }
