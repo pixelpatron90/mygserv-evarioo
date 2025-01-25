@@ -120,7 +120,7 @@
   }
 
   main .site .sidebar > .widget > .content {
-    @apply bg-gray-200 mt-1 p-4 overflow-auto w-full text-gray-500 border-t border-dashed border-red-500;
+    @apply bg-gray-200 mt-1 p-4 w-full text-gray-500 border-t border-dashed border-red-500;
   }
 
   footer {

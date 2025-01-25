@@ -144,10 +144,10 @@
 
                     <div class="widget">
                         <div class="title">
-                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Support') }}</h1>
+                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Discord') }}</h1>
                         </div>
                         <div class="content">
-                            <iframe src="https://discord.com/widget?id=1256247335319507007&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                            <iframe src="https://discord.com/widget?id=1256247335319507007&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                         </div>
                     </div>
                     
