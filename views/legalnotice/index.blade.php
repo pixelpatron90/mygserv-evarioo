@@ -1,12 +1,8 @@
 <x-app-layout title="{{ __('Legal notice') }}">
 
-    @php
-        $widgets = ['reviews'];
-    @endphp
-
     @section('paymenter_copyright', 'Powered by paymenter')
 
-    @section('reviews')
+    @section('widget_reviews')
     <div class="widget">
         <div class="title">
             <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Reviews') }}</h1>
