@@ -44,8 +44,8 @@
             @if(Route::is('index') )
 
             <div class="carousel">
-                <div id="default-carousel" class="h-48 w-full" data-carousel="slide">
-                    <div class="h-48 flex flex-col w-1/4 overflow-hidden rounded-md">
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="relative h-48 flex flex-col w-1/4 overflow-hidden rounded-md">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
