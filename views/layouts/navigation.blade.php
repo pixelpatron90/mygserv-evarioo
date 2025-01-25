@@ -3,7 +3,7 @@
         <span class="sr-only">Open main menu</span>
         <i class="fa-solid fa-bars"></i>
     </button>
-    <div class="mt-2 lg:mt-0 hidden lg:block h-full rounded-md" id="navbar-default">
+    <div class="mt-2 lg:mt-0 hidden lg:block ps-2 h-full rounded-md" id="navbar-default">
       <ul>
         <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
         @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
