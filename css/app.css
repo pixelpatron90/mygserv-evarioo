@@ -55,7 +55,7 @@
   }
 
   main .carousel {
-    @apply h-48 mt-8 rounded-md;
+    @apply h-48 mt-8 bg-gray-200 rounded-md;
   }
 
   main .site {
