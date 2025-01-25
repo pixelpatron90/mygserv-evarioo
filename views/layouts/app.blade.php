@@ -107,12 +107,12 @@
                                 {{ __('We are always looking for creative ideas and projects. If you are interested in a partnership contact us!') }}
                             </p>
                             <ul class="mt-2">
-                                <li class="bg-red-500 hover:bg-red-600 text-white rounded-md p-2 mb-1">
+                                <li class="bg-red-500 odd:bg-blue-500 hover:bg-red-600 text-white rounded-md p-2 mb-1">
                                     <a href="mailto://info@mygserv.de" target="_blank">
                                         <i class="fa-solid fa-envelope me-2"></i> {{ __('Contact') }}
                                     </a>
                                 </li>
-                                <li class="bg-red-500 hover:bg-red-600 text-white rounded-md p-2 ">
+                                <li class="bg-red-500 odd:bg-blue-500 hover:bg-red-600 text-white rounded-md p-2 ">
                                     <a href="https://discord.mygserv.de" target="_blank">
                                         <i class="fa-brands fa-discord me-2"></i> {{ __('Discord') }}
                                     </a>
