@@ -1,9 +1,9 @@
-<nav class="lg:flex lg:flex-row lg:justify-between">
+<nav class="ps-2 pe-2 lg:flex lg:flex-row lg:justify-between">
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-3.5 w-8 h-8 justify-center text-white rounded-sm lg:hidden bg-red-500 hover:bg-red-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <i class="fa-solid fa-bars"></i>
     </button>
-    <div class="mt-2 lg:mt-0 hidden lg:block ps-2 h-full rounded-md" id="navbar-default">
+    <div class="mt-2 lg:mt-0 hidden lg:block h-full rounded-md" id="navbar-default">
       <ul>
         <li><a href="{{ route('index') }}">{{ __('Home') }}</a></li>
         @foreach (App\Models\Category::whereNull('category_id')->orderBy('order')->get() as $category)
