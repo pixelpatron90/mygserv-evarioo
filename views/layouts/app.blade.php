@@ -43,7 +43,9 @@
             <div class="site">
                 <div class="content">
                     @if ($clients) @include('layouts.subnavigation') @endif
-                    <section>{{ $slot }}</section>
+                    <section>
+                        {{ $slot }}
+                    </section>
                 </div>
                 <div class="sidebar">
                     <div class="widget">
@@ -93,16 +95,13 @@
                             @endauth
                         </div>
                     </div>
-                    <div class="widget">
-                        <div class="title">
-                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Reviews') }}</h1>
-                        </div>
-                        <div class="content">
-                            <div class="trustpilot-widget" data-locale="de-DE" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="679298f81bb2105f11f9f0eb" data-style-height="52px" data-style-width="100%">
-                                <a href="https://de.trustpilot.com/review/mygserv.de" target="_blank" rel="noopener">Trustpilot</a>
-                            </div>
-                        </div>
-                    </div>
+                    @if($widgets)
+                        @foreach ($widgets as $widget)
+                            @hasSection('widget_'.$widget)
+                                @yield('widget_'.$widget)
+                            @endif
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
@@ -110,7 +109,16 @@
     @include('layouts.footer')
     <div class="info">
         <div class="container">
-            <p>Seite wurde in {{ round(microtime(true) - LARAVEL_START, 3) }} Sekunden geladen</p>
+            <div class="flex flex-col lg:flex-row justify-between">
+                <p>
+                    {{ __('Page was in') }} {{ round(microtime(true) - LARAVEL_START, 3) }} {{ __('seconds loaded.') }}.
+                </p>
+                @hasSection('paymenter_copyright')
+                <p>
+                    @yield('paymenter_copyright')
+                </p>
+                @endif
+            </div>
         </div>
     </div>
 </body>
