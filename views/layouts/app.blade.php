@@ -43,92 +43,9 @@
 
             @if(Route::is('index') )
 
-
-            <script type="module">
-                window.carousel = function () {
-                  return {
-                    container: null,
-                    prev: null,
-                    next: null,
-                    init() {
-                      this.container = this.$refs.container
-            
-                      this.update();
-            
-                      this.container.addEventListener('scroll', this.update.bind(this), {passive: true});
-                    },
-                    update() {
-                      const rect = this.container.getBoundingClientRect();
-            
-                      const visibleElements = Array.from(this.container.children).filter((child) => {
-                        const childRect = child.getBoundingClientRect()
-            
-                        return childRect.left >= rect.left && childRect.right <= rect.right;
-                      });
-            
-                      if (visibleElements.length > 0) {
-                        this.prev = this.getPrevElement(visibleElements);
-                        this.next = this.getNextElement(visibleElements);
-                      }
-                    },
-                    getPrevElement(list) {
-                      const sibling = list[0].previousElementSibling;
-            
-                      if (sibling instanceof HTMLElement) {
-                        return sibling;
-                      }
-            
-                      return null;
-                    },
-                    getNextElement(list) {
-                      const sibling = list[list.length - 1].nextElementSibling;
-            
-                      if (sibling instanceof HTMLElement) {
-                        return sibling;
-                      }
-            
-                      return null;
-                    },
-                    scrollTo(element) {
-                      const current = this.container;
-            
-                      if (!current || !element) return;
-            
-                      const nextScrollPosition =
-                        element.offsetLeft +
-                        element.getBoundingClientRect().width / 2 -
-                        current.getBoundingClientRect().width / 2;
-            
-                      current.scroll({
-                        left: nextScrollPosition,
-                        behavior: 'smooth',
-                      });
-                    }
-                  };
-                }
-              </script>
-              <style>
-                .scroll-snap-x {
-                  scroll-snap-type: x mandatory;
-                }
-            
-                .snap-center {
-                  scroll-snap-align: center;
-                }
-            
-                .no-scrollbar::-webkit-scrollbar {
-                  display: none;
-                }
-            
-                .no-scrollbar {
-                  -ms-overflow-style: none;
-                  scrollbar-width: none;
-                }
-              </style>
-
             <div class="carousel">
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                    <div class="relative h-48 overflow-hidden rounded-md">
+                    <div class="relative h-48 flex flex-col w-1/4 overflow-hidden rounded-md">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
