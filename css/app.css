@@ -59,7 +59,7 @@
   }
 
   main .features > div {
-    @apply w-[500px] bg-gray-200 rounded-md;
+    @apply w-[353.5px] bg-gray-200 rounded-md;
   }
 
   main .site {
