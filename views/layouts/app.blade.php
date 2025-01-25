@@ -41,6 +41,7 @@
         <div class="container">
             @include('layouts.navigation')
 
+            @if(Route::is('index') )
             <div class="carousel">
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                     <div class="relative h-48 overflow-hidden rounded-md">
@@ -69,6 +70,9 @@
                     </div>
                 </div>
             </div>
+            @endif
+
+            
 
             <div class="site">
                 <div class="content">
