@@ -106,6 +106,13 @@
                             <p>
                                 {{ __('We are always looking for creative ideas and projects. If you are interested in a partnership contact us!') }}
                             </p>
+                            <ul class="mt-2">
+                                <li class="bg-red-500 text-white rounded-md p-2 ">
+                                    <a href="mailto://info@mygserv.de" target="_blank">
+                                        <i class="fa-solid fa-envelope me-2"></i> {{ __('Contact') }}
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
