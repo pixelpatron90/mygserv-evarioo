@@ -46,9 +46,7 @@
             <div class="features">
                 <div class="minecraft"></div>
                 <div class="rust"></div>
-                <div>
-                    2
-                </div>
+                <div class="gm"></div>
                 <div>
                     2
                 </div>
