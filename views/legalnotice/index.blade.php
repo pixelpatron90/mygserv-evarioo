@@ -2,6 +2,10 @@
 
     @section('paymenter_copyright', 'Powered by paymenter')
 
+    @section('sidebar_widgets')
+    @php
+    $widgets = ['widget_reviews'];
+    @endphp
     @section('widget_reviews')
     <div class="widget">
         <div class="title">
@@ -13,6 +17,7 @@
             </div>
         </div>
     </div>
+    @endsection
     @endsection
 
     <div class="content">
