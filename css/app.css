@@ -59,11 +59,11 @@
   }
 
   main .features > div {
-    @apply w-[353.5px] h-[160px] bg-gray-200 rounded-md;
+    @apply w-[353.5px] h-[160px] hover:border-b-[20px] border-red-500; bg-gray-200 rounded-md;
   }
 
   main .features > .rust {
-    @apply block hover:border-b-8 border-red-500;
+    @apply block 
     background-image: url('../images/rust.jpg');
   }
 
