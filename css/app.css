@@ -64,6 +64,7 @@
 
   main .features > .rust {
     @apply !bg-red-200;
+    background-image: url('../images/rust.jpg');
   }
 
   main .features > .minecraft {
