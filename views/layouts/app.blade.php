@@ -41,7 +41,7 @@
         <div class="container">
             @include('layouts.navigation')
 
-            <div class="h-44 bg-red-500">
+            <div class="bg-red-500 h-48">
                 adasd
             </div>
 
