@@ -7,8 +7,6 @@ module.exports = {
     './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     './vendor/rappasoft/laravel-livewire-tables/resources/views/**/*.blade.php',
     './node_modules/flowbite/**/*.js',
-    './node_modules/@splidejs/**/*.js',
-    './node_modules/@splidejs/splide/dist/**/*.{css,js}',
     './storage/framework/views/*.php',
     './app/**/*.php', './resources/views/**/*.blade.php',
     './themes/mygserv-evarioo/**/*.{blade.php}'],
