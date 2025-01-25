@@ -62,11 +62,11 @@
     @apply w-[353.5px] bg-gray-200 rounded-md;
   }
 
-  main .features > div > .rust {
+  main .features > .rust {
     @apply !bg-red-200;
   }
 
-  main .features > div > .minecraft {
+  main .features > .minecraft {
     @apply !bg-red-500;
   }
 
