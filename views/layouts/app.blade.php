@@ -95,11 +95,8 @@
                             @endauth
                         </div>
                     </div>
-                    @hasSection('sidebar_widgets')
-                    @foreach ($widgets as $widget)
-                    @yield($widget)
-                    ds
-                    @endforeach
+                    @hasSection('widget_reviews')
+                    @yield('widget_reviews')
                     @endif
                 </div>
             </div>
