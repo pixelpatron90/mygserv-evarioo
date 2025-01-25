@@ -44,12 +44,8 @@
             @if(Route::is('index') )
 
             <div class="features">
-                <div class="minecraft">
-                    1
-                </div>
-                <div class="rust">
-                    2
-                </div>
+                <div class="minecraft"></div>
+                <div class="rust"></div>
                 <div>
                     2
                 </div>
