@@ -63,7 +63,7 @@
   }
 
   main .features > .rust {
-    @apply block 
+    @apply block;
     background-image: url('../images/rust.jpg');
   }
 
