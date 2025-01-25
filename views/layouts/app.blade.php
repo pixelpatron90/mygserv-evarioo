@@ -108,7 +108,7 @@
                             </p>
                             <ul class="mt-2">
                                 <li class="bg-red-500 odd:bg-blue-500 hover:bg-red-600 text-white rounded-md p-2 mb-1">
-                                    <a href="mailto://info@mygserv.de" target="_blank">
+                                    <a href="mailto:info@mygserv.de" target="_blank">
                                         <i class="fa-solid fa-envelope me-2"></i> {{ __('Contact') }}
                                     </a>
                                 </li>
