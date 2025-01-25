@@ -63,7 +63,7 @@
   }
 
   main .features > .rust {
-    @apply block;
+    @apply block hover:border-b-8 border-red-500;
     background-image: url('../images/rust.jpg');
   }
 
