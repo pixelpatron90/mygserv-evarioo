@@ -98,6 +98,16 @@
                     @hasSection('widget_reviews')
                     @yield('widget_reviews')
                     @endif
+                    <div class="widget">
+                        <div class="title">
+                            <h1><i class="fa-solid fa-angle-right me-2"></i> {{ __('Partner') }}</h1>
+                        </div>
+                        <div class="content">
+                            <p>
+                                {{ __('We are always looking for creative ideas and projects. If you are interested in a partnership contact us!') }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
