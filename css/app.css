@@ -55,7 +55,7 @@
   }
 
   main .carousel {
-    @apply bg-red-500 h-48;
+    @apply bg-red-500 h-48 mt-8;
   }
 
   main .site {
