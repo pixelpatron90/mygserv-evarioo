@@ -62,6 +62,14 @@
     @apply w-[353.5px] bg-gray-200 rounded-md;
   }
 
+  main .features > div > .rust {
+    @apply bg-red-200;
+  }
+
+  main .features > div > .minecraft {
+    @apply bg-red-500;
+  }
+
   main .site {
     @apply flex flex-col lg:flex-row gap-5 mt-8;
   }
