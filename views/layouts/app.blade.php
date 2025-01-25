@@ -42,14 +42,13 @@
             @include('layouts.navigation')
 
             <div class="carousel">
-                
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                     <div class="relative h-48 overflow-hidden rounded-lg">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-2/4 left-2/4" alt="...">
                         </div>
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -69,7 +68,6 @@
                         <button type="button" class="bg-red-500 w-5 h-5 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
                     </div>
                 </div>
-
             </div>
 
             <div class="site">
