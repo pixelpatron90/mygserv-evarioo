@@ -47,7 +47,7 @@
                 <div class="minecraft"></div>
                 <div class="rust"></div>
                 <div class="gm"></div>
-                <div class="custom text-center font-intertight font-semibold text-2xl text-red-500">
+                <div class="custom ">
                     Support per Discord
                 </div>
             </div>

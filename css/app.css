@@ -78,7 +78,7 @@
   }
 
   main .features > .custom {
-    @apply block flex flex-row;
+    @apply block text-center font-intertight font-semibold text-2xl text-red-500;
   }
 
   main .site {
