@@ -9,7 +9,7 @@ module.exports = {
     './node_modules/flowbite/**/*.js',
     './storage/framework/views/*.php',
     './app/**/*.php', './resources/views/**/*.blade.php',
-    './themes/mygserv-evarioo/**/*.{blade.php,js}'],
+    './themes/mygserv-evarioo/**/*.{blade.php}'],
 
   theme: {
     // Colors
