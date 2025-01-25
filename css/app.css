@@ -62,7 +62,7 @@
     @apply flex flex-col lg:flex-row gap-5 mt-8;
   }
   main .site > .content {
-    @apply lg:w-9/12 w-full bg-gray-200 p-8;
+    @apply lg:w-9/12 w-full bg-gray-200 p-8 rounded-md;
   }
   main .site .content .headline {
     @apply w-full;
