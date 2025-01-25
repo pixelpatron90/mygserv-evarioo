@@ -59,16 +59,17 @@
   }
 
   main .features > div {
-    @apply w-[353.5px] bg-gray-200 rounded-md;
+    @apply w-[353.5px] h-[160px] bg-gray-200 rounded-md;
   }
 
   main .features > .rust {
-    @apply !bg-red-200;
+    @apply block;
     background-image: url('../images/rust.jpg');
   }
 
   main .features > .minecraft {
-    @apply !bg-red-500;
+    @apply block;
+    background-image: url('../images/mc.jpg');
   }
 
   main .site {
