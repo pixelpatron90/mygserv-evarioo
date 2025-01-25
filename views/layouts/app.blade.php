@@ -42,7 +42,7 @@
             @include('layouts.navigation')
 
             <div class="h-44 bg-red-500">
-
+                adasd
             </div>
 
             <div class="site">
