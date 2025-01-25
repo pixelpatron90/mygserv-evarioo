@@ -98,6 +98,7 @@
                     @hasSection('sidebar_widgets')
                     @foreach ($widgets as $widget)
                     @yield($widget)
+                    ds
                     @endforeach
                     @endif
                 </div>
