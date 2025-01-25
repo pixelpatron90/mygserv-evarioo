@@ -63,11 +63,11 @@
   }
 
   main .features > div > .rust {
-    @apply bg-red-200;
+    @apply !bg-red-200;
   }
 
   main .features > div > .minecraft {
-    @apply bg-red-500;
+    @apply !bg-red-500;
   }
 
   main .site {
