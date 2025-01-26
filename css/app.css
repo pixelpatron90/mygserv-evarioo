@@ -205,7 +205,7 @@
   }
 
   .form-submit {
-    @apply bg-red-500 hover:bg-red-600 text-white w-full py-3 px-2 font-bold rounded-md uppercase justify-center;
+    @apply bg-red-500 hover:bg-red-600 text-white w-full py-3 px-2 font-bold rounded-md uppercase justify-center duration-300;
   }
 
   .prose {

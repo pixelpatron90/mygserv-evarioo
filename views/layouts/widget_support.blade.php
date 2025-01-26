@@ -7,17 +7,17 @@
             {{ __('This is how you reach us:') }}
         </p>
         <ul class="mt-2">
-            <li class="bg-red-500 hover:bg-red-600 text-white rounded-md p-2 mb-1">
+            <li class="button button-danger mb-1">
                 <a href="mailto:info@mygserv.de" target="_blank">
                     <i class="fa-solid fa-envelope me-2"></i> {{ __('Mail') }}
                 </a>
             </li>
-            <li class="bg-primarycolor hover:bg-gray-900 text-white rounded-md p-2 mb-1">
+            <li class="button button-secondary mb-1">
                 <a target="_blank" href="https://discord.mygserv.de" target="_blank">
                     <i class="fa-brands fa-discord me-2"></i> {{ __('Discord') }}
                 </a>
             </li>
-            <li class="bg-red-500 hover:bg-red-600 text-white rounded-md p-2 ">
+            <li class="button button-danger">
                 <a target="_blank" href="https://wiki.mygserv.de" target="_blank">
                     <i class="fa-brands fa-wikipedia-w me-2"></i> {{ __('Wikipedia') }}
                 </a>
