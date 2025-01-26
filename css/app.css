@@ -193,7 +193,7 @@
 
 @layer components {
   .form-label {
-    @apply w-full block mb-2 bg-secondary-200 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base group-focus-within:!top-px group-focus-within:!text-sm rounded-md;
+    @apply w-full block mb-2 text-secondary-200 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base group-focus-within:!top-px group-focus-within:!text-sm rounded-md;
   }
 
   .form-input {

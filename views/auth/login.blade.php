@@ -4,15 +4,15 @@
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
                 <h2 class="text-lg text-secondary-200 font-semibold">{{ __('Login to continue') }}</h2>
-                <x-input class="mt-3" label="{{ __('Email') }}" type="email" placeholder="{{ __('Email..') }}" required
-                    name="email" id="email" icon="ri-at-line" />
+
+                <input type="email" placeholder="{{ __('Email..') }}" name="email" id="email" />
 
                 <div class="flex justify-between mt-4 mb-1 text-sm text-secondary-600">
                     <label for="password">{{ __('Password') }}</label>
                     <a href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
-                <x-input type="password" required placeholder="{{ __('Password..') }}" name="password" id="password"
-                    icon="ri-lock-line" />
+
+                <input type="password" placeholder="{{ __('Password..') }}" name="password" id="password" />
 
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
 
