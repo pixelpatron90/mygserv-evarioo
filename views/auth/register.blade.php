@@ -14,7 +14,7 @@
 
             <form method="POST" action="{{ route('register') }}" id="register">
                 @csrf
-                <div class="grid grid-cols-4 lg:gap-4 mb-4">
+                <div class="grid grid-cols-4 lg:gap-4 gap-x-2 mb-4">
                     <div class="lg:col-span-2 col-span-4">
                         <label class="form-label" for="first_name">{{ __('First name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('First name') }}" name="first_name" id="first_name" />
@@ -32,7 +32,7 @@
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
 
-                <div class="grid grid-cols-4 lg:gap-4 mt-4">
+                <div class="grid grid-cols-4 lg:gap-4 gap-x-2 mt-4">
                     <div class="lg:col-span-2 col-span-4">
                         <label class="form-label" for="last_name">{{ __('Password') }}</label>
                         <input type="password" required class="form-input" placeholder="{{ __('Password') }}" name="password" id="password" />
