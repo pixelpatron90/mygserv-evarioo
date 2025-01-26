@@ -12,7 +12,7 @@
                     <a href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
 
-                <input type="password" placeholder="{{ __('Password..') }}" name="password" id="password" />
+                <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
 
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
 
