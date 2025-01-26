@@ -13,7 +13,7 @@
                 <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
                 <x-recaptcha class="mt-4" form="login" />
-                <button class="form-submit mt-4">{{ __('Login') }}</button>
+                <button class="form-submit">{{ __('Login') }}</button>
             </form>
 
             <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-4 block text-center">{{
