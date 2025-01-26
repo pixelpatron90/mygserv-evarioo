@@ -197,7 +197,7 @@
   }
 
   .form-input {
-    @apply w-full bg-secondary-200 text-secondary-800;
+    @apply w-full bg-secondary-200 rounded-md border border-secondary-300 text-secondary-800;
   }
 
   .form-input.is-invalid {
@@ -205,7 +205,7 @@
   }
 
   .form-submit {
-    @apply px-4 py-2 font-bold text-white rounded-md bg-logo hover:bg-blue-700;
+    @apply bg-red-500 hover:bg-red-600 text-white w-full;
   }
 
   .prose {
