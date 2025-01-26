@@ -1,3 +1,4 @@
+<div {{ $attributes->merge(['class' => 'mt-2 mb-2']) }}>
 @if (config('settings::recaptcha') == 1)
     @if (config('settings::recaptcha_type') == 'v2' || !config('settings::recaptcha_type'))
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -25,3 +26,4 @@
         <div class="h-captcha" data-sitekey="{{ config('settings::recaptcha_site_key') }}"></div>
     @endif
 @endif
+</div>
