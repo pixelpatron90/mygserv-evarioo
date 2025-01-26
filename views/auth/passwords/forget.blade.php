@@ -1,5 +1,4 @@
 <x-app-layout>
-
     <div class="flex items-center justify-center flex-col">
         <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Forgot Password') }}</h2>
@@ -12,8 +11,9 @@
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
 
-                <x-recaptcha class="mt-2" form="forget-password" />
-                <div class="mt-3 flex justify-between items-center">
+                <x-recaptcha class="mt-4" form="forget-password" />
+
+                <div class="mt-4 flex justify-between items-center">
                     <a href="{{ route('login') }}" class="text-sm text-red-500 hover:text-red-600">
                         {{ __('Return to Login') }}
                     </a>
@@ -24,5 +24,4 @@
             </form>
         </div>
     </div>
-    
 </x-app-layout>
