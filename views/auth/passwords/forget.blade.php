@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="flex items-center justify-center flex-col">
+    <div class="content">
         <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Forgot Password') }}</h2>
             <x-alert alert="info">
