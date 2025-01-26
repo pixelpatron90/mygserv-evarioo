@@ -29,11 +29,18 @@
                     </div>
                 </div>
 
+                <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
 
                 <div class="flex flex-row gap-4">
-                    <input type="password" required class="form-input" placeholder="{{ __('Password') }}" name="password" id="password" />
-                    <input type="password" required class="form-input" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" id="password-confirm" />
+                    <div>
+                        <label class="form-label" for="last_name">{{ __('Password') }}</label>
+                        <input type="password" required class="form-input" placeholder="{{ __('Password') }}" name="password" id="password" />
+                    </div>
+                    <div>
+                        <label class="form-label" for="last_name">{{ __('Confirm Password') }}</label>
+                        <input type="password" required class="form-input" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" id="password-confirm" />
+                    </div>
                 </div>
                 <div class="flex items-center justify-center mt-4">
                     <x-recaptcha form="register" />
