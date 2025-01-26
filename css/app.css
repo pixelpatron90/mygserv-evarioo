@@ -60,8 +60,6 @@
 
   main .features > div {
     @apply w-[353.5px] h-[160px] hover:border-b-[20px] border-red-500 bg-gray-200 rounded-md;
-    background-position: center center;
-    background-size: cover;  
   }
 
   main .features > .rust {
