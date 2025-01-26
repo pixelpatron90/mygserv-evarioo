@@ -15,11 +15,11 @@
             <form method="POST" action="{{ route('register') }}" id="register">
                 @csrf
                 <div class="flex flex-wrap gap-4 mb-4">
-                    <div class="w-5/12">
+                    <div class="w-6/12">
                         <label class="form-label" for="first_name">{{ __('First name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('First name') }}" name="first_name" id="first_name" />
                     </div>
-                    <div class="w-5/12">
+                    <div class="w-6/12">
                         <label class="form-label" for="last_name">{{ __('Last name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('Last name') }}" name="last_name" id="last_name" />
                     </div>
