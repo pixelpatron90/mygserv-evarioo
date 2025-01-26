@@ -13,11 +13,19 @@
                 <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
                 <x-recaptcha class="mt-4" form="login" />
-                <button class="form-submit">{{ __('Login') }}</button>
+                <div class="mt-3 flex justify-between items-right">
+                    <div class="w-3/6">
+                        <button type="submit" class="form-submit">
+                            {{ __('Login') }}
+                        </button>
+                    </div>
+                    <div class="w-3/6 content-center text-right">
+                        <a href="{{ route('register') }}" class="text-sm text-red-500 hover:text-red-600">
+                            {{ __('New here? Create an account.') }}
+                        </a>
+                    </div>
+                </div>
             </form>
-
-            <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-4 block text-center">{{
-                    __('New here? Create an account.') }}</a>
 
             @if (config('settings::discord_enabled') == 1 ||
                 config('settings::apple_enabled') == 1 ||
