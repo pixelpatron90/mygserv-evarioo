@@ -40,7 +40,7 @@
                 <x-recaptcha class="mt-4" form="register" />
                 <div class="mt-3 flex justify-between items-center">
                     <div class="w-3/6">
-                        <a href="{{ route('login') }}" class="text-sm text-secondary-200 font-bold">
+                        <a href="{{ route('login') }}" class="text-sm text-red-500 hover:text-red-600">
                             {{ __('Already registered?') }}
                         </a>
                     </div>
