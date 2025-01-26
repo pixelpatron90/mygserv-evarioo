@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center flex-col">
         <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Forgot Password') }}</h2>
-            <x-alert alert="info">
+            <x-alert alert="error">
                 {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
             </x-alert>
             <form method="POST" action="{{ route('password.email') }}" id="forget-password">

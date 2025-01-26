@@ -9,7 +9,7 @@
     {{ $slot }}
 </div>
 @elseif($alert == 'warning')
-<div {{ $attributes->merge(['class' => 'p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50']) }}
+<div {{ $attributes->merge(['class' => 'p-4 mb-4 text-sm text-yellow-500 rounded-lg bg-yellow-50']) }}
     role="alert">
     {{ $slot }}
 </div>
