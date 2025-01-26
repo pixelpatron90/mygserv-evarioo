@@ -1,17 +1,12 @@
 <x-app-layout>
-
-    <div class="content flex items-center justify-center flex-col">
-
+    <div class="content">
         @if (config('settings::registrationAbillity_disable') == 1)
-        <div class="w-full text-center pb-7 pt-7 mb-5 bg-red-500 rounded-lg">
-            <h1 class="font-bold text-white">REGISTRATION IS CURRENTLY DISABLED</h1>
-        </div>
+        <x-alert alert="error">
+            {{ __('Registration is currently not activated. Please try again soon.') }}
+        </x-alert>
         @else
-
-        <div class="content-box w-full">
-
+        <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Make an Account') }}</h2>
-
             <form method="POST" action="{{ route('register') }}" id="register">
                 @csrf
                 <div class="grid grid-cols-4 lg:gap-4 gap-y-2 mb-4">
@@ -57,10 +52,8 @@
                         </button>
                     </div>
                 </div>
-
             </form>
         </div>
         @endif
     </div>
-
 </x-app-layout>

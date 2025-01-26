@@ -7,12 +7,9 @@
             </x-alert>
             <form method="POST" action="{{ route('password.email') }}" id="forget-password">
                 @csrf
-
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
-
                 <x-recaptcha class="mt-4" form="forget-password" />
-
                 <div class="mt-4 flex justify-between items-center">
                     <a href="{{ route('login') }}" class="text-sm text-red-500 hover:text-red-600">
                         {{ __('Return to Login') }}
