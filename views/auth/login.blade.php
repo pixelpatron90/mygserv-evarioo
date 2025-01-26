@@ -44,7 +44,7 @@
                     @if (config('settings::github_enabled'))
                     <a href="{{ route('social.login', 'github') }}"
                         class="button button-secondary !flex gap-x-2 items-center justify-center">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-github fa-lg"></i>
                         {{ __('Sign in with GitHub') }}
                     </a>
                     @endif
