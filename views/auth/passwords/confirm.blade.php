@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-auth-layout>
     <div class="flex items-center justify-center flex-col">
         <div class="w-full content-box">
             <div class="mb-4 bg-red-500 p-4 text-white rounded-md">
@@ -23,4 +23,4 @@
             </form>
         </div>
     </div>
-</x-app-layout>
+</x-auth-layout>
