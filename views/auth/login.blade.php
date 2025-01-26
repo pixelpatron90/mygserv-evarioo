@@ -7,12 +7,14 @@
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
 
-                <label for="email">{{ __('Email') }}</label>
+                <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
-                <div class="flex justify-between mt-4 mb-1 text-sm text-secondary-200">
-                    <label for="password">{{ __('Password') }}</label>
-                    <a href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
+
+                <div class="flex justify-between mt-4 mb-1">
+                    <label class="form-label" for="password">{{ __('Password') }}</label>
+                    <a class="text-sm text-red-500 hover:text-red-600" href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
+
                 <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
 
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
