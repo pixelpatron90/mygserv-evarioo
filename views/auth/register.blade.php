@@ -32,7 +32,7 @@
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
 
-                <div class="flex flex-row gap-4 mb-4">
+                <div class="flex flex-row gap-4 mt-4">
                     <div class="w-3/6">
                         <label class="form-label" for="last_name">{{ __('Password') }}</label>
                         <input type="password" required class="form-input" placeholder="{{ __('Password') }}" name="password" id="password" />
