@@ -2,25 +2,19 @@
     <div class="content flex items-center justify-center flex-col">
         <div class="content-box w-full">
 
-            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2">{{ __('Login to continue') }}</h2>
+            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Login to continue') }}</h2>
 
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
-
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
-
                 <div class="flex justify-between mt-4 mb-1">
                     <label class="form-label" for="password">{{ __('Password') }}</label>
                     <a class="text-sm text-red-500 hover:text-red-600" href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
-
                 <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
-
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
-
                 <button class="form-submit mt-4">{{ __('Login') }}</button>
-
                 <a href="{{ route('register') }}" class="text-sm text-secondary-200 underline mt-4 block text-center">{{
                     __('New here? Create an account.') }}</a>
 
