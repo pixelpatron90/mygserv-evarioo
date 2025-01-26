@@ -218,7 +218,7 @@
     <div @isset($class) class="{{ $class }}" @endisset>
         {{ $slot }}
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{{ $label }}</label>
+            <label for="{{ $id ?? $name }}" class="form-label">{{ $label }}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -231,7 +231,6 @@
                 id={{ $id ?? $name }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="form-input 
-            @isset($icon) pl-10 pr-4 @else px-4 @endisset
             @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror">
         </div>
         @error($name)
