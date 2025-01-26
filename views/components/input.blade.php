@@ -40,7 +40,7 @@
                 {{ $attributes->except('class') }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none w-full border focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300
-            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror">
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror">
         </div>
         @error($name)
             <label for="{{ $id ?? $name }}" class="text-sm text-danger-300">{{ $message }}</label>
@@ -60,7 +60,7 @@
             <select {{ $attributes->except('class') }} id={{ $id ?? $name }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none w-full border focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300
-            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror
             @isset($icon) pl-10 pr-4 @else px-4 @endisset">
                 {{ $slot }}
             </select>
@@ -83,11 +83,11 @@
             <input type="search" {{ $attributes->except('class') }} id={{ $id ?? $name }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none w-full border focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300
-                @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror
+                @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror
                 @isset($icon) pl-10 pr-4 @else px-4 @endisset" autocomplete="off">
         
             <div id="{{$id ?? $name }}-list" class="mt-1 absolute hidden z-10 w-full bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none border max-h-[100px] overflow-y-scroll focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300
-                @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror
+                @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror
                 @isset($icon) pl-10 pr-4 @else px-4 @endisset">
                     {{ $slot }}
                 </div>
@@ -184,7 +184,7 @@
             <textarea {{ $attributes->except('class') }} id={{ $id ?? $name }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none w-full border focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300
-            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror">{{ $value ?? $slot }}</textarea>
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror">{{ $value ?? $slot }}</textarea>
         </div>
         @error($name)
             <label for="{{ $id ?? $name }}" class="text-sm text-danger-300">{{ $message }}</label>
@@ -208,7 +208,7 @@
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="bg-secondary-200 text-secondary-800 font-medium rounded-md placeholder-secondary-500 outline-none w-full border focus:ring-2 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-secondary-100 duration-300 disabled:opacity-50
             @isset($icon) pl-10 pr-4 @else px-4 @endisset
-            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror">
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror">
         </div>
         @error($name)
             <label for={{ $id ?? $name }} class="text-sm text-danger-300">{{ $message }}</label>
@@ -231,7 +231,7 @@
                 id={{ $id ?? $name }}
                 @isset($required) {{ $required ? 'required' : '' }} @endisset
                 class="form-input 
-            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400 focus:ring-primary-400 @enderror">
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror">
         </div>
         @error($name)
             <label for={{ $id ?? $name }} class="text-sm text-danger-300">{{ $message }}</label>
