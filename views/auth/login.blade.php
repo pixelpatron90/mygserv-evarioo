@@ -1,12 +1,15 @@
 <x-app-layout>
     <div class="content flex items-center justify-center flex-col">
         <div class="content-box w-full">
+
+            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2">{{ __('Login to continue') }}</h2>
+
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
-                <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2">{{ __('Login to continue') }}</h2>
 
+                <label for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
-                <div class="flex justify-between mt-4 mb-1 text-sm text-secondary-600">
+                <div class="flex justify-between mt-4 mb-1 text-sm text-secondary-200">
                     <label for="password">{{ __('Password') }}</label>
                     <a href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
@@ -23,7 +26,9 @@
                     <x-recaptcha form="login" />
                 </div>
 
-                @if (config('settings::discord_enabled') == 1 ||
+            </form>
+
+            @if (config('settings::discord_enabled') == 1 ||
                 config('settings::apple_enabled') == 1 ||
                 config('settings::google_enabled') == 1 ||
                 config('settings::github_enabled') == 1)
@@ -60,7 +65,6 @@
                     @endif
                 </div>
                 @endif
-            </form>
         </div>
     </div>
 
