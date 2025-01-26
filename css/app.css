@@ -15,7 +15,7 @@
     @apply flex justify-between w-full h-full;
   }
   header div .logo {
-    @apply lg:w-4/6 w-full flex justify-center;
+    @apply lg:w-4/6 w-full flex justify-center lg:justify-start;
   }
   header div .logo > div.title {
     @apply ms-8 hidden lg:flex flex-col justify-start w-96 pt-2;
