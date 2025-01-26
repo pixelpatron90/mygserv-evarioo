@@ -19,7 +19,7 @@
                         <label class="form-label" for="first_name">{{ __('First name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('First name') }}" name="first_name" id="first_name" />
                     </div>
-                    <div class="w-3/6">
+                    <div class="w-[50%]">
                         <label class="form-label" for="last_name">{{ __('Last name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('Last name') }}" name="last_name" id="last_name" />
                     </div>
