@@ -11,7 +11,7 @@
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
                 <x-recaptcha class="mt-4" form="forget-password" />
                 <div class="mt-3 flex justify-between items-center">
-                    <div class="w-3/6">
+                    <div class="w-3/6 content-center">
                         <button type="submit" class="form-submit">
                             {{ __('Email Password Reset Link') }}
                         </button>

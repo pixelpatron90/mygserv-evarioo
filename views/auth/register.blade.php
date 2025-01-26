@@ -44,7 +44,7 @@
                             {{ __('Register') }}
                         </button>
                     </div>
-                    <div class="w-3/6">
+                    <div class="w-3/6 content-center">
                         <a href="{{ route('login') }}" class="text-sm text-red-500 hover:text-red-600">
                             {{ __('Already registered?') }}
                         </a>
