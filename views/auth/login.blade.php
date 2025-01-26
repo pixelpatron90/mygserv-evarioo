@@ -49,7 +49,7 @@
                     </a>
                     @endif
                 </div>
-                @endif
+            @endif
         </div>
     </div>
 
