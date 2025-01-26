@@ -5,7 +5,7 @@
                 <a href="{{ route('index') }}">
                     <x-branding class="w-36" />
                 </a>
-                <div class="title lg:block hidden">
+                <div class="title">
                     <h1>
                         <a class="hover:text-red-600" href="{{ route('index') }}">
                             {{ config('app.name') }}

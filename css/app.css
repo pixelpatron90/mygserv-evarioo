@@ -18,7 +18,7 @@
     @apply w-4/6 flex justify-start;
   }
   header div .logo > div.title {
-    @apply ms-8 flex flex-col justify-start w-96 pt-2;
+    @apply ms-8 hidden lg:flex flex-col justify-start w-96 pt-2;
   }
   header div .logo > div.title h1 {
     @apply text-7xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
@@ -55,7 +55,7 @@
   }
 
   main .features {
-    @apply h-[160px] mt-8 rounded-md flex flex-row gap-1 sm:gap-2 lg:gap-3;
+    @apply h-[160px] hidden mt-8 rounded-md lg:flex flex-row gap-1 sm:gap-2 lg:gap-3;
   }
 
   main .features > div {
