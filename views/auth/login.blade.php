@@ -8,7 +8,7 @@
                 @csrf
                 <label class="form-label" for="email">{{ __('Email') }}</label>
                 <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
-                <div class="flex justify-between mb-4">
+                <div class="flex justify-between mt-4">
                     <label class="form-label" for="password">{{ __('Password') }}</label>
                     <a class="text-sm text-red-500 hover:text-red-600" href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>

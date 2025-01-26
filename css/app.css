@@ -197,7 +197,7 @@
   }
 
   .form-input {
-    @apply mt-3 w-full px-6 py-3 text-base  rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
+    @apply mt-2 w-full px-6 py-3 text-base  rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
   }
 
   .form-input.is-invalid {
