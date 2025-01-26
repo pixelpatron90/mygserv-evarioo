@@ -30,12 +30,16 @@
                     <x-recaptcha form="register" />
                 </div>
                 <div class="mt-3 flex justify-between items-center">
-                    <a href="{{ route('login') }}" class="text-sm text-secondary-200 font-bold">
-                        {{ __('Already registered?') }}
-                    </a>
-                    <button type="submit" class="form-submit">
-                        {{ __('Register') }}
-                    </button>
+                    <div class="w-3/6">
+                        <a href="{{ route('login') }}" class="text-sm text-secondary-200 font-bold">
+                            {{ __('Already registered?') }}
+                        </a>
+                    </div>
+                    <div class="w-3/6">
+                        <button type="submit" class="form-submit">
+                            {{ __('Register') }}
+                        </button>
+                    </div>
                 </div>
 
             </form>
