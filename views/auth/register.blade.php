@@ -14,7 +14,7 @@
 
             <form method="POST" action="{{ route('register') }}" id="register">
                 @csrf
-                <div class="flex flex-wrap gap-4 mb-4">
+                <div class="flex flex-wrap mb-4">
                     <div class="w-6/12">
                         <label class="form-label" for="first_name">{{ __('First name') }}</label>
                         <input type="name" class="form-input" placeholder="{{ __('First name') }}" name="first_name" id="first_name" />
