@@ -197,7 +197,7 @@
   }
 
   .form-input {
-    @apply mt-2 w-full px-4 py-2.5 text-base  rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
+    @apply mt-2 w-full px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
   }
 
   .form-input.is-invalid {
@@ -205,7 +205,7 @@
   }
 
   .form-submit {
-    @apply bg-red-500 hover:bg-red-600 text-white w-full py-3 px-2 font-bold rounded-md uppercase justify-center duration-300;
+    @apply bg-red-500 hover:bg-red-600 text-white w-full py-3 px-2 font-bold rounded-md justify-center duration-300;
   }
 
   .prose {
