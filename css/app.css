@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
   }
   body.auth main {
-    @apply !bg-red-500 h-full;
+    @apply !bg-none h-full;
   }
 
   body.auth main > .wrapper {
