@@ -214,6 +214,24 @@
             <label for={{ $id ?? $name }} class="text-sm text-danger-300">{{ $message }}</label>
         @enderror
     </div>
+@elseif($type == 'number')
+    <div @isset($class) class="{{ $class }}" @endisset>
+        {{ $slot }}
+        @isset($label)
+            <label for="{{ $id ?? $name }}" class="form-label">{{ $label }}</label>
+        @endisset
+        <div class="relative">
+            <input type="number" {{ $attributes->except('class') }}
+                @isset($value) value="{{ $value }}" @else value="{{ old($name) }}" @endisset
+                id={{ $id ?? $name }}
+                @isset($required) {{ $required ? 'required' : '' }} @endisset
+                class="form-number 
+            @error($name) border-danger-300 focus:border-danger-400 focus:ring-danger-300 @else border-secondary-300 focus:border-secondary-400  @enderror">
+        </div>
+        @error($name)
+            <label for={{ $id ?? $name }} class="text-sm text-danger-300">{{ $message }}</label>
+        @enderror
+    </div>
 @else 
     <div @isset($class) class="{{ $class }}" @endisset>
         {{ $slot }}
