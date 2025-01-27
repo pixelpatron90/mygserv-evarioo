@@ -29,7 +29,7 @@
   }
 
   .languageswitch li {
-    @apply block me-4 px-2 py-1 bg-red-500 text-white rounded-md;
+    @apply block text-sm me-4 px-1.5 py-1 bg-red-500 text-white rounded-md;
   }
 
   header {
