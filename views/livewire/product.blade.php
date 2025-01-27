@@ -26,10 +26,10 @@
                     wire:click="addToCart">
                     @if ($added)
                         <i class="fa-solid fa-cart-plus me-2"></i>
-                        <span class="lg:block hidden">{{ __('Added to cart') }}</span>
+                        <span class="lg:inline-block hidden">{{ __('Added to cart') }}</span>
                     @else
                         <i class="fa-solid fa-cart-shopping me-2"></i>
-                        <span class="lg:block hidden">{{ __('Added to cart') }}</span>
+                        <span class="lg:inline-block hidden">{{ __('Added to cart') }}</span>
                     @endif
                 </button>
             @endif
