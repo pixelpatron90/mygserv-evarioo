@@ -9,7 +9,7 @@
             </p>
         </div>
             @if ($product->image !== 'null')
-            <div class="border-y-2 border-red-500">
+            <div class="border-y-8 border-red-500">
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full"
                 onerror="removeElement(this);">
             </div>
