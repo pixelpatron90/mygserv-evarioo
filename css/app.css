@@ -225,11 +225,11 @@
 
 @layer components {
   .form-label {
-    @apply text-secondary-200;
+    @apply text-secondary-200 mb-3;
   }
 
   .form-input {
-    @apply mt-2 w-full px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
+    @apply w-full px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
   }
 
   .form-input.is-invalid {
