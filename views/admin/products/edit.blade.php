@@ -48,17 +48,17 @@
 </div>
 
 <div class="mb-4">
-    <input type="checkbox" checked="{{ $product->hidden ? true : false }}" required class="form-input" placeholder="{{ __('Hidden') }}" name="hidden" id="hidden" />
+    <input type="" checked="{{ $product->hidden ? true : false }}" required class="form-input" placeholder="{{ __('Hidden') }}" name="hidden" id="hidden" />
 </div>
 
 <div class="mb-4">
-    <textarea required rows="4" required class="form-input" placeholder="{{ __('Description') }}" autofocus name="description" id="description">
+    <textarea required rows="4" required class="" placeholder="{{ __('Description') }}" autofocus name="description" id="description">
         {{ $product->description }}
     </textarea>
 </div>
 
 <div class="mb-4">
-    <input type="checkbox" value="1" onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }" checked="{{ $product->stock_enabled ? true : false }}" required class="form-input" placeholder="{{ __('Stock enabled') }}" name="stock_enabled" id="stock_enabled" />
+    <input type="" value="1" onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }" checked="{{ $product->stock_enabled ? true : false }}" required class="form-input" placeholder="{{ __('Stock enabled') }}" name="stock_enabled" id="stock_enabled" />
 </div>
         
         <div class="@if (!$product->stock_enabled) hidden mb-4 @endif" id="stock">
