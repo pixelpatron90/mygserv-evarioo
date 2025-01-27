@@ -41,11 +41,12 @@
   }
 
   header {
-    @apply bg-primarycolor py-7 bg-cover bg-center bg-no-repeat;
-    background-image: url('../images/header.jpg')
+    @apply bg-primarycolor py-7;
   }
+
   header > .container > div  {
-    @apply flex justify-between w-full h-full;
+    @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat;
+    background-image: url('../images/header.jpg')
   }
   header > .container > div .logo {
     @apply lg:w-4/6 w-full flex justify-center lg:justify-start;
