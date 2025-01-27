@@ -128,15 +128,12 @@
                     </select>
                 </div>
             </div>
-            <!-- Limit -->
-            <div class="flex flex-row text-sm mt-4">
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="limit">
-                        {{ __('Limit per client') }}
-                    </label>
-                    <input type="text" name="limit" id="limit" value="{{ $product->limit }}" class="form-input">
-                </div>
+
+            <div class="mb-4">
+                <x-input type="number" name="limit" id="limit" label="{{ __('Stock') }}"
+                    placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
             </div>
+
             <div class="flex items-center justify-end mt-4">
                 <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
                     {{ __('Save') }}
