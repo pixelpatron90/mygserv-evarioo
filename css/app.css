@@ -20,10 +20,9 @@
     @apply bg-primarycolor h-44 py-7;
   }
 
-  header .top {
+  .top {
     @apply h-16 bg-red-500;
   }
-  header .bottom {}
 
   header div {
     @apply flex justify-between w-full h-full;
