@@ -24,6 +24,18 @@
     @apply flex flex-row justify-between;
   }
 
+  .languageswitch {
+    @apply flex flex-row h-full;
+  }
+
+  .languageswitch li {
+    @apply me-4;
+  }
+
+  .languageswitch li.german {
+    background-image: url('../images/icons/flags/de.png');
+  }
+
   header {
     @apply bg-primarycolor py-7;
   }

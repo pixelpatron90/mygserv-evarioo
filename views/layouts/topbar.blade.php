@@ -5,7 +5,14 @@
                 {{ __('Welcome to :appname', ['appname' => config('app.name')]) }}
             </p>
             <div>
-                <img src="https://mygserv.de/themes/mygserv-evarioo/images/icons/flags/de.png" />
+                <ul class="languageswitch">
+                    <li class="german">
+                        DE
+                    </li>
+                    <li class="english">
+                        EN
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
