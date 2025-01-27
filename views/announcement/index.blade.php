@@ -7,8 +7,8 @@
                 @foreach ($announcements->sortByDesc('created_at') as $announcement)
                     <div class="col-span-12">
                         <div class="content-box">
-                            <h3 class="font-semibold text-red-500 text-lg">{{ $announcement->title }}</h3>
-                            <div class="max-w-full">
+                            <h3 class="font-semibold text-red-500 text-lg mb-3">{{ $announcement->title }}</h3>
+                            <div class="w-full">
                                 @markdownify(substr($announcement->announcement, 0, 300) . '...')
                             </div>
                             <div class="flex justify-between items-center mt-3">

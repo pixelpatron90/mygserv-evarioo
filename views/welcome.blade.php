@@ -18,7 +18,7 @@
                             <h3 class="font-semibold text-secondary-200 text-lg">{{ $category->name }}</h3>
                         </div>
                     </div>
-                    <div class="prose dark:prose-invert">@markdownify($category->description)</div>
+                    <div>@markdownify($category->description)</div>
                     <div class="pt-3 mt-auto">
                         <a href="{{ route('products', $category->slug) }}" class="button button-secondary w-full">{{
                             __('Browse Category') }}</a>
@@ -39,7 +39,7 @@
             <div class="col-span-12">
                 <div class="content-box">
                     <h3 class="font-semibold text-secondary-200 text-lg">{{ $announcement->title }}</h3>
-                    <div class="prose dark:prose-invert">
+                    <div class="">
                         @markdownify(substr($announcement->announcement, 0, 400) . '...')
                     </div>
                     <div class="flex justify-between items-center mt-3">
