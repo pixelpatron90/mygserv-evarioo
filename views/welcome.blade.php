@@ -43,10 +43,13 @@
                         @markdownify(substr($announcement->announcement, 0, 400) . '...')
                     </div>
                     <div class="flex lg:flex-col flex-row justify-between items-center mt-3">
-                        <span class="text-sm text-secondary-400">{{ __('Published') }}
-                            {{ $announcement->created_at->diffForHumans() }}</span>
-                            <a href="{{ route('announcements.view', $announcement->id) }}"
-                                class="button button-secondary">{{ __('Read More') }}</a>
+                        <span class="text-sm text-secondary-400">
+                            {{ __('Published') }}
+                            {{ $announcement->created_at->diffForHumans() }}
+                        </span>
+                        <a href="{{ route('announcements.view', $announcement->id) }}" class="button button-secondary">
+                            {{ __('Read More') }}
+                        </a>
                     </div>
                 </div>
             </div>
