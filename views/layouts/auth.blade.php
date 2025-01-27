@@ -34,7 +34,7 @@
     <x-paymenter-update />
     
     <div class="wrapper">
-      <h2 class="block lg:hidden text-white text-4xl uppercase font-intertight font-bold text-center py-4">
+      <h2 class="block lg:hidden text-white text-4xl uppercase font-intertight font-bold text-center py-8">
         {{ config('app.name') }}
       </h2>
       <div class="hidden lg:flex justify-center items-center py-4">
