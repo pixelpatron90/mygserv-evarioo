@@ -51,8 +51,9 @@
   header > .container > div .logo {
     @apply lg:w-4/6 w-full flex justify-center content-center lg:justify-start;
   }
+  
   header > .container > div .logo > div.title {
-    @apply ms-8 hidden lg:flex flex-col justify-start  w-96 pt-2;
+    @apply bg-red-500 w-2/6 ms-8 hidden lg:flex flex-col justify-start  w-96 pt-2;
   }
   header > .container > div .logo > div.title h1 {
     @apply text-6xl text-white font-intertight uppercase text-shadow;
@@ -60,9 +61,7 @@
   header > .container > div .logo > div.title p {
     @apply text-xl text-white font-intertight text-shadow;
   }
-  header > .container > div .login {
-    @apply bg-red-500 w-2/6;
-  }
+
   main {
     @apply py-6 bg-gradient-to-t from-slate-50 to-slate-50;
   }
