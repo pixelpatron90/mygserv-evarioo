@@ -8,9 +8,8 @@
                 <x-money :amount="$product->price()" showFree="true" />
             </p>
         </div>
-        
             @if ($product->image !== 'null')
-            <div>
+            <div class="border-y-2 border-red-500">
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full"
                 onerror="removeElement(this);">
             </div>
@@ -19,7 +18,6 @@
             {{ __('No product image selected.') }}
             </div>
             @endif
-        
         <div class="product-card-footer">
             @if ($product->stock_enabled && $product->stock <= 0)
                 <a class="button bg-red-500 text-white w-full hover:cursor-not-allowed">
