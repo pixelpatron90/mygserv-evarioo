@@ -42,7 +42,7 @@
                     <div class="w-full text-secondary-400">
                         @markdownify(substr($announcement->announcement, 0, 400) . '...')
                     </div>
-                    <div class="flex lg:flex-col flex-row justify-between items-center mt-3">
+                    <div class="flex lg:flex-row flex-col justify-between items-center mt-3">
                         <span class="text-sm text-secondary-400">
                             {{ __('Published') }}
                             {{ $announcement->created_at->diffForHumans() }}
