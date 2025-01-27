@@ -35,7 +35,7 @@
         </div>
 
         @isset($extension)
-        <div class="mt-6 mb-6 text-gray-400 grid grid-cols-2 gap-x-2">
+        <div class="mt-6 mb-6 text-gray-400 grid grid-cols-2 gap-x-5">
             @foreach ($extension->productConfig as $setting)
             @if (!isset($setting->required))
             @php
