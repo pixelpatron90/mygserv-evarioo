@@ -63,7 +63,7 @@
                 onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }"
                 :checked="$product->stock_enabled ? true : false" />
 
-                <div class="@if (!$product->stock_enabled) hidden @endif" id="stock">
+                <div class="@if (!$product->stock_enabled) hidden mt-4 @endif" id="stock">
                     <x-input type="number" name="stock" label="{{ __('Stock') }}" placeholder="{{ __('Stock') }}"
                         value="{{ $product->stock }}" required min="0" />
                 </div>
