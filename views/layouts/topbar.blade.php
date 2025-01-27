@@ -5,7 +5,7 @@
                 {{ __('Welcome to :appname', ['appname' => config('app.name')]) }}
             </p>
             <div>
-                <img src="./images/icons/flags/de.png" />
+                <img src="./themes/mygserv-evarioo/images/icons/flags/de.png" />
             </div>
         </div>
     </div>
