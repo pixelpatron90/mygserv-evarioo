@@ -17,7 +17,7 @@
   }
 
   body.auth main > .wrapper {
-    @apply w-3/12 mx-auto rounded-md;
+    @apply w-3/12 mx-auto my-auto rounded-md;
   }
 
   body {
