@@ -34,7 +34,7 @@
     @apply lg:w-4/6 w-full flex justify-center lg:justify-start;
   }
   header > .container > div .logo > div.title {
-    @apply ms-8 hidden lg:flex flex-col justify-start w-96 pt-2;
+    @apply ms-8 hidden lg:flex flex-col justify-start content-center w-96 pt-2;
   }
   header > .container > div .logo > div.title h1 {
     @apply text-6xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
