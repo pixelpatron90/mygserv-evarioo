@@ -49,10 +49,10 @@
     background-image: url('../images/header.jpg')
   }
   header > .container > div .logo {
-    @apply lg:w-4/6 w-full flex justify-center content-center lg:justify-start;
+    @apply lg:w-4/6 w-full flex justify-between content-center lg:justify-start;
   }
   header > .container > div .logo > div.title {
-    @apply ms-8 hidden lg:flex flex-col justify-between w-96 pt-2;
+    @apply ms-8 hidden lg:flex flex-col justify-start  w-96 pt-2;
   }
   header > .container > div .logo > div.title h1 {
     @apply text-6xl text-white font-intertight uppercase text-shadow;
