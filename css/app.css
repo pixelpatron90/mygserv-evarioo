@@ -18,7 +18,7 @@
   }
 
   .topbar {
-    @apply h-10 bg-gray-500;
+    @apply h-10 py-2 flex flex-col justify-between bg-gray-200;
   }
 
   header {
