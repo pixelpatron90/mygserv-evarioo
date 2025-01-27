@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
   }
   body.auth main {
-    @apply !bg-none;
+    @apply !bg-none h-full flex flex-col content-center;
   }
 
   body {
