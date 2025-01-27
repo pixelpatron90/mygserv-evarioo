@@ -1,4 +1,4 @@
-<div class="md:col-span-1 col-span-3">
+<div class="col-span-2">
     <div class="content-box h-full flex flex-col">
         <div class="flex gap-x-3 items-center mb-2">
             @if ($product->image !== 'null')
