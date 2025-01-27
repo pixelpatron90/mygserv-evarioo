@@ -7,10 +7,10 @@
             <div>
                 <ul class="languageswitch">
                     <li class="german">
-                        DE
+                        
                     </li>
                     <li class="english">
-                        EN
+                        
                     </li>
                 </ul>
             </div>
