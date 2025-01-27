@@ -2,38 +2,9 @@
     <x-slot name="title">
         {{ __('Pricing') }}
     </x-slot>
-    <div class="h-full mx-auto">
-        <div class="pb-6 bg-white dark:bg-secondary-100 dark:border-darkmode">
-            <div class="flex flex-row overflow-x-auto lg:flex-wrap lg:space-x-1">
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.edit', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Details') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.pricing', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-logo text-logo">
-                        {{ __('Pricing') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.extension', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Extension') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.upgrade', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Upgrades') }}
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Show pricing choice: free, one-time, subscription -->
+    @include('admin.products.tabbar')
+
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf
         <div class="mt-4">
@@ -60,90 +31,89 @@
                     </div>
                 </div>
                 @if ($pricing->type == 'one-time')
-                    <div class="flex flex-row text-sm">
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="price">
-                                {{ __('Price') }}
-                            </label>
-                            <input type="text" name="monthly" id="price" value="{{ $pricing->monthly }}"
-                                class="form-input">
-                        </div>
+                <div class="flex flex-row text-sm">
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="price">
+                            {{ __('Price') }}
+                        </label>
+                        <input type="text" name="monthly" id="price" value="{{ $pricing->monthly }}" class="form-input">
                     </div>
+                </div>
                 @elseif($pricing->type == 'recurring')
-                    <div class="flex flex-row text-sm gap-4 mt-2">
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="monthly">
-                                {{ __('Monthly') }}
-                            </label>
-                            <input type="text" name="monthly" id="monthly" value="{{ $pricing->monthly }}"
-                                class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="monthly_setup">
-                                {{ __('Monthly Setup Fee') }}
-                            </label>
-                            <input type="text" name="monthly_setup" id="monthly_setup_fee"
-                                value="{{ $pricing->monthly_setup }}" class="form-input">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="quarterly">
-                                {{ __('Quarterly') }}
-                            </label>
-                            <input type="text" name="quarterly" id="quarterly" value="{{ $pricing->quarterly }}"
-                                class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="quarterly_setup">
-                                {{ __('Quarterly Setup Fee') }}
-                            </label>
-                            <input type="text" name="quarterly_setup" id="quarterly_setup_fee"
-                                value="{{ $pricing->quarterly_setup }}" class="form-input">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="semiannually">
-                                {{ __('Semiannually') }}
-                            </label>
-                            <input type="text" name="semi_annually" id="semi_annually"
-                                value="{{ $pricing->semi_annually }}" class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="semi_annually_setup">
-                                {{ __('Semiannually Setup Fee') }}
-                            </label>
-                            <input type="text" name="semi_annually_setup" id="semi_annually_setup_fee"
-                                value="{{ $pricing->semi_annually_setup }}" class="form-input">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="annually">
-                                {{ __('Annually') }}
-                            </label>
-                            <input type="text" name="annually" id="annually" value="{{ $pricing->annually }}"
-                                class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="annually_setup">
-                                {{ __('Annually Setup Fee') }}
-                            </label>
-                            <input type="text" name="annually_setup" id="annually_setup_fee"
-                                value="{{ $pricing->annually_setup }}" class="form-input">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="biennially">
-                                {{ __('Biennially') }}
-                            </label>
-                            <input type="text" name="biennially" id="biennially"
-                                value="{{ $pricing->biennially }}" class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="biennially_setup">
-                                {{ __('Biennially Setup Fee') }}
-                            </label>
-                            <input type="text" name="biennially_setup" id="biennially_setup_fee"
-                                value="{{ $pricing->biennially_setup }}" class="form-input">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="triennially">
-                                {{ __('Triennially') }}
-                            </label>
-                            <input type="text" name="triennially" id="triennially"
-                                value="{{ $pricing->triennially }}" class="form-input">
-                            <label class="text-gray-700 dark:text-darkmodetext" for="triennially_setup">
-                                {{ __('Triennially Setup Fee') }}
-                            </label>
-                            <input type="text" name="triennially_setup" id="triennially_setup_fee"
-                                value="{{ $pricing->triennially_setup }}" class="form-input">
-                        </div>
+                <div class="flex flex-row text-sm gap-4 mt-2">
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="monthly">
+                            {{ __('Monthly') }}
+                        </label>
+                        <input type="text" name="monthly" id="monthly" value="{{ $pricing->monthly }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="monthly_setup">
+                            {{ __('Monthly Setup Fee') }}
+                        </label>
+                        <input type="text" name="monthly_setup" id="monthly_setup_fee"
+                            value="{{ $pricing->monthly_setup }}" class="form-input">
                     </div>
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="quarterly">
+                            {{ __('Quarterly') }}
+                        </label>
+                        <input type="text" name="quarterly" id="quarterly" value="{{ $pricing->quarterly }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="quarterly_setup">
+                            {{ __('Quarterly Setup Fee') }}
+                        </label>
+                        <input type="text" name="quarterly_setup" id="quarterly_setup_fee"
+                            value="{{ $pricing->quarterly_setup }}" class="form-input">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="semiannually">
+                            {{ __('Semiannually') }}
+                        </label>
+                        <input type="text" name="semi_annually" id="semi_annually" value="{{ $pricing->semi_annually }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="semi_annually_setup">
+                            {{ __('Semiannually Setup Fee') }}
+                        </label>
+                        <input type="text" name="semi_annually_setup" id="semi_annually_setup_fee"
+                            value="{{ $pricing->semi_annually_setup }}" class="form-input">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="annually">
+                            {{ __('Annually') }}
+                        </label>
+                        <input type="text" name="annually" id="annually" value="{{ $pricing->annually }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="annually_setup">
+                            {{ __('Annually Setup Fee') }}
+                        </label>
+                        <input type="text" name="annually_setup" id="annually_setup_fee"
+                            value="{{ $pricing->annually_setup }}" class="form-input">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="biennially">
+                            {{ __('Biennially') }}
+                        </label>
+                        <input type="text" name="biennially" id="biennially" value="{{ $pricing->biennially }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="biennially_setup">
+                            {{ __('Biennially Setup Fee') }}
+                        </label>
+                        <input type="text" name="biennially_setup" id="biennially_setup_fee"
+                            value="{{ $pricing->biennially_setup }}" class="form-input">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="triennially">
+                            {{ __('Triennially') }}
+                        </label>
+                        <input type="text" name="triennially" id="triennially" value="{{ $pricing->triennially }}"
+                            class="form-input">
+                        <label class="text-gray-700 dark:text-darkmodetext" for="triennially_setup">
+                            {{ __('Triennially Setup Fee') }}
+                        </label>
+                        <input type="text" name="triennially_setup" id="triennially_setup_fee"
+                            value="{{ $pricing->triennially_setup }}" class="form-input">
+                    </div>
+                </div>
                 @endif
                 <!-- Quantity -->
                 <div class="flex flex-row text-sm mt-4">
@@ -170,13 +140,11 @@
                         <label class="text-gray-700 dark:text-darkmodetext" for="limit">
                             {{ __('Limit per client') }}
                         </label>
-                        <input type="text" name="limit" id="limit" value="{{ $product->limit }}"
-                            class="form-input">
+                        <input type="text" name="limit" id="limit" value="{{ $product->limit }}" class="form-input">
                     </div>
                 </div>
                 <div class="flex items-center justify-end mt-4">
-                    <button type="submit"
-                        class="inline-flex justify-center w-max float-right button button-primary">
+                    <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
                         {{ __('Save') }}
                     </button>
                 </div>
