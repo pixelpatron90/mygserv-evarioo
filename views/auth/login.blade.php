@@ -5,12 +5,12 @@
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
                 <label class="form-label" for="email">{{ __('Email') }}</label>
-                <input type="email" class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
+                <input type="email" required class="form-input" placeholder="{{ __('Email..') }}" name="email" id="email" />
                 <div class="flex justify-between mt-4">
                     <label class="form-label" for="password">{{ __('Password') }}</label>
                     <a class="text-sm text-red-500 hover:text-red-600" href="{{ route('password.request') }}" class="underline">{{ __('Forgot Password?') }}</a>
                 </div>
-                <input type="password" class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
+                <input type="password" required class="form-input" placeholder="{{ __('Password..') }}" name="password" id="password" />
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
                 <x-recaptcha class="mt-4" form="login" />
                 <div class="mt-3 flex justify-between items-right">
