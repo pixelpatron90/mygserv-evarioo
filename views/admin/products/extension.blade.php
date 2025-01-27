@@ -2,36 +2,7 @@
     <x-slot name="title">
         {{ __('Editing ') . $product->name }}
     </x-slot>
-    <div class="h-full mx-auto">
-        <div class="pb-6 bg-white dark:bg-secondary-100 dark:border-darkmode">
-            <div class="flex flex-row overflow-x-auto lg:flex-wrap lg:space-x-1">
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.edit', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Details') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.pricing', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Pricing') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.extension', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-logo text-logo">
-                        {{ __('Extension') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.upgrade', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Upgrades') }}
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('admin.products.tabbar', ['tab' => 'edit'])
     <div class="grid grid-cols-1 md:grid-cols-2 mt-4">
         <div class="text-2xl dark:text-darkmodetext">
             {{ __('Update product server') }}: {{ $product->name }}
@@ -48,8 +19,7 @@
                 </svg>
             </button>
             <div class="absolute hidden w-max origin-top-right bg-white rounded-md shadow-lg dark:bg-darkmode ring-1 ring-black ring-opacity-5 z-20"
-                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
-                id="moreOptions">
+                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="moreOptions">
                 <div class="py-1 grid grid-cols-1" role="none">
                     <a href="{{ route('admin.products.extension.export', $product->id) }}"
                         class="block px-4 py-2 text-base text-gray-700 dark:text-darkmodetext dark:hover:bg-darkmode2 hover:bg-gray-100 hover:text-gray-900"
@@ -65,8 +35,7 @@
                         <label for="json">
                             {{ __('Import') }}
                         </label>
-                        <input type="file" name="json" class="hidden" onchange="this.form.submit()"
-                            id="importFile">
+                        <input type="file" name="json" class="hidden" onchange="this.form.submit()" id="importFile">
                     </form>
                 </div>
             </div>
@@ -83,17 +52,17 @@
                         class="block w-full rounded-md shadow-sm focus:ring-logo focus:border-logo sm:text-sm dark:bg-darkmode"
                         name="extension_id" required onchange="document.getElementById('submitt').disabled = false;">
                         @if ($extensions->count())
-                            <option value="" disabled selected>None</option>
-                            @foreach ($extensions as $server)
-                                @if ($server->id == $product->extension_id)
-                                    <option value="{{ $server->id }}" selected>{{ $server->name }}
-                                    </option>
-                                @else
-                                    <option value="{{ $server->id }}">{{ $server->name }}</option>
-                                @endif
-                            @endforeach
+                        <option value="" disabled selected>None</option>
+                        @foreach ($extensions as $server)
+                        @if ($server->id == $product->extension_id)
+                        <option value="{{ $server->id }}" selected>{{ $server->name }}
+                        </option>
                         @else
-                            <option value="">{{ __('No servers found') }}</option>
+                        <option value="{{ $server->id }}">{{ $server->name }}</option>
+                        @endif
+                        @endforeach
+                        @else
+                        <option value="">{{ __('No servers found') }}</option>
                         @endif
                     </select>
                     <button type="button" class="ml-2 form-submit text-sm w-40 disabled:cursor-not-allowed"
@@ -103,29 +72,29 @@
                 </div>
             </div>
             @isset($extension)
-                <div class="mt-6 text-gray-500 dark:text-darkmodetext dark:bg-secondary-100 grid grid-cols-2 gap-x-2">
-                    @foreach ($extension->productConfig as $setting)
-                        @if (!isset($setting->required))
-                            @php
-                                $setting->required = false;
-                            @endphp
-                        @endif
-                        @if ($setting->type == 'title')
-                            <div class="mt-4 col-span-2">
-                                <div class="text-xl dark:text-darkmodetext">
-                                    {{ $setting->friendlyName }}
-                                </div>
-                                <p class="text-gray-500 dark:text-darkmodetext">
-                                    {{ $setting->description }}
-                                </p>
-                            </div>
-                            @continue
-                        @endif
-                        <div class="mt-4">
-                            <x-config-item :config="$setting" />
-                        </div>
-                    @endforeach
+            <div class="mt-6 text-gray-500 dark:text-darkmodetext dark:bg-secondary-100 grid grid-cols-2 gap-x-2">
+                @foreach ($extension->productConfig as $setting)
+                @if (!isset($setting->required))
+                @php
+                $setting->required = false;
+                @endphp
+                @endif
+                @if ($setting->type == 'title')
+                <div class="mt-4 col-span-2">
+                    <div class="text-xl dark:text-darkmodetext">
+                        {{ $setting->friendlyName }}
+                    </div>
+                    <p class="text-gray-500 dark:text-darkmodetext">
+                        {{ $setting->description }}
+                    </p>
                 </div>
+                @continue
+                @endif
+                <div class="mt-4">
+                    <x-config-item :config="$setting" />
+                </div>
+                @endforeach
+            </div>
             @endisset
 
             <div class="flex items-center justify-end mt-4" type="submit">

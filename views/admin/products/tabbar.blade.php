@@ -14,13 +14,13 @@
         </li>
         <li>
             <a href="{{ route('admin.products.extension', $product->id) }}"
-                class="inline-flex justify-center hover:bg-red-500 hover:text-white rounded-t-md w-full px-2.5 py-3.5 font-bold uppercase">
+                class="@if ($tab == 'extension') text-red-500 @endif inline-flex justify-center hover:bg-red-500 hover:text-white rounded-t-md w-full px-2.5 py-3.5 font-bold uppercase">
                 {{ __('Extension') }}
             </a>
         </li>
         <li>
             <a href="{{ route('admin.products.upgrade', $product->id) }}"
-                class="inline-flex justify-center hover:bg-red-500 hover:text-white rounded-t-md w-full px-2.5 py-3.5 font-bold uppercase">
+                class="@if ($tab == 'upgrade') text-red-500 @endif inline-flex justify-center hover:bg-red-500 hover:text-white rounded-t-md w-full px-2.5 py-3.5 font-bold uppercase">
                 {{ __('Upgrades') }}
             </a>
         </li>
