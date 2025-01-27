@@ -41,7 +41,7 @@
         </div>
     </div>
     <form method="POST" action="{{ route('admin.products.update', $product->id) }}" enctype="multipart/form-data">
-            @csrf
+        @csrf
             <div class="mb-4">
             <x-input type="text" name="name" label="{{ __('Name') }}" placeholder="{{ __('Name') }}"
                 value="{{ $product->name }}" required autofocus />
@@ -51,7 +51,7 @@
             <x-input type="checkbox" label="{{ __('Hidden') }}" name="hidden" id="hidden" value="1" class="mt-2"
                 :checked="$product->hidden ? true : false" />
             </div>
-            
+
             <div class="mb-4">
             <x-input type="textarea" name="description" label="{{ __('Description') }}"
                 placeholder="{{ __('Description') }}" value="{{ $product->description }}" required rows="4" />
@@ -63,13 +63,13 @@
                 onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }"
                 :checked="$product->stock_enabled ? true : false" />
 
-            <div class="@if (!$product->stock_enabled) hidden @endif" id="stock">
-                <x-input type="number" name="stock" label="{{ __('Stock') }}" placeholder="{{ __('Stock') }}"
-                    value="{{ $product->stock }}" required min="0" />
+                <div class="@if (!$product->stock_enabled) hidden @endif" id="stock">
+                    <x-input type="number" name="stock" label="{{ __('Stock') }}" placeholder="{{ __('Stock') }}"
+                        value="{{ $product->stock }}" required min="0" />
+                </div>
             </div>
-            </div>
-        <div class="mb-4">
-            <div class="mt-4">
+        
+            <div class="mb-4">
                 <label for="image">{{ __('Image') }}</label>
                 <p>Only upload a new image if you want to replace the existing one</p>
                 <input id="image" class="block w-full mt-1 rounded-lg dark:bg-darkmode" type="file"
@@ -103,6 +103,7 @@
                     </script>
                 </div>
             </div>
+            <div class="mb-4">
             <x-input type="select" name="category_id" label="{{ __('Category') }}">
                 @if ($categories->count())
                     @foreach ($categories as $category)
@@ -120,6 +121,7 @@
             <div class="flex items-center justify-end mt-4 text-blue-700">
                 <a href="{{ route('admin.categories.create') }}">Create Category</a>
             </div>
+        </div>
             <div class="flex items-center justify-end mt-4">
                 <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
                     {{ __('Save') }}
