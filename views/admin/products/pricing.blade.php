@@ -1,10 +1,5 @@
-<x-admin-layout>
-    <x-slot name="title">
-        {{ __('Pricing') }}
-    </x-slot>
-
+<x-admin-layout :title="__('Pricing ')">
     @include('admin.products.tabbar', ['tab' => 'pricing'])
-
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf
         <div class="mt-4">

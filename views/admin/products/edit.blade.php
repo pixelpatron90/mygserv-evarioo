@@ -1,7 +1,4 @@
-<x-admin-layout>
-    <x-slot name="title">
-        {{ __('Products') }}
-    </x-slot>
+<x-admin-layout :title="__('Products ')">
     @include('admin.products.tabbar', ['tab' => 'edit'])
     <div class="grid grid-cols-1 md:grid-cols-2 mt-4 mb-4">
         <div class="text-2xl dark:text-darkmodetext">
