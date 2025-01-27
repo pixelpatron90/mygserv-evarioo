@@ -7,7 +7,7 @@
         enctype="multipart/form-data" id="formu">
         @csrf
 
-        <div class="flex lg:flex-row flex-col justify-between">
+        <div class="flex lg:flex-row flex-col gap-y-2 lg:gap-y-0 justify-between">
             <select id="server"
                 class="block w-full rounded-md shadow-sm focus:ring-logo focus:border-logo sm:text-sm dark:bg-darkmode"
                 name="extension_id" required onchange="document.getElementById('submitt').disabled = false;">
