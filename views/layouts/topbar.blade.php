@@ -5,7 +5,7 @@
                 {{ __('Welcome to :appname', ['appname' => config('app.name')]) }}
             </p>
             <div>
-                asdad
+                <img src="./images/icons/flags/de.png" />
             </div>
         </div>
     </div>
