@@ -1,9 +1,9 @@
 <x-auth-layout>
     <div class="content">
         <div class="content-box">
-            <div class="mb-4 bg-red-500 p-4 text-white rounded-md">
+            <x-alert alert="error">
                 {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
-            </div>
+            </x-alert>
             <x-input-errors />
             <form method="POST" action="{{ route('password.confirm') }}" id="pw-confirm">
                 @csrf

@@ -1,18 +1,13 @@
-<x-app-layout>
-    <div class="content min-h-[50vh] flex items-center justify-center flex-col">
-        <div class="flex items-center text-secondary-900 font-semibold text-lg py-4 gap-x-2">
-            <x-application-logo class="w-10" />
-            {{ config('app.name', 'Paymenter') }}
-        </div>
-
-        <div class="content-box max-w-lg w-full">
+<x-auth-layout>
+    <div class="content">
+        <div class="content-box">
+            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Two Factor Authentication') }}</h2>
+            <x-alert alert="error">
+                {{ __('Please enter the code from your authenticator app.') }}
+            </x-alert>
+            <x-input-errors />
             <form method="POST" action="{{ route('tfa') }}" id="tfa">
                 @csrf
-                <h2 class="text-lg font-semibold">{{ __('Two Factor Authentication') }}</h2>
-                <h4 class="text-base text-gray-600 dark:text-darkmodetext">
-                    {{ __('Please enter the code from your authenticator app.') }}
-                </h4>
-
                 <x-input id="code" type="text" label="{{ __('Code') }}" name="code" required class="mt-3" />
                 <div class="flex items-center justify-center">
                     <x-recaptcha form="tfa" />
@@ -25,4 +20,4 @@
             </form>
         </div>
     </div>
-</x-app-layout>
+</x-auth-layout>
