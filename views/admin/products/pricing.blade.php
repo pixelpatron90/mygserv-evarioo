@@ -108,29 +108,25 @@
                 </div>
             </div>
             @endif
-            <!-- Quantity -->
-            <div class="flex flex-row text-sm mt-4">
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="allow_quantity">
-                        {{ __('Allow multiple quantities') }}
-                    </label>
-                    <select name="allow_quantity" id="allow_quantity" class="form-input">
-                        <option value="0" @if ($product->allow_quantity == 0) selected @endif>
-                            {{ __('No') }}
-                        </option>
-                        <option value="1" @if ($product->allow_quantity == 1) selected @endif>
-                            {{ __('Yes, Multiple Services (Each represents a own individual service instance)')
-                            }}
-                        </option>
-                        <option value="2" @if ($product->allow_quantity == 2) selected @endif>
-                            {{ __('Yes, Single Service (One service instance with multiple quantity)') }}
-                        </option>
-                    </select>
-                </div>
+
+            <div class="mb-4">
+                <x-input type="select" name="allow_quantity" id="allow_quantity"
+                    label="{{ __('Allow multiple quantities') }}" placeholder="{{ __('Allow multiple quantities') }}">
+                    <option value="0" @if ($product->allow_quantity == 0) selected @endif>
+                        {{ __('No') }}
+                    </option>
+                    <option value="1" @if ($product->allow_quantity == 1) selected @endif>
+                        {{ __('Yes, Multiple Services (Each represents a own individual service instance)')
+                        }}
+                    </option>
+                    <option value="2" @if ($product->allow_quantity == 2) selected @endif>
+                        {{ __('Yes, Single Service (One service instance with multiple quantity)') }}
+                    </option>
+                </x-input>
             </div>
 
             <div class="mb-4">
-                <x-input type="number" name="limit" id="limit" label="{{ __('Stock') }}"
+                <x-input type="number" name="limit" id="limit" label="{{ __('Limit per client') }}"
                     placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
             </div>
 
