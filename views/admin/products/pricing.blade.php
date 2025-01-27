@@ -1,4 +1,4 @@
-<x-admin-layout :title="__('Pricing ')">
+<x-admin-layout :title="__('Editing ') . $product->name">
     @include('admin.products.tabbar', ['tab' => 'pricing'])
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf

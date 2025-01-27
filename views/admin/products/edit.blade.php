@@ -1,4 +1,4 @@
-<x-admin-layout :title="__('Products ')">
+<x-admin-layout :title="__('Editing ') . $product->name">
     @include('admin.products.tabbar', ['tab' => 'edit'])
     <div class="grid grid-cols-1 md:grid-cols-2 mt-4 mb-4">
         <div class="text-2xl dark:text-darkmodetext">
