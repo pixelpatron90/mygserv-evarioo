@@ -1,20 +1,20 @@
 <div class="col-span-4 lg:col-span-2">
     <div class="product-card h-full">
         <div class="product-card-header">
-            @if ($product->image !== 'null')
-                <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-14 rounded-md"
-                    onerror="removeElement(this);">
-            @endif
-            <div>
-                <h3 class="text-lg text-secondary-200 leading-5 font-semibold">
-                    {{ $product->name }}</h3>
-                <p class="!text-secondary-200">
-                    <x-money :amount="$product->price()" showFree="true" />
-                </p>
-            </div>
+            <h3 class="text-lg text-secondary-200 leading-5 font-semibold">
+                {{ $product->name }}
+            </h3>
+            <p class="!text-secondary-200">
+                <x-money :amount="$product->price()" showFree="true" />
+            </p>
         </div>
-        <div class="markdownify-h2 w-full text-secondary-400">
-            @markdownify($product->description)
+        <div class="h-28">
+            @if ($product->image !== 'null')
+            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-14 rounded-md"
+                onerror="removeElement(this);">
+                @else
+                asdads
+            @endif
         </div>
         <div class="product-card-footer">
             @if ($product->stock_enabled && $product->stock <= 0)
