@@ -45,8 +45,7 @@
   }
 
   header > .container > div  {
-    @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat py-7 px-8;
-    background-image: url('../images/header.jpg')
+    @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat py-7 px-8 bg-primarycolor lg:bg-[url(../images/header.jpg)];
   }
   header > .container > div > div.logo {
     @apply lg:w-4/6 w-full flex justify-center content-center lg:justify-start;
