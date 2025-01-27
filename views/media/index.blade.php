@@ -2,11 +2,11 @@
 
   <div class="content">
     <div class="content-box">
-      <div class="prose dark:prose-invert min-w-full">
+
         <div class="flex flex-row gap-4">
           <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-200">{{ __('Media') }}</h2>
         </div>
-        <p>
+        <p class="text-secondary-400">
           {{ __('Do you like what we do? Do you have a game server from mygserv.de or a web space? Then you have the opportunity to thank us here by placing our advertising banner on your homepage / your discord / your server.') }}
         </p>
         <div class="mt-6 grid grid-cols-12 gap-4">
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </div>
 
 </x-app-layout>

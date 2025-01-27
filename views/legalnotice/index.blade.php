@@ -17,7 +17,6 @@
 
     <div class="content">
         <div class="content-box">
-            <div class="prose dark:prose-invert min-w-full">
                 <div class="flex flex-row gap-4">
                     <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-200">{{ __('Legal notice') }}</h2>
                 </div>
@@ -72,7 +71,6 @@
                     {{ __('We are not willing or obliged to take part in dispute resolution proceedings before a consumer arbitration board.') }}
                 </p>
             </div>
-        </div>
     </div>
 
 </x-app-layout>
