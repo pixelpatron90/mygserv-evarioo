@@ -5,9 +5,10 @@
                 {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
             </div>
 
+            <x-input-errors />
+
             <form method="POST" action="{{ route('password.confirm') }}" id="pw-confirm">
                 @csrf
-                <!-- Password -->
                 <div class="mt-4 mb-4">
                     <x-input id="password" type="password" label="{{ __('Password') }}"
                         name="password" required autocomplete="new-password" >

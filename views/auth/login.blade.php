@@ -3,21 +3,7 @@
         <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Login to continue') }}</h2>
 
-            @if($errors->any())
-            <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                <i class="fas fa-exclamation-triangle me-3"></i>
-                <div>
-                    <span class="font-medium">
-                        @lang('The following errors occurred:')
-                    </span>
-                    <ul class="mt-1.5 list-disc list-inside">
-                        @foreach($errors->default->messages() as $error)
-                        <li>{{ $error[0] }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            @endif
+            <x-input-errors />
 
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
