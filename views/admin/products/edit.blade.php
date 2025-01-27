@@ -46,16 +46,17 @@
             <x-input type="text" name="name" label="{{ __('Name') }}" placeholder="{{ __('Name') }}"
                 value="{{ $product->name }}" required autofocus />
             </div>
+
             <div class="mb-4">
             <x-input type="checkbox" label="{{ __('Hidden') }}" name="hidden" id="hidden" value="1" class="mt-2"
                 :checked="$product->hidden ? true : false" />
             </div>
+            
             <div class="mb-4">
             <x-input type="textarea" name="description" label="{{ __('Description') }}"
                 placeholder="{{ __('Description') }}" value="{{ $product->description }}" required rows="4" />
             </div>
-            <div class="mb-4">
-            </div>
+
             <div class="mb-4">
             <x-input type="checkbox" label="{{ __('Stock enabled') }}" name="stock_enabled" id="stock_enabled"
                 value="1"
@@ -66,7 +67,7 @@
                 <x-input type="number" name="stock" label="{{ __('Stock') }}" placeholder="{{ __('Stock') }}"
                     value="{{ $product->stock }}" required min="0" />
             </div>
-        </div>
+            </div>
         <div class="mb-4">
             <div class="mt-4">
                 <label for="image">{{ __('Image') }}</label>
