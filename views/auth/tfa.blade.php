@@ -8,6 +8,7 @@
             <x-input-errors />
             <form method="POST" action="{{ route('tfa') }}" id="tfa">
                 @csrf
+                <label class="form-label" for="code">{{ __('Code') }}</label>
                 <input type="text" required class="form-input" placeholder="{{ __('Code') }}" name="code" id="code" />
                 <x-recaptcha form="tfa" />
                 <div class="flex items-center justify-start mt-4">

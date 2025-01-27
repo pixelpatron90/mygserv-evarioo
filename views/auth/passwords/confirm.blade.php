@@ -7,11 +7,8 @@
             <x-input-errors />
             <form method="POST" action="{{ route('password.confirm') }}" id="pw-confirm">
                 @csrf
-                <div class="mt-4 mb-4">
-                    <x-input id="password" type="password" label="{{ __('Password') }}"
-                        name="password" required autocomplete="new-password" >
-                    </x-input>
-                </div>
+                <label class="form-label" for="password">{{ __('Password') }}</label>
+                <input type="password" autocomplete="new-password" required class="form-input" placeholder="{{ __('Password') }}" name="password" id="password" />
                 <x-recaptcha form="pw-confirm" />
                 <div class="flex justify-start mt-4">
                     <button type="submit"
