@@ -29,11 +29,7 @@
   }
 
   .languageswitch li {
-    @apply me-4;
-  }
-
-  .languageswitch li.german {
-    background-image: url('../images/icons/flags/de.png');
+    @apply block me-4 px-2 py-1 bg-red-500 text-white rounded-md;
   }
 
   header {
