@@ -25,7 +25,7 @@
   }
 
   .languageswitch {
-    @apply flex flex-row h-full;
+    @apply flex lg:flex-row flex-col h-full;
   }
 
   .languageswitch li {
