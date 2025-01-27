@@ -6,7 +6,7 @@
 
 @layer base {
   body.auth {
-    @apply h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
+    @apply !p-28 h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
     background-image: url('../images/backgrounds/auth-layout.jpg');
   }
   body.auth > .wrapper {
