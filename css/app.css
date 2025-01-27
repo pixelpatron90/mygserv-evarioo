@@ -29,7 +29,7 @@
   }
 
   .languageswitch li {
-    @apply me-4 w-[16px] h-[11px];
+    @apply me-4;
   }
 
   .languageswitch li.german {
