@@ -8,6 +8,15 @@
   body {
     @apply bg-white;
   }
+
+  body.auth {
+    @apply h-screen;
+    background-image: url("../../public/images/backgrounds/error.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   header {
     @apply bg-primarycolor h-44 py-7;
   }
