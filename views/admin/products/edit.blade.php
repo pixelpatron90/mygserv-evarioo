@@ -122,8 +122,8 @@
             </div>
         </div>
         <div class="flex items-center justify-start">
-            <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
-                {{ __('Save') }}
+            <button type="submit" class="form-submit">
+                {{ __('Update') }}
             </button>
         </div>
     </form>
