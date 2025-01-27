@@ -8,14 +8,18 @@
                 <x-money :amount="$product->price()" showFree="true" />
             </p>
         </div>
-        <div class="h-28">
+        
             @if ($product->image !== 'null')
+            <div class="h-28">
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-14 rounded-md"
                 onerror="removeElement(this);">
-                @else
-                asdads
+            </div>
+            @else
+            <div class="py-4 text-center text-red-500 font-bold">
+            asdads
+            </div>
             @endif
-        </div>
+        
         <div class="product-card-footer">
             @if ($product->stock_enabled && $product->stock <= 0)
                 <a class="button bg-red-500 text-white w-full hover:cursor-not-allowed">
