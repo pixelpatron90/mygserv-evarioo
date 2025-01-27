@@ -4,23 +4,6 @@
         <div class="text-2xl dark:text-darkmodetext">
             {{ __('Update product server') }}: {{ $product->name }}
         </div>
-        <div class="relative inline-block text-left justify-end">
-            <button type="button"
-                class="absolute top-0 right-0 inline-flex w-max justify-end bg-red-500 hover:bg-red-600 px-2 py-2 text-base font-medium rounded-md text-white"
-                id="menu-button" aria-expanded="true" aria-haspopup="true" data-dropdown-toggle="moreOptions">
-                <i class="fa-solid fa-ellipsis"></i>
-            </button>
-            <div class="absolute hidden w-max origin-top-right bg-primarycolor rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-20"
-                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="moreOptions">
-                <div class="py-1 grid grid-cols-1" role="none">
-                    <a href="{{ route('admin.products.extension.export', $product->id) }}"
-                        class="block px-4 py-2 text-base text-gray-200 hover:bg-gray-800" role="menuitem" tabindex="-1"
-                        id="menu-item-0">
-                        {{ __('Export') }}
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="mt-6 text-gray-500 dark:text-darkmodetext dark:bg-secondary-100">
         <form method="POST" action="{{ route('admin.products.extension.update', $product->id) }}"
