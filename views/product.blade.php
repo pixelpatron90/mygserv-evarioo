@@ -15,8 +15,8 @@
                             <img src="/storage/categories/{{ $category->image }}" class="w-20 h-full rounded-md mr-4" />
                         @endif
                         <div class="w-full">
-                            <h1 class="text-3xl font-semibold text-secondary-200">{{ $category->name }}</h1>
-                            <div class="prose dark:prose-invert">
+                            <h1 class="text-3xl font-semibold text-red-500">{{ $category->name }}</h1>
+                            <div class="w-full text-secondary-400">
                                 @markdownify($category->description)
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                                         <h3 class="font-semibold text-lg">{{ $childCat->name }}</h3>
                                     </div>
                                 </div>
-                                <div class="prose dark:prose-invert">@markdownify($childCat->description)</div>
+                                <div class="w-full text-secondary-400">@markdownify($childCat->description)</div>
                                 <div class="pt-3 mt-auto">
                                     <a href="{{ route('products', $childCat->slug) }}"
                                     class="button button-secondary w-full">{{ __('Browse Category') }}</a>
