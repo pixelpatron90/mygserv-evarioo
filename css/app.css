@@ -25,7 +25,7 @@
   }
 
   header {
-    @apply bg-primarycolor h-44 py-7;
+    @apply bg-primarycolor py-7;
   }
   header > .container > div  {
     @apply flex justify-between w-full h-full;
