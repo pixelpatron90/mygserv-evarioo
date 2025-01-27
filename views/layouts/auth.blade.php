@@ -34,6 +34,9 @@
     <x-paymenter-update />
     
     <div class="wrapper">
+      <div class="bg-red-500">
+
+      </div>
       {{ $slot }}
     </div>
     
