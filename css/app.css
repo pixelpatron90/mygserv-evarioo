@@ -12,12 +12,9 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  body.auth main {
-    @apply !bg-none h-full;
-  }
 
-  body.auth main > .wrapper {
-    @apply w-3/12 mx-auto my-auto rounded-md;
+  body.auth > .wrapper {
+    @apply w-3/12 bg-red-500 mx-auto my-auto rounded-md;
   }
 
   body {

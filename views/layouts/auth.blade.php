@@ -33,11 +33,9 @@
 <body class="auth">
     <x-paymenter-update />
     
-    <main>
-        <div class="wrapper">
-            {{ $slot }}
-        </div>
-    </main>
+    <div class="wrapper">
+      {{ $slot }}
+    </div>
     
 </body>
 
