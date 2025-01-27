@@ -34,7 +34,7 @@
     <x-paymenter-update />
     
     <main>
-        <div class=" w-3/12 container mx-auto bg-red-500">
+        <div class="w-3/12 mx-auto bg-red-500">
             {{ $slot }}
         </div>
     </main>
