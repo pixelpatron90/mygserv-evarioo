@@ -29,6 +29,7 @@
 
 <body>
     <x-paymenter-update />
+    @include('layouts.topbar')
     @include('layouts.header')
     <main>
         <div class="container">

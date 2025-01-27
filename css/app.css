@@ -16,14 +16,14 @@
   body {
     @apply bg-white;
   }
-  header {
-    @apply bg-primarycolor h-44 py-7;
-  }
 
-  .top {
+  .topbar {
     @apply h-16 bg-red-500;
   }
 
+  header {
+    @apply bg-primarycolor h-44 py-7;
+  }
   header div {
     @apply flex justify-between w-full h-full;
   }
