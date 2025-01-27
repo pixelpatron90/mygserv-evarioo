@@ -1,5 +1,5 @@
 <div class="mb-4">
-    <ul>
+    <ul class="flex flex-row">
         <li>
             <a href="{{ route('admin.products.edit', $product->id) }}"
                 class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-logo text-logo">
