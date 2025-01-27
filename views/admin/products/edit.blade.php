@@ -77,8 +77,8 @@
                 <input id="image" class="form-image" type="file"
                     name="image" @if ($product->image == 'null') disabled @endif />
                 <div class="p-4 bg-[#1a202c] mt-4">
-                    <x-input type="checkbox" label="{{ __('Select to delete image') }}" name="hidden" id="hidden" value="1" class="mt-2"
-                :checked="$product->image  == 'null' ? true : false" />
+                    <input type="checkbox" name="no_image" id="no_image" value="1" class="form-input w-4 h-4"
+                        @if ($product->image == 'null') checked @endif>
                     <img src="{{ $product->image }}" alt="{{ $product->name }}" class="h-36 mt-4 mb-4" id="prodctimg"
                         onerror="removeElement(this)">
                     <script>
