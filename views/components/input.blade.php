@@ -49,7 +49,7 @@
 @elseif($type == 'select')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="form-label">{!! $label !!}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -72,7 +72,7 @@
 @elseif($type == 'searchselect')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="form-label">{!! $label !!}</label>
         @endisset
         <div class="relative h-fit">
             @isset($icon)
