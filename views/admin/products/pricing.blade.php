@@ -38,10 +38,10 @@
             <x-input type="number" name="limit" id="limit" label="{{ __('Limit per client') }}"
                 placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
         </div>
-        <<div class="flex items-center justify-start">
+        <div class="flex items-center justify-start">
             <button type="submit" class="form-submit">
                 {{ __('Update') }}
             </button>
-            </div>
+        </div>
     </form>
 </x-admin-layout>
