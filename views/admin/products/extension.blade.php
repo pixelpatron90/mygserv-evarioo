@@ -27,8 +27,8 @@
                 </select>
             </div>
             <div class="w-1/6">
-                <button type="button" class="form-submit" onclick="document.getElementById('formu').submit();" disabled
-                    id="submitt">
+                <button type="button" class="form-submit !w-full" onclick="document.getElementById('formu').submit();"
+                    disabled id="submitt">
                     {{ __('Update server') }}
                 </button>
             </div>
