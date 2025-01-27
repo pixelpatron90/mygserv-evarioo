@@ -11,12 +11,12 @@
         
             @if ($product->image !== 'null')
             <div class="h-28">
-            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-14 rounded-md"
+            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full"
                 onerror="removeElement(this);">
             </div>
             @else
             <div class="py-4 text-center text-red-500 font-bold">
-            asdads
+            {{ __('No product image selected.') }}
             </div>
             @endif
         
