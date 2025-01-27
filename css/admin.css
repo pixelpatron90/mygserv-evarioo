@@ -5,79 +5,79 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-[#1a202c];
-    }
-  
-    nav {
-        @apply bg-primarycolor py-5 w-full;
-    }
-  
-    nav ul {
-        @apply lg:flex lg:flex-row flex-col lg:h-full;
-    }
-  
-    nav ul li {
-        @apply relative content-center h-full me-2 text-base text-shadow;
-    }
-  
-    nav ul li a {
-        @apply py-2 px-3 block text-white me-1.5 rounded-md;
-    }
-    nav ul li a:hover {
-        @apply bg-red-600 text-shadow;
-    }
-
-    nav ul li > div {
-        @apply z-10 hidden bg-[#1a202c] rounded-md shadow lg:w-52 w-full;
-    }
-
-    nav ul li > div > ul {
-        @apply flex lg:flex-col flex-row;
-    }
-
-    nav ul li > div > ul > li {
-        @apply me-0;
-    }
-
-    nav ul li > div > ul > li > a {
-        @apply me-0;
-    }
-    
-    main {
-        @apply py-6;
-    }
-
-    main .content-box .site-header {
-      @apply bg-[#1a202c] flex flex-row justify-between rounded-md mb-4;
-    }
-
-    main .content-box .site-header i {
-      @apply text-red-500 me-2;
-    }
-  
-    footer {
-        @apply w-full text-white bg-primarycolor py-5;
-    }
+  body {
+    @apply bg-[#1a202c];
   }
-  
-  @layer utilities {
-    /* Scrollbar */
-    ::-webkit-scrollbar {
-      width: 15px;
-    }
-  
-    ::-webkit-scrollbar-track {
-      @apply bg-primarycolor;
-    }
-  
-    ::-webkit-scrollbar-thumb {
-      @apply bg-red-500;
-    }
-  
-    ::-webkit-scrollbar-thumb:hover {
-      @apply bg-red-600;
-    }
+
+  nav {
+    @apply bg-primarycolor py-5 w-full;
+  }
+
+  nav ul {
+    @apply lg:flex lg:flex-row flex-col lg:h-full;
+  }
+
+  nav ul li {
+    @apply relative content-center h-full me-2 text-base text-shadow;
+  }
+
+  nav ul li a {
+    @apply py-2 px-3 block text-white me-1.5 rounded-md;
+  }
+  nav ul li a:hover {
+    @apply bg-red-600 text-shadow;
+  }
+
+  nav ul li > div {
+    @apply z-10 hidden bg-[#1a202c] rounded-md shadow lg:w-52 w-full;
+  }
+
+  nav ul li > div > ul {
+    @apply flex lg:flex-col flex-row;
+  }
+
+  nav ul li > div > ul > li {
+    @apply me-0;
+  }
+
+  nav ul li > div > ul > li > a {
+    @apply me-0;
+  }
+
+  main {
+    @apply py-6;
+  }
+
+  main .content-box .site-header {
+    @apply bg-[#1a202c] flex flex-row justify-between rounded-md mb-4;
+  }
+
+  main .content-box .site-header i {
+    @apply text-red-500 me-2;
+  }
+
+  footer {
+    @apply w-full text-white bg-primarycolor py-5;
+  }
+}
+
+@layer utilities {
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primarycolor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-red-500;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-red-600;
+  }
 
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -130,6 +130,10 @@
   }
 
   .form-number {
+    @apply inline-block px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
+  }
+
+  .form-select {
     @apply inline-block px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
   }
 
