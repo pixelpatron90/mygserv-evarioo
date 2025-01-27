@@ -6,7 +6,7 @@
 
 @layer base {
   body.auth {
-    @apply h-screen !bg-none;
+    @apply h-screen;
     background-image: url('../images/backgrounds/auth-layout.jpg');
     background-size: cover;
     background-position: center;
