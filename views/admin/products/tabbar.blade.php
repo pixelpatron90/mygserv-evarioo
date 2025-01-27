@@ -6,7 +6,6 @@
                 {{ __('Details') }}
             </a>
         </li>
-
         <li>
             <a href="{{ route('admin.products.pricing', $product->id) }}"
                 class="inline-flex justify-center hover:bg-red-500 hover:text-white rounded-t-md w-full px-2.5 py-3.5 font-bold uppercase">
