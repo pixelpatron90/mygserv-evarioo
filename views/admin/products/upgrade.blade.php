@@ -1,6 +1,6 @@
 <x-admin-layout :title="__('Editing ') . $product->name">
     @include('admin.products.tabbar', ['tab' => 'upgrade'])
-    <div class="text-2xl text-secondary-300">
+    <div class="text-2xl text-secondary-300 mt-4 mb-4">
         {{ __('Update product upgrade') }} {{ $product->name }}
     </div>
     <form action="{{ route('admin.products.upgrade.update', $product->id) }}" method="POST">
