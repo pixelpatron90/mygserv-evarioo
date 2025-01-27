@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white;
-  }
-
   body.auth {
     @apply h-screen;
     background-image: url('../images/backgrounds/auth-layout.jpg');
@@ -16,11 +12,13 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-
   body.auth main {
     @apply !bg-none;
   }
 
+  body {
+    @apply bg-white;
+  }
   header {
     @apply bg-primarycolor h-44 py-7;
   }
