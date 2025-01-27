@@ -1,3 +1,4 @@
+{{ $active }}
 <div class="mb-4">
     <ul class="flex flex-row text-white text-sm border-b-4 border-red-500">
         <li>

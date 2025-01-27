@@ -3,7 +3,7 @@
         {{ __('Pricing') }}
     </x-slot>
 
-    @include('admin.products.tabbar')
+    @include('admin.products.tabbar', ['active' => 'true])
 
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf
