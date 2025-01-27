@@ -76,7 +76,7 @@
                 </x-alert>
                 <input id="image" class="form-image" type="file"
                     name="image" @if ($product->image == 'null') disabled @endif />
-                <div class="p-4 bg-[#1a202c]">
+                <div class="p-4 bg-[#1a202c] mt-4">
                     <x-input type="checkbox" label="{{ __('Select to delete image') }}" name="hidden" id="hidden" value="1" class="mt-2"
                 :checked="$product->image  == 'null' ? true : false" />
                     <img src="{{ $product->image }}" alt="{{ $product->name }}" class="h-36 mt-4 mb-4" id="prodctimg"
@@ -116,14 +116,18 @@
                         @endif
                     @endforeach
                 @else
-                    <option value="">No categories found</option>
+                    <option value="">
+                        {{ __('No categorie(s) found.') }}
+                    </option>
                 @endif
             </x-input>
-            <div class="flex items-center justify-end mt-4 text-blue-700">
-                <a href="{{ route('admin.categories.create') }}">Create Category</a>
+            <div class="flex items-center justify-end mt-4 ">
+                <a title="{{ __('Create categorie') }}" class="button button-success" href="{{ route('admin.categories.create') }}">
+                    {{ __('Create categorie') }}
+                </a>
             </div>
         </div>
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-start">
                 <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
                     {{ __('Save') }}
                 </button>
