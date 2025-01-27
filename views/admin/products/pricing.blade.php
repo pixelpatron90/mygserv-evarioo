@@ -1,11 +1,11 @@
 <x-admin-layout :title="__('Editing ') . $product->name">
     @include('admin.products.tabbar', ['tab' => 'pricing'])
-    <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
-        @csrf
-        <div class="mt-4">
-            <h1 class="text-2xl text-secondary-300">
-                {{ __('Pricing') }}
-            </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 mb-4">
+        <div class="text-2xl text-secondary-300">
+            {{ __('Update product pricing') }} {{ $product->name }}
+        </div>
+        <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
+            @csrf
             <div class="mt-4">
                 <div class="flex flex-row text-sm">
                     <div class="flex flex-col">
@@ -121,7 +121,8 @@
                                 {{ __('No') }}
                             </option>
                             <option value="1" @if ($product->allow_quantity == 1) selected @endif>
-                                {{ __('Yes, Multiple Services (Each represents a own individual service instance)') }}
+                                {{ __('Yes, Multiple Services (Each represents a own individual service instance)')
+                                }}
                             </option>
                             <option value="2" @if ($product->allow_quantity == 2) selected @endif>
                                 {{ __('Yes, Single Service (One service instance with multiple quantity)') }}
@@ -144,8 +145,8 @@
                     </button>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 
 
 </x-admin-layout>
