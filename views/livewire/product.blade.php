@@ -11,7 +11,7 @@
         
             @if ($product->image !== 'null')
             <div class="h-28">
-            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full"
+            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="block w-full"
                 onerror="removeElement(this);">
             </div>
             @else
