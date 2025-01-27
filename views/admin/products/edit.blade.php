@@ -70,8 +70,10 @@
             </div>
         
             <div class="mb-4">
-                <label for="image">{{ __('Image') }}</label>
-                <p>Only upload a new image if you want to replace the existing one</p>
+                <x-alert alert="info">
+                    {{ __('Only upload a new image if you want to replace the existing one') }}
+                </x-alert>
+                <label class="form-label" for="image">{{ __('Image') }}</label>
                 <input id="image" class="block w-full mt-1 rounded-lg dark:bg-darkmode" type="file"
                     name="image" @if ($product->image == 'null') disabled @endif />
                 <div class="mt-2">
