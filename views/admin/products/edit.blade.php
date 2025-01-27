@@ -18,7 +18,7 @@
                 id="moreOptions">
                 <div class="py-1 grid grid-cols-1" role="none">
                     <button
-                        class="block px-4 py-2 text-base text-gray-700 dark:text-darkmodetext dark:hover:bg-darkmode2 hover:bg-gray-100"
+                        class="block px-4 py-2 text-base text-gray-200 hover:bg-gray-800"
                         role="menuitem" tabindex="-1" id="menu-item-0"
                         onclick="document.getElementById('duplicate').submit()">
                         {{ __('Duplicate') }}
