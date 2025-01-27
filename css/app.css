@@ -11,7 +11,7 @@
 
   body.auth {
     @apply h-screen;
-    background-image: url("../../public/images/backgrounds/error.jpg");
+    background-image: url('../images/backgrounds/auth-layout.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
