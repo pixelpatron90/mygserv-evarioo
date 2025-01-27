@@ -13,7 +13,7 @@
                 </p>
             </div>
         </div>
-        <div class="prose dark:prose-invert">
+        <div class="w-full text-secondary-400">
             @markdownify($product->description)
         </div>
         <div class="pt-3 mt-auto">
