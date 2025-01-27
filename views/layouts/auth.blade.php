@@ -34,6 +34,9 @@
     <x-paymenter-update />
     
     <div class="wrapper">
+      <h2 class="block lg:hidden text-center py-4">
+        {{ config('app.name') }}
+      </h2>
       <div class="hidden lg:flex justify-center items-center py-4">
         <x-branding class="w-36" />
       </div>
