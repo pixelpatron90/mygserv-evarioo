@@ -79,7 +79,7 @@
                 <div class="p-4 bg-[#1a202c]">
                     <x-input type="checkbox" label="{{ __('Select to delete image') }}" name="hidden" id="hidden" value="1" class="mt-2"
                 :checked="$product->image  == 'null' ? true : false" />
-                    <img src="{{ $product->image }}" alt="{{ $product->name }}" class="h-36 w-full mt-4 mb-4" id="prodctimg"
+                    <img src="{{ $product->image }}" alt="{{ $product->name }}" class="h-36 mt-4 mb-4" id="prodctimg"
                         onerror="removeElement(this)">
                     <script>
                         function removeElement(element) {
