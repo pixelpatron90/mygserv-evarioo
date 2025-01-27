@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') . '/css/app.css'], config('settings::theme-active'))
+    @vite(['themes/' . config('settings::theme-active') . '/js/app.js', 'themes/' . config('settings::theme-active') .
+    '/css/app.css'], config('settings::theme-active'))
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     @if (config('settings::app_logo'))
     <link rel="icon" href="{{ asset(config('settings::app_logo')) }}" type="image/png" />
@@ -48,6 +49,7 @@
                     @yield('widget_reviews')
                     @endif
                     @include('layouts.widget_support')
+                    @livewire('evarioo-wikijs')
                 </div>
             </div>
         </div>
