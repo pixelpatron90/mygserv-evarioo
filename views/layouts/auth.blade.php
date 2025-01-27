@@ -32,7 +32,6 @@
 
 <body class="auth">
     <x-paymenter-update />
-    
     <div class="wrapper">
       <h2 class="block lg:hidden text-white text-4xl uppercase font-intertight font-bold text-center py-8">
         {{ config('app.name') }}

@@ -1,10 +1,8 @@
 <x-auth-layout>
     <div class="content">
         <div class="content-box">
-            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Login to continue') }}</h2>
-
+            <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Please login to continue...') }}</h2>
             <x-input-errors />
-
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
                 <label class="form-label" for="email">{{ __('Email') }}</label>
@@ -17,14 +15,14 @@
                 <x-input type="checkbox" name="remember" id="remember" label="Remember me" class="mt-4" />
                 <x-recaptcha class="mt-4" form="login" />
                 <div class="mt-3 flex justify-between items-right">
-                    <div class="w-3/6">
+                    <div class="w-4/6">
                         <button type="submit" class="form-submit">
                             {{ __('Login') }}
                         </button>
                     </div>
-                    <div class="w-3/6 content-center text-right">
+                    <div class="w-2/6 content-center text-right">
                         <a href="{{ route('register') }}" class="text-sm text-red-500 hover:text-red-600">
-                            {{ __('New here? Create an account.') }}
+                            {{ __('New here?') }}
                         </a>
                     </div>
                 </div>
