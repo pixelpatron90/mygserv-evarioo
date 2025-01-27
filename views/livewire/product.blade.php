@@ -1,4 +1,4 @@
-<div class="col-span-2">
+<div class="col-span-4 lg:col-span-2">
     <div class="content-box h-full flex flex-col">
         <div class="flex gap-x-3 items-center mb-2">
             @if ($product->image !== 'null')
@@ -19,15 +19,17 @@
         <div class="pt-3 mt-auto">
             @if ($product->stock_enabled && $product->stock <= 0)
                 <a class="button bg-red-500 text-white w-full hover:cursor-not-allowed">
-                    Out of stock
+                    {{ __('Out of stock!') }}
                 </a>
             @else
                 <button class="button button-secondary w-full @if ($added) !text-green-400 @endif"
                     wire:click="addToCart">
                     @if ($added)
-                        {{ __('Added to cart') }} <i class="ri-check-line"></i>
+                        <i class="fa-solid fa-cart-plus me-2"></i>
+                        <span class="lg:block hidden">{{ __('Added to cart') }}</span>
                     @else
-                        {{ __('Added to cart') }} <i class="ri-shopping-cart-2-line"></i>
+                        <i class="fa-solid fa-cart-shopping me-2"></i>
+                        <span class="lg:block hidden">{{ __('Added to cart') }}</span>
                     @endif
                 </button>
             @endif

@@ -12,7 +12,7 @@
                 <div class="content-box">
                     <div class="flex flex-row">
                         @if($category->image)
-                            <img src="/storage/categories/{{ $category->image }}" class="w-20 h-full rounded-md mr-4" />
+                            <img src="/storage/categories/{{ $category->image }}" class="w-20 h-full lg:block hidden rounded-md mr-4" />
                         @endif
                         <div class="w-full">
                             <h1 class="text-3xl font-semibold text-red-500">{{ $category->name }}</h1>
