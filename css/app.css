@@ -41,7 +41,8 @@
   }
 
   header {
-    @apply bg-primarycolor py-7;
+    @apply bg-primarycolor py-7 bg-cover bg-center bg-no-repeat;
+    background-image: url('../images/header.jpg')
   }
   header > .container > div  {
     @apply flex justify-between w-full h-full;
