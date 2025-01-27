@@ -13,7 +13,7 @@
                 </p>
             </div>
         </div>
-        <div class="w-full text-secondary-400">
+        <div class="markdownify-h2 w-full text-secondary-400">
             @markdownify($product->description)
         </div>
         <div class="pt-3 mt-auto">
