@@ -117,7 +117,7 @@
     @apply flex flex-col lg:flex-row gap-5 mt-8;
   }
   main .site > .content {
-    @apply lg:w-9/12 w-full bg-gray-200 p-8 rounded-md;
+    @apply lg:w-9/12 w-full bg-gray-200 p-4 lg:p-8 rounded-md;
   }
   main .site .content .headline {
     @apply w-full;
@@ -274,10 +274,6 @@
 
   .content-box {
     @apply bg-primarycolor px-6 py-5 text-secondary-200 rounded-md border-2 duration-300;
-  }
-
-  .markdownify-h2 {
-    @apply text-red-500;
   }
 
   .textarea-banner {
