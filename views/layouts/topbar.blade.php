@@ -1,9 +1,9 @@
 <div class="topbar">
     <div class="container">
         <div>
-            <p>
-                {{ __('Welcome to :appname', ['appname' => config('app.name')]) }}
-            </p>
+            <div class="flex items-center">
+                <p>{{ __('Welcome to :appname', ['appname' => config('app.name')]) }}</p>
+            </div>
             <div>
                 <ul class="languageswitch">
                     <li class="german">
