@@ -58,8 +58,8 @@
         </div>
         @endisset
 
-        <div class="flex items-center justify-end mt-4" type="submit">
-            <button class="form-submit">
+        <div class="flex items-center justify-start">
+            <button type="submit" class="form-submit">
                 {{ __('Update') }}
             </button>
         </div>

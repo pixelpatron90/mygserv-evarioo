@@ -19,7 +19,11 @@
                     :checked="$product->upgrade_configurable_options ? true : false" />
             </div>
 
-            <button class="button button-primary mt-4">{{ __('Save') }}</button>
+            <div class="flex items-center justify-start">
+                <button type="submit" class="form-submit">
+                    {{ __('Update') }}
+                </button>
+            </div>
         </div>
     </form>
 </x-admin-layout>

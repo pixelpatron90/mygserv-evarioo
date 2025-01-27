@@ -38,7 +38,7 @@
             <x-input type="number" name="limit" id="limit" label="{{ __('Limit per client') }}"
                 placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
         </div>
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-start">
             <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
                 {{ __('Save') }}
             </button>
