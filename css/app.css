@@ -29,11 +29,11 @@
   }
 
   .languageswitch li {
-    @apply w-full lg:block text-sm lg:me-4 me-0 mt-2 lg:mt-0 rounded-md;
+    @apply w-full lg:block text-sm lg:me-4 me-0 mt-2 lg:mt-0;
   }
 
   .languageswitch li > a {
-    @apply block bg-red-500 text-white px-1.5 py-1;
+    @apply block bg-red-500 text-white px-1.5 py-1 rounded-md;
   }
 
   .languageswitch li > a:hover {
