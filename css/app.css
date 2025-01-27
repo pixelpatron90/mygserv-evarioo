@@ -48,17 +48,17 @@
     @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat py-7 px-8;
     background-image: url('../images/header.jpg')
   }
-  header > .container > div .logo {
+  header > .container > div > div.logo {
     @apply lg:w-4/6 w-full flex justify-center content-center lg:justify-start;
   }
   
-  header > .container > div.title {
+  header > .container > div > div.title {
     @apply bg-red-500 w-2/6 ms-8 hidden lg:flex flex-col justify-start pt-2;
   }
-  header > .container > div.title h1 {
+  header > .container > div > div.title h1 {
     @apply text-6xl text-white font-intertight uppercase text-shadow;
   }
-  header > .container > div.title p {
+  header > .container > div > div.title p {
     @apply text-xl text-white font-intertight text-shadow;
   }
 
