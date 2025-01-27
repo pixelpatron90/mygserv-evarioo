@@ -42,24 +42,27 @@
     </div>
     <form method="POST" action="{{ route('admin.products.update', $product->id) }}" enctype="multipart/form-data">
         @csrf
-        <x-input type="text" name="name" label="{{ __('Name') }}" placeholder="{{ __('Name') }}"
-            value="{{ $product->name }}" required autofocus />
 
-        <x-input type="checkbox" label="{{ __('Hidden') }}" name="hidden" id="hidden" value="1" class="mt-2"
-            :checked="$product->hidden ? true : false" />
-            
-        <x-input type="textarea" name="description" label="{{ __('Description') }}"
-            placeholder="{{ __('Description') }}" value="{{ $product->description }}" required rows="4" />
+<div class="mb-4">
+    <input type="text" required class="form-input" placeholder="{{ __('Name') }}" autofocus name="name" id="name" />
+</div>
 
+<div class="mb-4">
+    <input type="checkbox" checked="{{ $product->hidden ? true : false }}" required class="form-input" placeholder="{{ __('Hidden') }}" name="hidden" id="hidden" />
+</div>
 
-        <x-input type="checkbox" label="{{ __('Stock enabled') }}" name="stock_enabled" id="stock_enabled"
-            value="1"
-            onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }"
-            :checked="$product->stock_enabled ? true : false" />
+<div class="mb-4">
+    <textarea required rows="4" required class="form-input" placeholder="{{ __('Description') }}" autofocus name="description" id="description">
+        {{ $product->description }}
+    </textarea>
+</div>
 
-        <div class="@if (!$product->stock_enabled) hidden @endif" id="stock">
-            <x-input type="number" name="stock" label="{{ __('Stock') }}" placeholder="{{ __('Stock') }}"
-                value="{{ $product->stock }}" required min="0" />
+<div class="mb-4">
+    <input type="checkbox" value="1" onchange="if(this.checked) { document.getElementById('stock').classList.remove('hidden'); } else { document.getElementById('stock').classList.add('hidden'); }" checked="{{ $product->stock_enabled ? true : false }}" required class="form-input" placeholder="{{ __('Stock enabled') }}" name="stock_enabled" id="stock_enabled" />
+</div>
+        
+        <div class="@if (!$product->stock_enabled) hidden mb-4 @endif" id="stock">
+            <input min="0" value="{{ $product->stock }}" type="number" required class="form-input" placeholder="{{ __('Stock') }}" autofocus name="stock" id="stock" />
         </div>
 
         <div class="mt-4">
