@@ -10,8 +10,7 @@
         </div>
             @if ($product->image !== 'null')
             <div class="border-y-8 border-red-500">
-                {{ asset('categories/'.$product->image) }}
-            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="w-full">
             </div>
             @else
             <div class="py-4 text-center text-red-500 font-bold">
