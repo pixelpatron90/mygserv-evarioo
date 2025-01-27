@@ -18,7 +18,7 @@
   }
 
   .topbar {
-    @apply h-12 py-2 bg-gray-200 text-gray-600;
+    @apply py-2 bg-gray-200 text-gray-600;
   }
   .topbar > .container > div {
     @apply flex flex-row justify-between;
