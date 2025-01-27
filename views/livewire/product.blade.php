@@ -10,6 +10,7 @@
         </div>
             @if ($product->image !== 'null')
             <div class="border-y-8 border-red-500">
+                {{ asset('js/'.$product->image) }}
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full">
             </div>
             @else
