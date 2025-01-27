@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-auth-layout>
     <div class="content">
         <div class="content-box">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Login to continue') }}</h2>
@@ -56,4 +56,4 @@
         </div>
     </div>
 
-</x-app-layout>
+</x-auth-layout>
