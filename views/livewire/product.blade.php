@@ -1,5 +1,5 @@
 <div class="col-span-4 lg:col-span-2">
-    <div class="product-card h-full">
+    <div class="product-card">
         <div class="product-card-header">
             <h3 class="text-lg text-secondary-200 leading-5 font-semibold">
                 {{ $product->name }}
