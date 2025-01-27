@@ -1,6 +1,6 @@
 <x-auth-layout>
     <div class="content">
-        <div class="content-box">
+        <div class="">
             <div class="mb-4 bg-red-500 p-4 text-white rounded-md">
                 {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
             </div>

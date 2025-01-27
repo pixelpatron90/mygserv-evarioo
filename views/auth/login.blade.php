@@ -1,6 +1,6 @@
 <x-auth-layout>
     <div class="content">
-        <div class="content-box">
+        <div class="">
             <h2 class="text-lg text-secondary-200 font-semibold border-b-2 border-red-500 pb-2 mb-4">{{ __('Login to continue') }}</h2>
             <form method="POST" action="{{ route('login') }}" id="login">
                 @csrf
