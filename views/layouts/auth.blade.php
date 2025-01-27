@@ -34,7 +34,7 @@
     <x-paymenter-update />
     
     <main>
-        <div class="w-3/12 mx-auto rounded-md">
+        <div class="wrapper">
             {{ $slot }}
         </div>
     </main>

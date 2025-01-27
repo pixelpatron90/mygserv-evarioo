@@ -6,14 +6,18 @@
 
 @layer base {
   body.auth {
-    @apply h-screen;
+    @apply h-screen !bg-none;
     background-image: url('../images/backgrounds/auth-layout.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   body.auth main {
-    @apply !bg-red-500 h-full flex flex-col content-center;
+    @apply !bg-red-500 h-full;
+  }
+
+  body.auth main > .wrapper {
+    @apply w-3/12 mx-auto rounded-md;
   }
 
   body {
