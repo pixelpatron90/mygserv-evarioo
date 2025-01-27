@@ -2,7 +2,7 @@
     <x-slot name="title">
         {{ __('Editing ') . $product->name }}
     </x-slot>
-    @include('admin.products.tabbar', ['tab' => 'extensions'])
+    @include('admin.products.tabbar', ['tab' => 'extension'])
     <div class="grid grid-cols-1 md:grid-cols-2 mt-4">
         <div class="text-2xl dark:text-darkmodetext">
             {{ __('Update product server') }}: {{ $product->name }}
