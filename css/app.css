@@ -10,7 +10,7 @@
   }
 
   body.auth {
-    @apply h-screen;
+    @apply h-screen bg-none;
     background-image: url('../images/backgrounds/auth-layout.jpg');
     background-size: cover;
     background-position: center;
