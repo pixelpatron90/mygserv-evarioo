@@ -1,11 +1,11 @@
 <x-admin-layout :title="__('Editing ') . $product->name">
     @include('admin.products.tabbar', ['tab' => 'extension'])
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-4">
-        <div class="text-2xl dark:text-darkmodetext">
-            {{ __('Update product server') }}: {{ $product->name }}
-        </div>
-    </div>
     <div class="mt-6 text-gray-500 dark:text-darkmodetext dark:bg-secondary-100">
+
+        <div class="text-2xl text-secondary-300">
+            {{ __('Update product server') }} {{ $product->name }}
+        </div>
+
         <form method="POST" action="{{ route('admin.products.extension.update', $product->id) }}"
             enctype="multipart/form-data" id="formu">
             @csrf

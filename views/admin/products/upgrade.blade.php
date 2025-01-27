@@ -3,7 +3,7 @@
     <form action="{{ route('admin.products.upgrade.update', $product->id) }}" method="POST">
         @csrf
         <div>
-            <h1 class="font-semibold text-2xl text-gray-900 dark:text-darkmodetext">
+            <h1 class="text-2xl text-secondary-300">
                 {{ __('Upgrades') }}
             </h1>
 

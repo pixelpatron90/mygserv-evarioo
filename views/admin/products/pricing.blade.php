@@ -3,7 +3,7 @@
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf
         <div class="mt-4">
-            <h1 class="font-semibold text-2xl text-gray-900 dark:text-darkmodetext">
+            <h1 class="text-2xl text-secondary-300">
                 {{ __('Pricing') }}
             </h1>
             <div class="mt-4">
