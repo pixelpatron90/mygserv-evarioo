@@ -35,7 +35,7 @@
     
     <div class="wrapper">
       <div class="bg-red-500">
-
+asda
       </div>
       {{ $slot }}
     </div>
