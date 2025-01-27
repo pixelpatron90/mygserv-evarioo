@@ -45,7 +45,7 @@
   }
 
   header > .container > div  {
-    @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat py-7 px-5;
+    @apply flex justify-between w-full h-full bg-cover bg-center bg-no-repeat py-7 px-8;
     background-image: url('../images/header.jpg')
   }
   header > .container > div .logo {
@@ -55,10 +55,10 @@
     @apply ms-8 hidden lg:flex flex-col justify-start content-center w-96 pt-2;
   }
   header > .container > div .logo > div.title h1 {
-    @apply text-6xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
+    @apply text-6xl content-center text-white font-intertight uppercase text-shadow;
   }
   header > .container > div .logo > div.title p {
-    @apply text-xl text-gray-400 font-intertight text-shadow-lg;
+    @apply text-xl text-white font-intertight text-shadow;
   }
   header > .container > div .login {
     @apply bg-red-500 w-2/6 hidden;
