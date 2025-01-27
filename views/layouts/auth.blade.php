@@ -27,7 +27,7 @@
     <link type="application/json+oembed"
         href="{{ url('/') }}/manifest.json?title={{ config('app.name', 'Paymenter') }}&author_url={{ url('/') }}&author_name={{ config('app.name', 'Paymenter') }}" />
     <meta name="twitter:card" content="@if (config('settings::seo_twitter_card')) summary_large_image @endif" />
-    <title>{{ config('app.name') }} | Auth</title>
+    <title>{{ config('app.name') }} | {{ __('Authentication') }}</title>
 </head>
 
 <body class="auth">
