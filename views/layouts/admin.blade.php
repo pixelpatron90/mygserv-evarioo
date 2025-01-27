@@ -54,7 +54,9 @@
                     {{ $slot }}
                 </div>
             @else
+            <div class="content-box">
                 {{ $slot }}
+            </div>
             @endif
         </div>
     </main>

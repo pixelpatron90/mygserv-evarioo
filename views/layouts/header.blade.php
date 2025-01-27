@@ -1,6 +1,9 @@
 <header>
     <div class="container">
-        <div>
+        <div class="top">
+            asdasd
+        </div>
+        <div class="bottom">
             <div class="logo">
                 <a href="{{ route('index') }}">
                     <x-branding class="w-36" />
