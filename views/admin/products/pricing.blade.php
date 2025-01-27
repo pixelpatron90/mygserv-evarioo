@@ -5,136 +5,43 @@
     </div>
     <form action="{{ route('admin.products.pricing.update', $product->id) }}" method="POST">
         @csrf
-        <div class="mt-4">
-            <div class="flex flex-row text-sm">
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="pricing">
-                        {{ __('Pricing') }}
-                    </label>
-                    <select name="pricing" id="pricing" class="form-input" onchange="this.form.submit()">
-                        <option value="free" @if ($pricing->type == 'free') selected @endif>
-                            {{ __('Free') }}
-                        </option>
-                        <option value="one-time" @if ($pricing->type == 'one-time') selected @endif>
-                            {{ __('One-time') }}
-                        </option>
-                        <option value="recurring" @if ($pricing->type == 'recurring') selected @endif>
-                            {{ __('Recurring') }}
-                        </option>
-                    </select>
-                </div>
-            </div>
-            @if ($pricing->type == 'one-time')
-            <div class="flex flex-row text-sm">
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="price">
-                        {{ __('Price') }}
-                    </label>
-                    <input type="text" name="monthly" id="price" value="{{ $pricing->monthly }}" class="form-input">
-                </div>
-            </div>
-            @elseif($pricing->type == 'recurring')
-            <div class="flex flex-row text-sm gap-4 mt-2">
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="monthly">
-                        {{ __('Monthly') }}
-                    </label>
-                    <input type="text" name="monthly" id="monthly" value="{{ $pricing->monthly }}" class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="monthly_setup">
-                        {{ __('Monthly Setup Fee') }}
-                    </label>
-                    <input type="text" name="monthly_setup" id="monthly_setup_fee" value="{{ $pricing->monthly_setup }}"
-                        class="form-input">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="quarterly">
-                        {{ __('Quarterly') }}
-                    </label>
-                    <input type="text" name="quarterly" id="quarterly" value="{{ $pricing->quarterly }}"
-                        class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="quarterly_setup">
-                        {{ __('Quarterly Setup Fee') }}
-                    </label>
-                    <input type="text" name="quarterly_setup" id="quarterly_setup_fee"
-                        value="{{ $pricing->quarterly_setup }}" class="form-input">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="semiannually">
-                        {{ __('Semiannually') }}
-                    </label>
-                    <input type="text" name="semi_annually" id="semi_annually" value="{{ $pricing->semi_annually }}"
-                        class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="semi_annually_setup">
-                        {{ __('Semiannually Setup Fee') }}
-                    </label>
-                    <input type="text" name="semi_annually_setup" id="semi_annually_setup_fee"
-                        value="{{ $pricing->semi_annually_setup }}" class="form-input">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="annually">
-                        {{ __('Annually') }}
-                    </label>
-                    <input type="text" name="annually" id="annually" value="{{ $pricing->annually }}"
-                        class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="annually_setup">
-                        {{ __('Annually Setup Fee') }}
-                    </label>
-                    <input type="text" name="annually_setup" id="annually_setup_fee"
-                        value="{{ $pricing->annually_setup }}" class="form-input">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="biennially">
-                        {{ __('Biennially') }}
-                    </label>
-                    <input type="text" name="biennially" id="biennially" value="{{ $pricing->biennially }}"
-                        class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="biennially_setup">
-                        {{ __('Biennially Setup Fee') }}
-                    </label>
-                    <input type="text" name="biennially_setup" id="biennially_setup_fee"
-                        value="{{ $pricing->biennially_setup }}" class="form-input">
-                </div>
-                <div class="flex flex-col">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="triennially">
-                        {{ __('Triennially') }}
-                    </label>
-                    <input type="text" name="triennially" id="triennially" value="{{ $pricing->triennially }}"
-                        class="form-input">
-                    <label class="text-gray-700 dark:text-darkmodetext" for="triennially_setup">
-                        {{ __('Triennially Setup Fee') }}
-                    </label>
-                    <input type="text" name="triennially_setup" id="triennially_setup_fee"
-                        value="{{ $pricing->triennially_setup }}" class="form-input">
-                </div>
-            </div>
-            @endif
-
-            <div class="mb-4">
-                <x-input type="select" name="allow_quantity" id="allow_quantity"
-                    label="{{ __('Allow multiple quantities') }}" placeholder="{{ __('Allow multiple quantities') }}">
-                    <option value="0" @if ($product->allow_quantity == 0) selected @endif>
-                        {{ __('No') }}
-                    </option>
-                    <option value="1" @if ($product->allow_quantity == 1) selected @endif>
-                        {{ __('Yes, Multiple Services (Each represents a own individual service instance)')
-                        }}
-                    </option>
-                    <option value="2" @if ($product->allow_quantity == 2) selected @endif>
-                        {{ __('Yes, Single Service (One service instance with multiple quantity)') }}
-                    </option>
-                </x-input>
-            </div>
-
-            <div class="mb-4">
-                <x-input type="number" name="limit" id="limit" label="{{ __('Limit per client') }}"
-                    placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
-                    {{ __('Save') }}
-                </button>
-            </div>
+        <div class="mb-4">
+            <x-input type="select" name="pricing" id="pricing" label="{{ __('Pricing') }}"
+                placeholder="{{ __('Pricing') }}">
+                <option value="free" @if ($pricing->type == 'free') selected @endif>
+                    {{ __('Free') }}
+                </option>
+                <option value="one-time" @if ($pricing->type == 'one-time') selected @endif>
+                    {{ __('One-time') }}
+                </option>
+                <option value="recurring" @if ($pricing->type == 'recurring') selected @endif>
+                    {{ __('Recurring') }}
+                </option>
+            </x-input>
+        </div>
+        <div class="mb-4">
+            <x-input type="select" name="allow_quantity" id="allow_quantity"
+                label="{{ __('Allow multiple quantities') }}" placeholder="{{ __('Allow multiple quantities') }}">
+                <option value="0" @if ($product->allow_quantity == 0) selected @endif>
+                    {{ __('No') }}
+                </option>
+                <option value="1" @if ($product->allow_quantity == 1) selected @endif>
+                    {{ __('Yes, Multiple Services (Each represents a own individual service instance)')
+                    }}
+                </option>
+                <option value="2" @if ($product->allow_quantity == 2) selected @endif>
+                    {{ __('Yes, Single Service (One service instance with multiple quantity)') }}
+                </option>
+            </x-input>
+        </div>
+        <div class="mb-4">
+            <x-input type="number" name="limit" id="limit" label="{{ __('Limit per client') }}"
+                placeholder="{{ __('Limit per client') }}" value="{{ $product->limit }}}" />
+        </div>
+        <div class="flex items-center justify-end mt-4">
+            <button type="submit" class="inline-flex justify-center w-max float-right button button-primary">
+                {{ __('Save') }}
+            </button>
         </div>
     </form>
 </x-admin-layout>
