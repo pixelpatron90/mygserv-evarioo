@@ -173,7 +173,7 @@
 @elseif($type == 'textarea')
     <div @isset($class) class="{{ $class }}" @endisset>
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{!! $label !!}</label>
+            <label for="{{ $id ?? $name }}" class="form-label">{!! $label !!}</label>
         @endisset
         <div class="relative">
             @isset($icon)
@@ -194,7 +194,7 @@
     <div @isset($class) class="{{ $class }}" @endisset>
         {{ $slot }}
         @isset($label)
-            <label for="{{ $id ?? $name }}" class="text-sm text-secondary-200">{{ $label }}</label>
+            <label for="{{ $id ?? $name }}" class="form-label">{{ $label }}</label>
         @endisset
         <div class="relative">
             @isset($icon)
