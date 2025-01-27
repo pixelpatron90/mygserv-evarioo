@@ -275,6 +275,10 @@
     @apply bg-primarycolor px-6 py-5 text-secondary-200 rounded-md border-2 duration-300;
   }
 
+  .content-box > p {
+    @apply text-secondary-400;
+  }
+
   .product-card {
     @apply bg-primarycolor p-0 text-secondary-200 rounded-md border-2 duration-300;
   }
