@@ -30,7 +30,7 @@
     <title>{{ config('app.name') }} | {{ __('Authentication') }}</title>
 </head>
 
-<body class="auth">
+<body class="auth py-8">
     <x-paymenter-update />
     
     <div class="wrapper">
