@@ -9,7 +9,7 @@
             </p>
         </div>
             @if ($product->image !== 'null')
-            <div class="border-y-8 border-red-500">
+            <div class="hidden lg:block border-y-8 border-red-500">
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="h-36 w-full">
             </div>
             @else
