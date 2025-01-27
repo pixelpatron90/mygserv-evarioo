@@ -6,7 +6,7 @@
 
 @layer base {
   body.auth {
-    @apply h-screen;
+    @apply h-screen flex items-center justify-center;
     background-image: url('../images/backgrounds/auth-layout.jpg');
     background-size: cover;
     background-position: center;
