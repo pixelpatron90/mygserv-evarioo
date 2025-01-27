@@ -1,6 +1,6 @@
 <div class="col-span-4 lg:col-span-2">
-    <div class="content-box !px-2.5 !py-1.5 h-full flex flex-col">
-        <div class="flex gap-x-3 items-center mb-2">
+    <div class="product-card h-full">
+        <div class="product-card-header">
             @if ($product->image !== 'null')
                 <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-14 rounded-md"
                     onerror="removeElement(this);">
