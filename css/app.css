@@ -280,11 +280,11 @@
   }
 
   .product-card-header {
-    @apply py-4 px-5 bg-primarycolor;
+    @apply py-4 px-5 bg-primarycolor rounded-t-md;
   }
 
   .product-card-footer {
-    @apply py-4 px-5 bg-primarycolor;
+    @apply py-4 px-5 bg-primarycolor rounded-b-md;
   }
 
   .textarea-banner {
