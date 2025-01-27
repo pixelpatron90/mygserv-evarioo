@@ -8,7 +8,7 @@
                     <div class="col-span-12">
                         <div class="content-box">
                             <h3 class="font-semibold text-red-500 text-lg mb-3">{{ $announcement->title }}</h3>
-                            <div class="w-full">
+                            <div class="w-full text-secondary-400">
                                 @markdownify(substr($announcement->announcement, 0, 300) . '...')
                             </div>
                             <div class="flex justify-between items-center mt-3">
