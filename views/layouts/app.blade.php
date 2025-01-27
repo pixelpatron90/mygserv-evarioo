@@ -49,7 +49,6 @@
                     @yield('widget_reviews')
                     @endif
                     @include('layouts.widget_support')
-                    @livewire('evarioo-wikijs')
                 </div>
             </div>
         </div>
