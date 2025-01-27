@@ -2,37 +2,7 @@
     <x-slot name="title">
         {{ __('Products') }}
     </x-slot>
-
-    <div class="h-full mx-auto">
-        <div class="pb-6 bg-white dark:bg-secondary-100 dark:border-darkmode">
-            <div class="flex flex-row overflow-x-auto lg:flex-wrap lg:space-x-1">
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.edit', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-logo text-logo">
-                        {{ __('Details') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.pricing', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Pricing') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.extension', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Extension') }}
-                    </a>
-                </div>
-                <div class="flex-none">
-                    <a href="{{ route('admin.products.upgrade', $product->id) }}"
-                        class="inline-flex justify-center w-full p-4 px-2 py-2 text-xs font-bold text-gray-900 uppercase border-b-2 dark:text-darkmodetext dark:hover:bg-darkbutton border-y-transparent hover:border-logo hover:text-logo">
-                        {{ __('Upgrades') }}
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('admin.products.tabbar')
     <div class="grid grid-cols-1 md:grid-cols-2 mt-4">
         <div class="text-2xl dark:text-darkmodetext">
             {{ __('Update product') }} {{ $product->name }}
