@@ -34,7 +34,7 @@
     <x-paymenter-update />
     
     <div class="wrapper">
-      <div class="text-center py-4">
+      <div class="flex flex-row items-center py-4">
         <x-branding class="w-36" />
       </div>
       {{ $slot }}

@@ -10,7 +10,7 @@
     background-image: url('../images/backgrounds/auth-layout.jpg');
   }
   body.auth > .wrapper {
-    @apply w-3/12 bg-red-500 rounded-md;
+    @apply w-3/12 rounded-md;
   }
 
   body {
