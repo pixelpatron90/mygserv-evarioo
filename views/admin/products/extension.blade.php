@@ -8,7 +8,7 @@
         @csrf
 
         <div class="flex lg:flex-row flex-col gap-y-3 lg:gap-y-0 gap-x-0 lg:gap-x-5 justify-between">
-            <div class="w-5/6">
+            <div class="lg:w-5/6 w-full">
                 <select id="server" class="form-select !w-full" name="extension_id" required
                     onchange="document.getElementById('submitt').disabled = false;">
                     @if ($extensions->count())
@@ -26,7 +26,7 @@
                     @endif
                 </select>
             </div>
-            <div class="w-1/6">
+            <div class="lg:w-1/6 w-full">
                 <button type="button" class="form-submit !w-full" onclick="document.getElementById('formu').submit();"
                     disabled id="submitt">
                     {{ __('Update server') }}
