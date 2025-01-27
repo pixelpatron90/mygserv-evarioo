@@ -70,13 +70,13 @@
             </div>
         
             <div class="mb-4">
+                <label class="form-label" for="image">{{ __('Image') }}</label>
                 <x-alert alert="info">
                     {{ __('Only upload a new image if you want to replace the existing one') }}
                 </x-alert>
-                <label class="form-label" for="image">{{ __('Image') }}</label>
-                <input id="image" class="block w-full mt-1 rounded-lg dark:bg-darkmode" type="file"
+                <input id="image" class="form-image" type="file"
                     name="image" @if ($product->image == 'null') disabled @endif />
-                <div class="mt-2">
+                <div class="p-4 bg-[#1a202c]">
                     <label for="no_image">No Image</label>
                     <input type="checkbox" name="no_image" id="no_image" value="1" class="form-input w-4 h-4"
                         @if ($product->image == 'null') checked @endif>

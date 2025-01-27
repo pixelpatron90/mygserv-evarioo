@@ -125,6 +125,10 @@
     @apply mt-2 w-full px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
   }
 
+  .form-image {
+    @apply mt-2 w-full px-4 py-2.5 text-base rounded-lg border focus:outline focus:outline-1 focus:outline-offset-1 bg-[#ebeef3] text-[#9a9898] focus:outline-[#aaaaaa] border-[#cccccc];
+  }
+
   .form-input.is-invalid {
     @apply border-red-500;
   }
