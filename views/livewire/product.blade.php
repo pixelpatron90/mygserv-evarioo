@@ -16,7 +16,7 @@
         <div class="markdownify-h2 w-full text-secondary-400">
             @markdownify($product->description)
         </div>
-        <div class="pt-3 mt-auto">
+        <div class="product-card-footer">
             @if ($product->stock_enabled && $product->stock <= 0)
                 <a class="button bg-red-500 text-white w-full hover:cursor-not-allowed">
                     {{ __('Out of stock!') }}

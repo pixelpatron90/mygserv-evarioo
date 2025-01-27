@@ -276,11 +276,15 @@
   }
 
   .product-card {
-    @apply bg-primarycolor px-6 py-5 text-secondary-200 rounded-md border-2 duration-300;
+    @apply bg-primarycolor p-0 text-secondary-200 rounded-md border-2 duration-300;
   }
 
   .product-card-header {
-    @apply py-4 bg-red-500;
+    @apply py-4 px-5 bg-red-500;
+  }
+
+  .product-card-footer {
+    @apply py-4 px-5 bg-red-500;
   }
 
   .textarea-banner {
