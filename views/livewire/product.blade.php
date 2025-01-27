@@ -10,8 +10,7 @@
         </div>
             @if ($product->image !== 'null')
             <div class="border-y-8 border-red-500">
-            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full"
-                onerror="removeElement(this);">
+            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full">
             </div>
             @else
             <div class="py-4 text-center text-red-500 font-bold">
