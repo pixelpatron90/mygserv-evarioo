@@ -221,11 +221,6 @@
             <label for="{{ $id ?? $name }}" class="form-label">{{ $label }}</label>
         @endisset
         <div class="relative">
-            @isset($icon)
-                <div class="absolute pointer-events-none top-0 left-0 py-2 px-4">
-                    <i class="{{ $icon }}"></i>
-                </div>
-            @endisset
             <input type={{ $type }} {{ $attributes->except('class') }}
                 @isset($value) value="{{ $value }}" @else value="{{ old($name) }}" @endisset
                 id={{ $id ?? $name }}
