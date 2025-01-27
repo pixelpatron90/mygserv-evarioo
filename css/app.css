@@ -225,7 +225,7 @@
 
 @layer components {
   .form-label {
-    @apply text-secondary-200 mb-3;
+    @apply block text-secondary-200 mb-3;
   }
 
   .form-input {
