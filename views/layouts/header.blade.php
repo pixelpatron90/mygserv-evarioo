@@ -3,7 +3,7 @@
         <div>
             <div class="logo">
                 <a href="{{ route('index') }}">
-                    <x-branding class="w-36" />
+                    <x-branding class="lg:w-36 w-20" />
                 </a>
                 <div class="title">
                     <h1>
