@@ -27,22 +27,22 @@
   header {
     @apply bg-primarycolor h-44 py-7;
   }
-  header div {
+  header > .container > div  {
     @apply flex justify-between w-full h-full;
   }
-  header div .logo {
+  header > .container > div .logo {
     @apply lg:w-4/6 w-full flex justify-center lg:justify-start;
   }
-  header div .logo > div.title {
+  header > .container > div .logo > div.title {
     @apply ms-8 hidden lg:flex flex-col justify-start w-96 pt-2;
   }
-  header div .logo > div.title h1 {
+  header > .container > div .logo > div.title h1 {
     @apply text-6xl content-center text-red-500 font-intertight uppercase text-shadow-lg;
   }
-  header div .logo > div.title p {
+  header > .container > div .logo > div.title p {
     @apply text-xl text-gray-400 font-intertight text-shadow-lg;
   }
-  header .container > div .login {
+  header > .container > div .login {
     @apply bg-red-500 w-2/6 hidden;
   }
   main {
