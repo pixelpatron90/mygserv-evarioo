@@ -35,7 +35,7 @@
         </div>
 
         <div class="content-box">
-            <h2 class="font-semibold text-xl mb-2 mt-2 text-secondary-200">
+            <h2 class="font-semibold text-xl mb-2 text-secondary-200">
                 {{ __('Information according to § 5 DDG:') }}
             </h2>
 
