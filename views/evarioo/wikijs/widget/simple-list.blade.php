@@ -2,7 +2,7 @@
     <div class="title">
         <h1>
             <i class="fa-solid fa-angle-right me-2"></i>
-            {{ __($data->widget_title) }} asfasdasd
+            {{ __($data->widget_title) }}
         </h1>
     </div>
     <div class="content">
