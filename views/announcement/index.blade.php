@@ -1,8 +1,7 @@
 <x-app-layout title="{{ __('Announcements') }}">
 
     <div class="content">
-        <h2 class="font-semibold text-2xl mb-2 text-secondary-900">{{ __('Announcements') }}</h2>
-
+        
         <div class="content-box">
             <div class="flex flex-row">
                 @if(config('settings::app_logo'))
@@ -10,7 +9,9 @@
                         class="w-16 h-full lg:block hidden rounded-md mr-4" />
                 @endif
                 <div class="w-full">
-                    <h1 class="text-3xl font-semibold text-red-500">asdasd</h1>
+                    <h1 class="text-3xl font-semibold text-red-500">
+                        {{ __('Announcements') }}
+                    </h1>
                     <div class="w-full text-secondary-400">
                         {{ __('Current and important things') }}
                     </div>
