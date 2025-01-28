@@ -21,11 +21,11 @@
         </div>
 
         <ul class="content-box mb-4 flex flex-row">
-            <li class="me-2 text-secondary-200 flex items-center gap-x-2">
+            <li class="me-3 text-secondary-200 flex items-center content-center gap-x-2">
                 <i class="fa-regular fa-calendar"></i>
                 {{ $announcement->created_at->format('d/m/Y') }}
             </li>
-            <li class="text-secondary-200 flex items-center gap-x-2">
+            <li class="text-secondary-200 flex items-center content-center gap-x-2">
                 <i class="fa-solid fa-clock"></i>
                 {{ $announcement->created_at->format('H:i') }}
             </li>
