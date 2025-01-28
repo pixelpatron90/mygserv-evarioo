@@ -6,7 +6,6 @@
         </h1>
     </div>
     <div class="content">
-
         <ul>
             @foreach ($data->pages as $page)
             <li>
@@ -18,5 +17,6 @@
             </li>
             @endforeach
         </ul>
+        {{ $data->pages->links('evarioo.wikijs.widget.pagination') }}
     </div>
 </div>
