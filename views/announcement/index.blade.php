@@ -1,5 +1,4 @@
 <x-app-layout title="{{ __('Announcements') }}">
-
     <div class="content">
         <div class="content-box mb-4">
             <div class="flex flex-row">
@@ -40,5 +39,4 @@
             <p class="text-center py-3">{{ __('Announcement not found!') }}</p>
         @endif
     </div>
-
 </x-app-layout>

@@ -1,6 +1,5 @@
 @if ($paginator->hasPages())
 <div role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="mt-4 flex items-center justify-between">
-
     <div>
         <span class="relative z-0 inline-flex rtl:flex-row-reverse shadow-sm rounded-md">
             @foreach ($elements as $element)

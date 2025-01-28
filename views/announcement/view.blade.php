@@ -1,8 +1,5 @@
 <x-app-layout title="{{ $announcement->title }}" description='{{ strip_tags(Str::markdown(nl2br(Stevebauman\Purify\Facades\Purify::clean($announcement->announcement)))) }}'>
-    
-    <!-- View Announcement -->
     <div class="content">
-
         <div class="content-box mb-4">
             <div class="flex flex-row">
                 @if(config('settings::app_logo'))
@@ -19,7 +16,6 @@
                 </div>
             </div>
         </div>
-
         <ul class="content-box mb-4 flex flex-row">
             <li class="me-3 text-secondary-200 flex items-center content-center gap-x-2">
                 <i class="fa-regular fa-calendar text-red-500"></i>
@@ -30,10 +26,8 @@
                 {{ $announcement->created_at->format('H:i') }}
             </li>
         </ul>
-
         <div class="content-box">
             @markdownify($announcement->announcement)
         </div>
     </div>
-
 </x-app-layout>
