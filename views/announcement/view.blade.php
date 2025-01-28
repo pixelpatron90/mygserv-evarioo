@@ -20,13 +20,13 @@
             </div>
         </div>
 
-        <div class="content-box mb-4 flex justify-between">
-            <p class="text-secondary-400 flex items-center gap-x-2">
-                <i class="ri-calendar-line"></i>
+        <div class="content-box mb-4 flex flex-col">
+            <p class="text-secondary-200 flex items-center gap-x-2">
+                <i class="fa-regular fa-calendar"></i>
                 {{ $announcement->created_at->format('d/m/Y') }}
             </p>
-            <p class="text-secondary-400 flex items-center gap-x-2">
-                <i class="ri-time-line ml-1"></i>
+            <p class="text-secondary-200 flex items-center gap-x-2">
+                <i class="fa-solid fa-clock"></i>
                 {{ $announcement->created_at->format('H:i') }}
             </p>
         </div>
