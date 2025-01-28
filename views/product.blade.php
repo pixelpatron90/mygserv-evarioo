@@ -12,7 +12,8 @@
                 <div class="content-box">
                     <div class="flex flex-row">
                         @if($category->image)
-                            <img src="/storage/categories/{{ $category->image }}" class="w-20 h-full lg:block hidden rounded-md mr-4" />
+                        <img src="/storage/categories/{{ $category->image }}"
+                            class="w-16 h-full lg:block hidden rounded-md mr-4" />
                         @endif
                         <div class="w-full">
                             <h1 class="text-3xl font-semibold text-red-500">{{ $category->name }}</h1>
@@ -23,8 +24,9 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-4 gap-4 mt-4">
-                    @foreach ($category->products()->where('hidden', false)->with('prices')->orderBy('order')->get() as $product)
-                        <livewire:product :product="$product" />
+                    @foreach ($category->products()->where('hidden', false)->with('prices')->orderBy('order')->get() as
+                    $product)
+                    <livewire:product :product="$product" />
                     @endforeach
                 </div>
             </div>
