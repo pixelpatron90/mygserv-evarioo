@@ -5,11 +5,14 @@
 
         <div class="content-box">
             <div class="flex flex-row">
-                as
+                @if(config('settings::app_logo'))
+                    <img src="{{ asset(config('settings::app_logo')) }}"
+                        class="w-16 h-full lg:block hidden rounded-md mr-4" />
+                @endif
                 <div class="w-full">
                     <h1 class="text-3xl font-semibold text-red-500">asdasd</h1>
                     <div class="w-full text-secondary-400">
-                        asdasd
+                        {{ __('Current and important things') }}
                     </div>
                 </div>
             </div>
