@@ -20,22 +20,19 @@
             </div>
         </div>
 
+        <div class="content-box mb-4 flex justify-between">
+            <p class="text-secondary-400 flex items-center gap-x-2">
+                <i class="ri-calendar-line"></i>
+                {{ $announcement->created_at->format('d/m/Y') }}
+            </p>
+            <p class="text-secondary-400 flex items-center gap-x-2">
+                <i class="ri-time-line ml-1"></i>
+                {{ $announcement->created_at->format('H:i') }}
+            </p>
+        </div>
+
         <div class="content-box">
-            <div class="flex justify-between">
-                <div class="flex items-center gap-x-5">
-                    <p class="text-secondary-400 flex items-center gap-x-2">
-                        <i class="ri-calendar-line"></i>
-                        {{ $announcement->created_at->format('d/m/Y') }}
-                    </p>
-                    <p class="text-secondary-400 flex items-center gap-x-2">
-                        <i class="ri-time-line ml-1"></i>
-                        {{ $announcement->created_at->format('H:i') }}
-                    </p>
-                </div>
-            </div>
-            <div class="prose dark:prose-invert max-w-full">
-                @markdownify($announcement->announcement)
-            </div>
+            @markdownify($announcement->announcement)
         </div>
     </div>
 
