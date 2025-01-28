@@ -9,7 +9,7 @@
     <div class="content">
         <div class="grid grid-cols-12 gap-4">
             <div class="@if ($categories->count() > 0) lg:col-span-12 @endif col-span-12">
-                <div class="content-box">
+                <div class="content-box mb-4">
                     <div class="flex flex-row">
                         @if($category->image)
                         <img src="/storage/categories/{{ $category->image }}"
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-4 gap-4 mt-4">
+                <div class="grid grid-cols-4 gap-4">
                     @foreach ($category->products()->where('hidden', false)->with('prices')->orderBy('order')->get() as $product)
                     <livewire:product :product="$product" />
                     @endforeach
