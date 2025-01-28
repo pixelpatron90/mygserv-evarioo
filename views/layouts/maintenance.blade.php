@@ -32,7 +32,7 @@
         </div>
         <div class="content">
             <div class="content-box">
-                <h1 class="text-red-500 text-center">
+                <h1 class="text-3xl font-intertight text-red-500 text-center">
                     {{ __('Maintenance on working') }}
                 </h1>
             </div>
