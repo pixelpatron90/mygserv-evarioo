@@ -14,6 +14,10 @@
         </div>
     </div>
 
+    <div class="p-7 bg-primarycolor border border-gray-600 border-dashed rounded-md">
+        {{ __('Welcome :username, nice to see ya!', ['username' => auth()->user()->username]) }}
+    </div>
+
     <div class="grid gap-6 overflow-hidden grid-cols-1 lg:grid-cols-3">
         <div class="lg:col-span-2 p-7 bg-primarycolor border border-gray-600 border-dashed rounded-md">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-10">
