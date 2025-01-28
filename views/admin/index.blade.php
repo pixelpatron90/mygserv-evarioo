@@ -14,7 +14,8 @@
         </div>
     </div>
 
-    <div class="p-7 bg-primarycolor border border-gray-600 border-dashed rounded-md">
+    <div class="flex items-center gap-x-2 p-7 text-3xl text-red-500 bg-primarycolor border border-gray-600 border-dashed rounded-md">
+        <i class="fa-solid fa-heart fa-beat"></i> 
         {{ __('Welcome :username, nice to see ya!', ['username' => auth()->user()->username]) }}
     </div>
 
