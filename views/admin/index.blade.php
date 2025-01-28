@@ -2,13 +2,21 @@
     <x-slot name="title">
         {{ __('General') }}
     </x-slot>
+
+    <div class="p-3 site-header">
+        <div>
+            <div class="text-2xl font-bold text-secondary-200">
+                <i class="fa-solid fa-caret-right"></i> {{ __('Dashboard') }}
+            </div>
+            <p class="text-secondary-200">
+                {{ __('An overview of everything') }}
+            </p>
+        </div>
+    </div>
+
     <div class="grow">
         <div class="py-10">
             <div class="mx-auto px-8 md:px-20">
-                <div class="mb-4 text-secondary-200">
-                    <h1 class="text-2xl font-bold">{{ __('Dashboard') }}</h1>
-                    <span class="text-red-500">{{ __('An overview of everything') }}</span>
-                </div>
                 <div class="grid gap-6 overflow-hidden grid-cols-1 lg:grid-cols-3">
                     <div class="lg:col-span-2 p-7 bg-primarycolor border-2 rounded-md">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-10">
