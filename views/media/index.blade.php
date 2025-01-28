@@ -1,7 +1,6 @@
 <x-app-layout title="{{ __('Media') }}">
 
   <div class="content">
-
     <div class="content-box mb-4">
       <div class="flex flex-row">
           @if(config('settings::app_logo'))
@@ -18,7 +17,6 @@
           </div>
       </div>
   </div>
-
     <div class="content-box">
         <div class="mt-6 grid grid-cols-12 gap-4">
           <div class="lg:col-span-6 col-span-12 flex-col">

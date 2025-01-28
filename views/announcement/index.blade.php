@@ -1,7 +1,6 @@
 <x-app-layout title="{{ __('Announcements') }}">
 
     <div class="content">
-
         <div class="content-box mb-4">
             <div class="flex flex-row">
                 @if(config('settings::app_logo'))
@@ -18,7 +17,6 @@
                 </div>
             </div>
         </div>
-
         @if ($announcements->count() > 0)
             <div class="grid grid-cols-12 gap-4">
                 @foreach ($announcements->sortByDesc('created_at') as $announcement)

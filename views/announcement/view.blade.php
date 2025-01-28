@@ -2,9 +2,26 @@
     
     <!-- View Announcement -->
     <div class="content">
-        <div class="content-box max-w-6xl mx-auto">
+
+        <div class="content-box mb-4">
+            <div class="flex flex-row">
+                @if(config('settings::app_logo'))
+                    <img src="{{ asset(config('settings::app_logo')) }}"
+                        class="w-16 h-full lg:block hidden rounded-md mr-4" />
+                @endif
+                <div class="w-full">
+                    <h1 class="text-3xl font-semibold text-red-500">
+                      {{ __('Announcements') }}
+                    </h1>
+                    <div class="w-full text-secondary-400">
+                        {{ __('You are currently reading: :title', ['title' => $announcement->title]) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
             <div class="flex justify-between">
-                <h1 class="text-2xl text-secondary-200 font-bold">{{ $announcement->title }}</h1>
                 <div class="flex items-center gap-x-5">
                     <p class="text-secondary-400 flex items-center gap-x-2">
                         <i class="ri-calendar-line"></i>
