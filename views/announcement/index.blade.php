@@ -2,6 +2,19 @@
 
     <div class="content">
         <h2 class="font-semibold text-2xl mb-2 text-secondary-900">{{ __('Announcements') }}</h2>
+
+        <div class="content-box">
+            <div class="flex flex-row">
+                as
+                <div class="w-full">
+                    <h1 class="text-3xl font-semibold text-red-500">asdasd</h1>
+                    <div class="w-full text-secondary-400">
+                        asdasd
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @if ($announcements->count() > 0)
             <div class="grid grid-cols-12 gap-4">
                 @foreach ($announcements->sortByDesc('created_at') as $announcement)
