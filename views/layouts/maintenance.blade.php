@@ -30,10 +30,12 @@
         <div class="hidden lg:flex justify-center items-center py-4">
             <x-branding class="w-36" />
         </div>
-        <div class="bg-gray-200 p-2">
-            <h1>
-                {{ __('Maintenance on working') }}
-            </h1>
+        <div class="content">
+            <div class="content-box">
+                <h1 class="text-red-500 text-center">
+                    {{ __('Maintenance on working') }}
+                </h1>
+            </div>
         </div>
     </div>
 
