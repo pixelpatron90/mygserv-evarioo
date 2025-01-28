@@ -1,13 +1,25 @@
 <x-app-layout title="{{ __('Media') }}">
 
   <div class="content">
+
+    <div class="content-box mb-4">
+      <div class="flex flex-row">
+          @if(config('settings::app_logo'))
+              <img src="{{ asset(config('settings::app_logo')) }}"
+                  class="w-16 h-full lg:block hidden rounded-md mr-4" />
+          @endif
+          <div class="w-full">
+              <h1 class="text-3xl font-semibold text-red-500">
+                {{ __('Media') }}
+              </h1>
+              <div class="w-full text-secondary-400">
+                  {{ __('Our advertising material') }}
+              </div>
+          </div>
+      </div>
+  </div>
+
     <div class="content-box">
-        <div class="flex flex-row gap-4">
-          <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-200">{{ __('Media') }}</h2>
-        </div>
-        <p>
-          {{ __('Do you like what we do? Do you have a game server from mygserv.de or a web space? Then you have the opportunity to thank us here by placing our advertising banner on your homepage / your discord / your server.') }}
-        </p>
         <div class="mt-6 grid grid-cols-12 gap-4">
           <div class="lg:col-span-6 col-span-12 flex-col">
             <div>
