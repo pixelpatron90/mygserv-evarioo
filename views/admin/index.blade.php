@@ -1,7 +1,4 @@
-<x-admin-layout>
-    <x-slot name="title">
-        {{ __('General') }}
-    </x-slot>
+<x-admin-layout :title="__('General')">
 
     <div class="site-header">
         <div class="title">

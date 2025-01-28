@@ -1,7 +1,4 @@
-<x-admin-layout>
-    <x-slot name="title">
-        {{ __('Orders') }}
-    </x-slot>
+<x-admin-layout :title="__('Orders')">
 
     <div class="site-header">
         <div class="title">
