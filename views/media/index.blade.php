@@ -2,7 +2,6 @@
 
   <div class="content">
     <div class="content-box">
-
         <div class="flex flex-row gap-4">
           <h2 class="font-semibold text-2xl mb-2 mt-2 text-secondary-200">{{ __('Media') }}</h2>
         </div>
