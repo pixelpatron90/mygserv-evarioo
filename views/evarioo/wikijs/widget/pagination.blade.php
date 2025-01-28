@@ -1,4 +1,5 @@
-<nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="mt-4 flex items-center justify-between">
+@if ($paginator->hasPages())
+<div role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="mt-4 flex items-center justify-between">
     <div class="flex justify-between flex-1 sm:hidden">
         @if ($paginator->onFirstPage())
         <span
@@ -129,4 +130,5 @@
             </span>
         </div>
     </div>
-</nav>
+</div>
+@endif
