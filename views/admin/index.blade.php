@@ -15,7 +15,7 @@
     </div>
 
     <div class="grid gap-6 overflow-hidden grid-cols-1 lg:grid-cols-3">
-        <div class="lg:col-span-2 p-7 bg-primarycolor border-2 rounded-md">
+        <div class="lg:col-span-2 p-7 bg-primarycolor border border-gray-600 border-dashed rounded-md">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-10">
 
                 <div class="p-4 rounded-md bg-normal flex">
