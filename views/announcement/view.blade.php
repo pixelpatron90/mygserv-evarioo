@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="content-box mb-4 flex flex-col">
+        <div class="content-box mb-4 flex flex-row">
             <p class="text-secondary-200 flex items-center gap-x-2">
                 <i class="fa-regular fa-calendar"></i>
                 {{ $announcement->created_at->format('d/m/Y') }}
