@@ -3,7 +3,7 @@
         {{ __('General') }}
     </x-slot>
 
-    <div class="p-3 site-header">
+    <div class="site-header">
         <div>
             <div class="text-2xl font-bold text-secondary-200">
                 <i class="fa-solid fa-caret-right"></i> {{ __('Dashboard') }}
