@@ -24,8 +24,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-4 gap-4 mt-4">
-                    @foreach ($category->products()->where('hidden', false)->with('prices')->orderBy('order')->get() as
-                    $product)
+                    @foreach ($category->products()->where('hidden', false)->with('prices')->orderBy('order')->get() as $product)
                     <livewire:product :product="$product" />
                     @endforeach
                 </div>
