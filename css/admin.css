@@ -51,6 +51,10 @@
   main .content-box .site-header {
     @apply bg-[#1a202c] flex flex-row justify-between rounded-md mb-4 p-4;
   }
+  main .content-box .site-header > .title > p {
+    @apply text-secondary-400;
+  }
+
 
   main .content-box .site-header i {
     @apply text-red-500 me-2;

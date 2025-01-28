@@ -4,11 +4,11 @@
     </x-slot>
 
     <div class="site-header">
-        <div>
+        <div class="title">
             <div class="text-2xl font-bold text-secondary-200">
                 <i class="fa-solid fa-caret-right"></i> {{ __('Invoices') }}
             </div>
-            <p class="text-secondary-200">
+            <p>
                 {{ __('Here you can see all invoices.') }}
             </p>
         </div>
