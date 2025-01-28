@@ -181,7 +181,7 @@
     @apply text-red-500;
   }
   .info {
-    @apply bg-white h-12 py-2.5;
+    @apply bg-white py-2.5;
   }
   .info p {
     @apply text-gray-500 text-sm;
